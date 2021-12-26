@@ -1,12 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Player
 {
     public class SelectedPlayer : MonoBehaviour
     {
-        public ParentPlayer Player
+        public ParentPlayer Main
         {
-            get => _player;
+            get
+            {
+                if (_player == null) throw new Exception("Player not found");
+                return _player;
+            }
             set
             {
                 if (value != null) _player = value;

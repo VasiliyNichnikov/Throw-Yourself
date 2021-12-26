@@ -2956,6 +2956,7 @@ GameObject:
   - component: {fileID: 7029130125453634101}
   - component: {fileID: 7029130125453634100}
   - component: {fileID: 7029130125453634099}
+  - component: {fileID: 2707254108240333645}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -3032,7 +3033,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 7029130124653298543}
-  _canvas: {fileID: 7029130124912926442}
   _movementSound: {fileID: 7741986761999736764}
   _sensitivity: 2.5
 --- !u!114 &7029130125453634099
@@ -3048,7 +3048,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delay: 0.35
-  _minDistance: 0.15
+--- !u!114 &2707254108240333645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7029130125453634102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c548cec7e984e03a5795d34c318dfb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 7029130124912926442}
 --- !u!1 &7029130125601512156
 GameObject:
   m_ObjectHideFlags: 0

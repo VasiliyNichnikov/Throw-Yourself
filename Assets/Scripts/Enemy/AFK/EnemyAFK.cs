@@ -38,7 +38,7 @@ namespace Enemy.AFK
                 {
                     // BasicParameters.SelectedPlayer.Player.PlayerTakingDamage.LauncherAnimationDamage();
                     BasicParameters.CreatorPlayerSound.Create(BasicParameters.AttackPlayer);
-                    BasicParameters.SelectedPlayer.Player.Health.DealDamage(_parameters.DamagePlayerWhenAttacking);
+                    BasicParameters.SelectedPlayer.Main.Health.DealDamage(_parameters.DamagePlayerWhenAttacking);
                 }
 
                 StartCoroutine(_parameters.Timer.ToRun(_parameters.DelayAttack));

@@ -43,9 +43,9 @@ namespace MovingToAnotherObject
         {
             if (_newPlayer == null) return;
             _firstSwitchBody = true;
-            _selectedPlayer.Player.Disconnection(_selectedPlayer.LayerController, _selectedPlayer.PlayerController);
-            _selectedPlayer.Player = _newPlayer;
-            _selectedPlayer.Player.Connection(_selectedPlayer.LayerPlayer, _selectedPlayer.PlayerSelected);
+            _selectedPlayer.Main.Disconnection(_selectedPlayer.LayerController, _selectedPlayer.PlayerController);
+            _selectedPlayer.Main = _newPlayer;
+            _selectedPlayer.Main.Connection(_selectedPlayer.LayerPlayer, _selectedPlayer.PlayerSelected);
             _newPlayer = null;
         }
 
@@ -58,8 +58,8 @@ namespace MovingToAnotherObject
 
         private void OnDrawGizmos()
         {
-            if (_selectedPlayer != null && _selectedPlayer.Player != null &&
-                _thisTransform == _selectedPlayer.Player.transform)
+            if (_selectedPlayer != null && _selectedPlayer.Main != null &&
+                _thisTransform == _selectedPlayer.Main.transform)
             {
                 Gizmos.color = Color.red;
                 Vector3 thisPosition = _thisTransform.position;

@@ -4,23 +4,15 @@ using UnityEngine.EventSystems;
 
 namespace Interaction
 {
-    public class DoubleTapOnScreen : MonoBehaviour, IPointerDownHandler
+    public class DoubleTapOnScreen : MonoBehaviour
     {
         public bool IsDoubleClickComplete => _isDoubleClickComplete;
         [SerializeField, Range(0, 1)] private float _delay;
-        [SerializeField, Range(0, 1)] private float _minDistance;
-        private Camera _camera;
         private Timer _timer;
         private float _countClick;
         private bool _isDoubleClickComplete;
 
-        private void Start()
-        {
-            _camera = Camera.main;
-            _timer = new Timer();
-        }
-
-        public void OnPointerDown(PointerEventData eventData)
+        public void Click()
         {
             if (_timer.IsLaunched == false)
             {
@@ -32,8 +24,6 @@ namespace Interaction
 
             if ((_countClick >= 2) == false) return;
             _isDoubleClickComplete = true;
-
-                
         }
 
         public bool GetStateDoubleClickAndReset()
@@ -41,6 +31,11 @@ namespace Interaction
             if (_isDoubleClickComplete == false) return false;
             _isDoubleClickComplete = false;
             return true;
+        }
+
+        private void Start()
+        {
+            _timer = new Timer();
         }
     }
 }

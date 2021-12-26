@@ -24,13 +24,13 @@ namespace Enemy
         public float DamagePlayerWhenAttacking => _damagePlayerWhenAttacking;
         public Timer Timer => _timer;
         public Vector3 StartPoint => _startPoint;
-        public bool PlayerInMotion => _selectedPlayer.Player.PlayerInMotion;
+        public bool PlayerInMotion => _selectedPlayer.Main.PlayerInMotion;
         [HideInInspector] public bool PlayerIsNoticed;
         public bool KeyIsEnemy => _keyIsEnemy;
         public CreatorKey CreatorKey => _creatorKey;
 
         public Transform TransformPlayer =>
-            _selectedPlayer.Player.GetComponent<Transform>(); // TODO слишком частые запросы к GetComponent
+            _selectedPlayer.Main.GetComponent<Transform>(); // TODO слишком частые запросы к GetComponent
 
         public SelectedPlayer SelectedPlayer => _selectedPlayer;
         public CreatorPlayerSound CreatorPlayerSound => _creatorPlayerSound;
