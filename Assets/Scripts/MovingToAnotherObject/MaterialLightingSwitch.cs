@@ -1,35 +1,26 @@
-﻿using UnityEngine;
+﻿using Events;
+using UnityEngine;
 
 namespace MovingToAnotherObject
 {
     public class MaterialLightingSwitch : MonoBehaviour
     {
         private MeshRenderer _renderer;
-        private static readonly int _lightingSwitch = Shader.PropertyToID("OnOffLighting");
-        private int _controlledLayer;
-        
-        private void OnEnable()
-        {
-            _controlledLayer = LayerMask.NameToLayer("Controlled");
-            if(gameObject.layer == _controlledLayer)
-                EventsMovingToAnotherObject.EventChangeLighting += ChangeLighting;
-        }
+        private Events.MovingToAnotherObject _event;
 
-        private void OnDisable()
-        {
-            if(gameObject.layer == _controlledLayer)
-                EventsMovingToAnotherObject.EventChangeLighting -= ChangeLighting;
-        }
+        private static readonly int LightingSwitch = Shader.PropertyToID("OnOffLighting"); // TODO вынести в отдельный статический класс
 
         private void Start()
         {
+            _event = FindObjectOfType<EventKeeper>().MovingToAnotherObject;
+            _event.Glow.AddListener(ChangeLighting);
             _renderer = GetComponent<MeshRenderer>();
         }
 
         private void ChangeLighting(float val)
         {
-            if (gameObject.layer != LayerMask.NameToLayer("Player"))
-                _renderer.material.SetFloat(_lightingSwitch, val);
+            if (gameObject.layer != LayerMask.NameToLayer("Player")) // TODO Сделать выбор слоя из Unity 
+                _renderer.material.SetFloat(LightingSwitch, val);
         }
     }
 }

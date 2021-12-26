@@ -4,11 +4,11 @@ namespace Training.Conditions
 {
     public class ConditionRelocationToAnotherObject : TransitionCondition
     {
-        private PlayerBodySwitch _bodySwitch;
+        private BodySwitchPlayer _bodySwitch;
 
         private void Start()
         {
-            _bodySwitch = GetComponent<PlayerBodySwitch>();
+            _bodySwitch = GetComponent<BodySwitchPlayer>();
         }
         
         public override bool CheckingTransitionCondition()

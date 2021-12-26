@@ -1,4 +1,5 @@
 ﻿using DirectionMovement;
+using Events;
 using MovingToAnotherObject;
 using PhysicsObjects;
 using Player;
@@ -22,6 +23,7 @@ namespace Interaction
         private DoubleTapOnScreen _doubleTap;
         private SelectedPlayer _selectedPlayer;
         private MotionVectorCalculator _vectorCalculator;
+        private Events.MovingToAnotherObject _eventMovingToAnotherObject;
 
         private bool _firstMovement;
         private Vector3 _positionStart;
@@ -29,6 +31,7 @@ namespace Interaction
 
         private void Start()
         {
+            _eventMovingToAnotherObject = FindObjectOfType<EventKeeper>().MovingToAnotherObject;
             _vectorCalculator = new MotionVectorCalculator(_camera, _sensitivity);
             _doubleTap = GetComponent<DoubleTapOnScreen>();
             _selectedPlayer = FindObjectOfType<SelectedPlayer>();
@@ -46,7 +49,7 @@ namespace Interaction
             var doubleClick = _doubleTap.IsDoubleClickComplete;
             if (doubleClick)
             {
-                EventsMovingToAnotherObject.LauncherChangeLighting(1);
+                _eventMovingToAnotherObject.Glow.Invoke(1);
             }
 
             SelectArrow(doubleClick);
@@ -63,6 +66,7 @@ namespace Interaction
                 {
                     typeArrow = TypesArrow.Transformation;
                 }
+
                 _selectedPlayer.Player.InteractionArrow.Install(typeArrow);
             }
         }
@@ -74,21 +78,23 @@ namespace Interaction
             var doubleClick = _doubleTap.GetStateDoubleClickAndReset();
             if (doubleClick)
             {
-                EventsMovingToAnotherObject.LauncherChangeLighting(0);
+                _eventMovingToAnotherObject.Glow.Invoke(0);
                 ChangeBody();
             }
             else
             {
                 MoveObjects();
             }
+
             _selectedPlayer.Player.InteractionArrow.Remove();
         }
 
         private void RotationDirectionsMovement()
         {
             Vector3 direction = _vectorCalculator.GetDirectionsFromScreen(_positionStart, _positionEnd);
-            EventChangerPlayerBody.LauncherEventBeamThrow(direction);
-            // Работа с стрелкой
+            // Выбор нового тела
+            _selectedPlayer.Player.BodySwitch.BeamThrow(direction);
+            // Работа со стрелкой
             _selectedPlayer.Player.InteractionArrow.ChangePosition();
             _selectedPlayer.Player.InteractionArrow.ChangeAngleZ(direction);
             _selectedPlayer.Player.InteractionArrow.Stretch(direction);
@@ -99,12 +105,12 @@ namespace Interaction
         {
             _movementSound.LauncherPlayback();
             Vector3 direction = _vectorCalculator.GetDirectionsFromScreen(_positionStart, _positionEnd);
-            EventMovementObject.LauncherEventMove(direction);
+            _selectedPlayer.Player.Movement.Push(direction);
         }
 
         private void ChangeBody()
         {
-            EventChangerPlayerBody.LauncherEventChangeBody();
+            _selectedPlayer.Player.BodySwitch.MoveToNew();
         }
 
         private void OnDrawGizmos()

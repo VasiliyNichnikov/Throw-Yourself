@@ -1,4 +1,6 @@
-﻿using LifeSlider;
+﻿using System;
+using LifeSlider;
+using Player;
 using UnityEngine;
 
 namespace Bullet
@@ -27,7 +29,9 @@ namespace Bullet
         {
             if (other.gameObject.layer == _layerPlayer)
             {
-                EventsLifeSlider.LauncherEventTakingDamage(_damage);
+                ParentPlayer player = other.GetComponent<ParentPlayer>();
+                if (player == null) throw new Exception("The object does not have a main player script");
+                player.Health.DealDamage(_damage);
             }
 
             Destroy(this.gameObject);

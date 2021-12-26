@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace MovingToAnotherObject
 {
-    public class PlayerBodySwitch : MonoBehaviour
+    public class BodySwitchPlayer : MonoBehaviour
     {
-        public bool FirstSwitchBody => _firstSwitchBody;
+        public bool FirstSwitchBody => _firstSwitchBody; // TODO Удалить переменную (Была сделанна для обучения)
 
         [SerializeField, Range(0, 10)] private float _heightRay;
         private SelectedPlayer _selectedPlayer;
@@ -16,25 +16,30 @@ namespace MovingToAnotherObject
         private MeshRenderer _renderer;
         private Vector3 _hitPoint;
 
+        /// <summary>
+        /// Пускает луч и если луч попадает в объект, в который можно переместиться,
+        /// сохраняем этого игрока в отдельную переменную
+        /// </summary>
+        /// <param name="direction">Направление луча</param>
         public void BeamThrow(Vector3 direction)
         {
-            RaycastHit hit;
             Vector3 center = _renderer.bounds.center;
-            // Vector3 thisPosition = _thisTransform.position;
             Vector3 origin = new Vector3(center.x, _heightRay, center.z);
-            if (Physics.SphereCast(origin, _selectedPlayer.RadiusRay, direction, out hit,
-                    _selectedPlayer.MaxDistance, ~_selectedPlayer.LayerController))
+            if (Physics.SphereCast(origin, _selectedPlayer.RadiusRay, direction, out var hit,
+                    _selectedPlayer.MaxDistance, ~_selectedPlayer.LayerController) == false) return;
+            _hitPoint = hit.point;
+            ParentPlayer newPlayer = hit.collider.GetComponent<ParentPlayer>();
+            if (newPlayer != null)
             {
-                _hitPoint = hit.point;
-                ParentPlayer newPlayer = hit.collider.GetComponent<ParentPlayer>();
-                if (newPlayer != null)
-                {
-                    _newPlayer = newPlayer;
-                }
+                _newPlayer = newPlayer;
             }
         }
-
-        public void ChangePlayer()
+        
+        
+        /// <summary>
+        /// Если новое тело выбрано, меняем тело игрока на новое
+        /// </summary>
+        public void MoveToNew()
         {
             if (_newPlayer == null) return;
             _firstSwitchBody = true;
