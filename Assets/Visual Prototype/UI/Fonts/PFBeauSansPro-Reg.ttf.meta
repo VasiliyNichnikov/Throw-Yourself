@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: d37d9cd44ab821f4bbe112e15834c8fe
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: PF BeauSans Pro
+  fontNames:
+  - PF BeauSans Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6b1764439abecc84da86ddc58da360b3, type: 3}
+  - {fileID: 12800000, guid: a26693dc78afb8c47b6215de8139a607, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
