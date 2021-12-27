@@ -15,14 +15,14 @@ namespace Player
     {
         public InteractionArrow InteractionArrow { get; private set; }
         public BodySwitchPlayer BodySwitch { get; private set; }
-        public MovementObject Movement { get; private set; }
+        public MovementObject Engine { get; private set; }
         public HealthPlayer Health { get; private set; }
 
         public bool PlayerInMotion
         {
             get
             {
-                if (Movement != null) return Movement.PlayerInMotion;
+                if (Engine != null) return Engine.PlayerInMotion;
                 throw new Exception($"Script {nameof(MovementObject)} not found");
             }
         }
@@ -42,7 +42,7 @@ namespace Player
             gameObject.layer = layer;
             _renderer.material = mat;
             InteractionArrow.Remove();
-            Movement.StopCheckingPlayerMovement(true);
+            Engine.StopCheckingPlayerMovement(true);
             Health.RemoveSlider();
             _enemyEvents.ResetIsNoticesPlayer.Invoke();
         }
@@ -51,7 +51,7 @@ namespace Player
         {
             InteractionArrow = GetComponent<InteractionArrow>();
             _renderer = GetComponent<MeshRenderer>();
-            Movement = GetComponent<MovementObject>();
+            Engine = GetComponent<MovementObject>();
             BodySwitch = GetComponent<BodySwitchPlayer>();
             Health = GetComponent<HealthPlayer>();
             _enemyEvents = FindObjectOfType<EventKeeper>().EnemyEvents;

@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/GettingTypeArrow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/GettingTypeArrow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ScreenTapHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ScreenTapHandler.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RainbowAssets/!Core/Assemblies/RainbowCore.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RainbowAssets/!Core/Assemblies/RainbowCore.dll.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DirectionalArrowControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DirectionalArrowControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoubleTapOnScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DoubleTapOnScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/InteractionWithScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/InteractionWithScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/MotionHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/MotionHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Training/Conditions/ConditionFirstMovePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Training/Conditions/ConditionFirstMovePlayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +28,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/PropertyDrawers/SpriteStateDrawer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -77,6 +96,8 @@
       <option name="presentableId" value="Default" />
       <updated>1640551645926</updated>
       <workItem from="1640551668422" duration="11393000" />
+      <workItem from="1640616765952" duration="599000" />
+      <workItem from="1640633493230" duration="2305000" />
     </task>
     <servers />
   </component>

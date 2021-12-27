@@ -3,7 +3,8 @@ using UnityEngine.EventSystems;
 
 namespace Interaction
 {
-    [RequireComponent(typeof(DoubleTapOnScreen), typeof(DirectionalArrowControl))]
+    [RequireComponent(typeof(DoubleTapOnScreen), typeof(DirectionalArrowControl), typeof(ScreenTapHandler))]
+    [RequireComponent(typeof(PlayerControl))]
     public class InteractionWithScreen : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
     {
         public Vector2 PositionStart => _positionStart;
@@ -11,57 +12,35 @@ namespace Interaction
 
         private Vector2 _positionStart;
         private Vector2 _positionEnd;
-        
-        // private InteractionWithScreenEvents _screenEvents;
 
-        // private TouchPositions _touchPositions;
+        private ScreenTapHandler _tapHandler;
         private DoubleTapOnScreen _doubleTap;
-        // private DirectionalArrowControl _arrowControl;
 
 
         public void OnPointerDown(PointerEventData eventData)
         {
             _positionStart = eventData.position;
             _positionEnd = eventData.position;
+            _doubleTap.Click();
         }
 
         public void OnDrag(PointerEventData eventData)
         {
             _positionEnd = eventData.position;
-            _doubleTap.Click();
-            // _doubleTap.Click();
-            // var doubleClick = _doubleTap.IsDoubleClickComplete;
-            // if (doubleClick)
-            // {
-            //     // _eventMovingToAnotherObject.Glow.Invoke(1);
-            // }
-            //
-            // SelectArrow(doubleClick);
-            // RotationDirectionsMovement();
+            var doubleClick = _doubleTap.IsDoubleClickNow;
+            _tapHandler.OnDrag(doubleClick, _positionStart, _positionEnd);
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            // _firstMovement = true;
-            // _oneClick = false;
-            // var doubleClick = _doubleTap.GetStateDoubleClickAndReset();
-            // if (doubleClick)
-            // {
-            //     _eventMovingToAnotherObject.Glow.Invoke(0);
-            //     ChangeBody();
-            // }
-            // else
-            // {
-            //     MoveObjects();
-            // }
-            //
-            // _selectedPlayer.Player.InteractionArrow.Remove();
+            var doubleClick = _doubleTap.GetStateDoubleClickAndReset();
+            _tapHandler.OnUp(doubleClick, _positionStart, _positionEnd);
         }
 
         private void Start()
         {
             _doubleTap = GetComponent<DoubleTapOnScreen>();
-            // _screenEvents = new InteractionWithScreenEvents();
+            _tapHandler = GetComponent<ScreenTapHandler>();
         }
     }
 }
