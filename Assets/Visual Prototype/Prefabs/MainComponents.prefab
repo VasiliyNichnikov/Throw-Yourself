@@ -1594,6 +1594,12 @@ MonoBehaviour:
   _maxDistance: 8
   _playerSelected: {fileID: 2100000, guid: 7452fe09674ee2d43840f6bffce1c634, type: 2}
   _playerController: {fileID: 2100000, guid: 032660dec0fafc7439f373dcd77d4e3e, type: 2}
+  _layerPlayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  _layerControlled:
+    serializedVersion: 2
+    m_Bits: 131072
 --- !u!1 &7029130124165470220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,6 +2066,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7c328adf1348289bd865be83dfd726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &7029130124653298534
 MonoBehaviour:
   m_ObjectHideFlags: 0

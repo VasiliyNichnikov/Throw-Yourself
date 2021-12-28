@@ -4771,7 +4771,7 @@ GameObject:
   - component: {fileID: 5328748058341489425}
   - component: {fileID: 8504656476528786675}
   m_Layer: 0
-  m_Name: Player Key Taker
+  m_Name: Key Taker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5544,7 +5544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7885004218625067931}
   m_Layer: 0
-  m_Name: Player Particles
+  m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5583,7 +5583,7 @@ GameObject:
   - component: {fileID: 7779724197057533512}
   - component: {fileID: 6332653399808945660}
   m_Layer: 0
-  m_Name: Player Death
+  m_Name: Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5976,7 +5976,7 @@ GameObject:
   - component: {fileID: 3772040819640647416}
   - component: {fileID: 7764962444399006508}
   m_Layer: 10
-  m_Name: Player Damage FeedBack
+  m_Name: Damage FeedBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6564,7 +6564,7 @@ GameObject:
   - component: {fileID: 7185114050814814695}
   - component: {fileID: 63037736720801675}
   m_Layer: 0
-  m_Name: Player Throwing FeedBack
+  m_Name: Throwing FeedBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6954,7 +6954,7 @@ GameObject:
   - component: {fileID: 3092542756601229365}
   - component: {fileID: 7562924719414521820}
   m_Layer: 0
-  m_Name: Player Death Particles
+  m_Name: Death Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11809,7 +11809,7 @@ GameObject:
   - component: {fileID: 8823544156664701497}
   - component: {fileID: 2080964252128196449}
   m_Layer: 0
-  m_Name: Player Dammage Particles
+  m_Name: Damage Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -62,7 +62,6 @@ namespace MovingToAnotherObject
                 _thisTransform == _selectedPlayer.Main.transform)
             {
                 Gizmos.color = Color.red;
-                Vector3 thisPosition = _thisTransform.position;
                 Vector3 center = _renderer.bounds.center;
                 Vector3 origin = new Vector3(center.x, _heightRay, center.z);
 

@@ -1,8 +1,6 @@
 ﻿using System;
 using DirectionMovement;
-using Enemy;
 using Events;
-using LifeSlider;
 using MovingToAnotherObject;
 using PhysicsObjects;
 using UnityEngine;
