@@ -1,5 +1,6 @@
 ﻿using Enemy.Dead;
 using Enemy.FieldOfView;
+using Events;
 using Key;
 using Particulars;
 using Player;
@@ -15,7 +16,7 @@ namespace Enemy
     {
         public float SpeedRotation => _speedRotation;
         public float DistanceFromSelectedPositionToEnemy => Vector3.Distance(ThisTransform.position, _startPoint);
-        public float DistanceFromPlayerToEnemy => Vector3.Distance(ThisTransform.position, Player.position);
+        public float DistanceFromPlayerToEnemy => Vector3.Distance(ThisTransform.position, TransformPlayer.position);
         public float MinWalkingDistance => _minWalkingDistance;
         public float MinAttackDistance => _minAttackDistance;
         public float MinDistanceToSelectedPoint => _minDistanceToSelectedPoint;
@@ -23,16 +24,21 @@ namespace Enemy
         public float DamagePlayerWhenAttacking => _damagePlayerWhenAttacking;
         public Timer Timer => _timer;
         public Vector3 StartPoint => _startPoint;
-        public bool PlayerInMotion => _player.Player.PlayerInMotion;
+        public bool PlayerInMotion => _selectedPlayer.Main.PlayerInMotion;
         [HideInInspector] public bool PlayerIsNoticed;
         public bool KeyIsEnemy => _keyIsEnemy;
         public CreatorKey CreatorKey => _creatorKey;
-        public Transform Player => _player.Player.transform;
+
+        public Transform TransformPlayer =>
+            _selectedPlayer.Main.GetComponent<Transform>(); // TODO слишком частые запросы к GetComponent
+
+        public SelectedPlayer SelectedPlayer => _selectedPlayer;
         public CreatorPlayerSound CreatorPlayerSound => _creatorPlayerSound;
         public AudioClip AttackPlayer => _attackPlayer;
         public Animator Animator => _animator;
         public NavMeshAgent Agent => _agent;
         public Collider Collider => _collider;
+        public EventKeeper EventKeeper => _eventKeeper;
         public ManagementStateRagdoll StateRagdoll => _stateRagdoll;
         public DestroyerOfVisualizationComponents DestroyerOfVisualization => _destroyerOfVisualization;
         public CreatorOfParticulars CreatorOfParticulars => _creatorOfParticulars;
@@ -65,7 +71,7 @@ namespace Enemy
         [SerializeField, Range(0, 100), Tooltip("Кол-во урона за одну атаку")]
         private float _damagePlayerWhenAttacking;
 
-        private SelectedPlayer _player;
+        private SelectedPlayer _selectedPlayer;
         private Vector3 _startPoint;
         private NavMeshAgent _agent;
         private Animator _animator;
@@ -76,6 +82,7 @@ namespace Enemy
         private CreatorOfParticulars _creatorOfParticulars;
         private CreatorKey _creatorKey;
         private CreatorPlayerSound _creatorPlayerSound;
+        private EventKeeper _eventKeeper;
         [SerializeField] private AudioClip _attackPlayer;
         [SerializeField] private RotationOfFieldOfView _rotationOfFieldOfView;
         [SerializeField] private AnalyzerOfPlayerGettingIntoZone _analyzerOfPlayerGettingIntoZone;
@@ -91,10 +98,11 @@ namespace Enemy
             _timer = new Timer();
             _stateRagdoll = GetComponent<ManagementStateRagdoll>();
             _destroyerOfVisualization = GetComponent<DestroyerOfVisualizationComponents>();
-            _player = FindObjectOfType<SelectedPlayer>();
+            _selectedPlayer = FindObjectOfType<SelectedPlayer>();
             _creatorOfParticulars = FindObjectOfType<CreatorOfParticulars>();
             _creatorKey = FindObjectOfType<CreatorKey>();
             _creatorPlayerSound = FindObjectOfType<CreatorPlayerSound>();
+            _eventKeeper = FindObjectOfType<EventKeeper>();
             _fieldOfView.ViewDistance = _minWalkingDistance;
         }
     }

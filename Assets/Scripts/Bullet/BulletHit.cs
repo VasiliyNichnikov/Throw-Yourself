@@ -1,4 +1,6 @@
-﻿using LifeSlider;
+﻿using System;
+using LifeSlider;
+using Player;
 using UnityEngine;
 
 namespace Bullet
@@ -14,20 +16,22 @@ namespace Bullet
                     _damage = value;
             }
         }
-        
-        private int _layerPlayer; // TODO нужно чтобы слой можно было выбрать в unity
+
+        [SerializeField] private LayerMask _layerPlayer;
         private float _damage;
 
         private void Start()
         {
             _layerPlayer = LayerMask.NameToLayer("Player");
         }
-        
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.layer == _layerPlayer)
+            if (other.gameObject.layer == MyUtils.GetLayerNumberByMask(_layerPlayer))
             {
-                EventsLifeSlider.LauncherEventTakingDamage(_damage);
+                ParentPlayer player = other.GetComponent<ParentPlayer>();
+                if (player == null) throw new Exception("The object does not have a main player script");
+                player.Health.DealDamage(_damage);
             }
 
             Destroy(this.gameObject);

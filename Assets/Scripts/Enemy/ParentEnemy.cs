@@ -75,7 +75,7 @@ namespace Enemy
 
         public void ChangeRotationWithLerp()
         {
-            Quaternion newRotation = MyUtils.GetLookRotation(ThisTransform.position, _basicParameters.Player.position);
+            Quaternion newRotation = MyUtils.GetLookRotation(ThisTransform.position, _basicParameters.TransformPlayer.position);
             ThisTransform.rotation = Quaternion.Lerp(ThisTransform.rotation, newRotation,
                 Time.deltaTime * _basicParameters.SpeedRotation);
         }
@@ -116,19 +116,9 @@ namespace Enemy
             ThisTransform = transform;
             _states = GetComponent<IStatesEnemy>();
             _basicParameters = GetComponent<BasicParametersEnemy>();
-
             _basicParameters.Init();
+            _basicParameters.EventKeeper.EnemyEvents.ResetIsNoticesPlayer.AddListener(ResetPlayerIsNoticed);
             InitStates();
-        }
-
-        private void OnEnable()
-        {
-            EventEnemy.EventResetParameters += ResetPlayerIsNoticed;
-        }
-
-        private void OnDisable()
-        {
-            EventEnemy.EventResetParameters -= ResetPlayerIsNoticed;
         }
 
         private void InitStates()

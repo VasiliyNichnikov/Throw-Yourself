@@ -22,7 +22,7 @@ namespace Player
         }
         
 
-        public void Damage(float qty)
+        public void DealDamage(float qty)
         {
             _nowHp -= qty;
             _lifeSlider.ActivateLifeSlider(_thisTransform, _nowHp, qty, true);

@@ -1,12 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Player
 {
     public class SelectedPlayer : MonoBehaviour
     {
-        public ParentPlayer Player
+        public ParentPlayer Main
         {
-            get => _player;
+            get
+            {
+                if (_player == null) throw new Exception("Player not found");
+                return _player;
+            }
             set
             {
                 if (value != null) _player = value;
@@ -15,8 +20,8 @@ namespace Player
 
         public float RadiusRay => _radiusRay;
         public float MaxDistance => _maxDistance;
-        public int LayerPlayer => _layerPlayer;
-        public int LayerController => _layerControlled;
+        public int LayerPlayer => MyUtils.GetLayerNumberByMask(_layerPlayer.value);
+        public int LayerController => MyUtils.GetLayerNumberByMask(_layerControlled.value);
         public Material PlayerSelected => _playerSelected;
         public Material PlayerController => _playerController;
 
@@ -25,19 +30,17 @@ namespace Player
         [SerializeField, Range(0, 50)] private float _maxDistance;
         [SerializeField] private Material _playerSelected;
         [SerializeField] private Material _playerController;
-        private int _layerPlayer;
-        private int _layerControlled;
+        [SerializeField] private LayerMask _layerPlayer;
+        [SerializeField] private LayerMask _layerControlled;
 
         private void Start()
         {
-            _layerPlayer = LayerMask.NameToLayer("Player"); // TODO Сделать выбор слоя в unity или создать общий скрипт 
-            _layerControlled = LayerMask.NameToLayer("Controlled"); // TODO Сделать выбор слоя в unity или создать общий скрипт 
-            _player.Connection(_layerPlayer, _playerSelected);
+            _player.Connection(MyUtils.GetLayerNumberByMask(_layerPlayer.value), _playerSelected);
         }
 
         public void Disconnection()
         {
-            _player.Disconnection(_layerControlled, _playerController);
+            _player.Disconnection(MyUtils.GetLayerNumberByMask(_layerControlled.value), _playerController);
         }
     }
 }
