@@ -1,14 +1,15 @@
 ﻿using System;
 using Map;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 namespace MainCamera
 {
     public class CalculatorCameraPosition : MonoBehaviour
     {
+        [SerializeField] private LayerMask _layerMask;
         private MapBoundaries _boundaries;
         private Transform _thisTransform;
-        private const int LayerMask = 1 << 8; // TODO сделать возможность выбора слоя из Unity
         private Vector3 _hitPoint;
 
         public Vector3 GetMovementPosition(Vector3 targetPosition)
@@ -33,7 +34,7 @@ namespace MainCamera
                 Color.yellow);
 
             if (Physics.Raycast(_thisTransform.position, _thisTransform.TransformDirection(Vector3.forward),
-                    out var hit, 100.0f, LayerMask) == false) return;
+                    out var hit, 100.0f, _layerMask.value) == false) return;
 
             _hitPoint = hit.point;
         }

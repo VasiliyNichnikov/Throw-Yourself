@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public static class MyUtils
 {
@@ -38,5 +39,13 @@ public static class MyUtils
         Vector2 min = new Vector2(viewportPoint.x - difference.x / 2, viewportPoint.y - difference.y / 2);
         Vector2 max = new Vector2(viewportPoint.x + difference.x / 2, viewportPoint.y + difference.y / 2);
         return (min, max);
+    }
+
+    public static int GetLayerNumberByMask(int value)
+    {
+        if (value == 0)
+            return 1;
+        float result = Mathf.Log(value, 2);
+        return Convert.ToInt32(result);
     }
 }

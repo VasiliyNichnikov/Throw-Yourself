@@ -1,26 +1,17 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
+
 
 namespace Interaction
 {
-    public class DoubleTapOnScreen : MonoBehaviour, IPointerDownHandler
+    public class DoubleTapOnScreen : MonoBehaviour
     {
-        public bool IsDoubleClickComplete => _isDoubleClickComplete;
+        public bool IsDoubleClickNow => _isDoubleClickNow;
         [SerializeField, Range(0, 1)] private float _delay;
-        [SerializeField, Range(0, 1)] private float _minDistance;
-        private Camera _camera;
         private Timer _timer;
         private float _countClick;
-        private bool _isDoubleClickComplete;
+        private bool _isDoubleClickNow;
 
-        private void Start()
-        {
-            _camera = Camera.main;
-            _timer = new Timer();
-        }
-
-        public void OnPointerDown(PointerEventData eventData)
+        public void Click()
         {
             if (_timer.IsLaunched == false)
             {
@@ -31,16 +22,19 @@ namespace Interaction
             _countClick++;
 
             if ((_countClick >= 2) == false) return;
-            _isDoubleClickComplete = true;
-
-                
+            _isDoubleClickNow = true;
         }
 
         public bool GetStateDoubleClickAndReset()
         {
-            if (_isDoubleClickComplete == false) return false;
-            _isDoubleClickComplete = false;
+            if (_isDoubleClickNow == false) return false;
+            _isDoubleClickNow = false;
             return true;
+        }
+
+        private void Start()
+        {
+            _timer = new Timer();
         }
     }
 }

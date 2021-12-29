@@ -19,7 +19,7 @@ namespace MainCamera
         }
         private void Update()
         {
-            var positionEnd = _calculatorPosition.GetMovementPosition(_player.Player.transform.position);
+            var positionEnd = _calculatorPosition.GetMovementPosition(_player.Main.transform.position);
             _thisTransform.position = Vector3.Lerp(_thisTransform.position, positionEnd, _speed * Time.deltaTime);
         }
     }

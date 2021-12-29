@@ -15,7 +15,7 @@ namespace Player
         private CreatorPlayerSound _creatorPlayerSound;
         private MovementObject _movement;
         private CreatorOfParticulars _creatorOfParticulars;
-        private int _layerCustom;
+        private int _layerCustom; // TODO сделать выбор слоя через Unity
         private Timer _timer;
 
         private void Start()

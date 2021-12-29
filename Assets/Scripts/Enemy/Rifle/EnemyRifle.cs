@@ -14,7 +14,7 @@ namespace Enemy.Rifle
             if (_parameters.Timer.IsLaunched == false)
             {
                 Vector3 thisPosition = ThisTransform.position;
-                Vector3 playerPosition = _parameters.Player.position;
+                Vector3 playerPosition = _parameters.TransformPlayer.position;
                 
                 Vector3 direction = playerPosition  - new Vector3(thisPosition.x, _parameters.PositionCreateBullet.y, thisPosition.z);
                 float angleY = Vector3.Angle(direction, Vector3.right);
@@ -34,7 +34,7 @@ namespace Enemy.Rifle
             switch (typeObj)
             {
                 case TypeMovementObject.Player:
-                    target = _parameters.Player.position;
+                    target = _parameters.TransformPlayer.position;
                     stoppingDistance = _parameters.MinStoppingDistance;
                     break;
                 case TypeMovementObject.SelectedPoint:
