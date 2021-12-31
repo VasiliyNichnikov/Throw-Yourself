@@ -36,6 +36,7 @@ namespace Interaction
             {
                 MovePlayer(positionStart, positionEnd);
             }
+
             _arrowControl.Remove();
         }
 

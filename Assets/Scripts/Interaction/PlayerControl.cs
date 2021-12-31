@@ -16,7 +16,7 @@ namespace Interaction
         {
             _player.Main.BodySwitch.MoveToNew();
         }
-        
+
         private void Start()
         {
             _player = FindObjectOfType<SelectedPlayer>();
