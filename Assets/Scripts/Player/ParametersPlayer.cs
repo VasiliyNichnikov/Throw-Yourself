@@ -14,7 +14,7 @@ namespace Player
         public AudioClip HitEnemy => _hitEnemy;
         public AudioClip HitWall => _hitWall;
 
-        [SerializeField, Header("Название параметра")]
+        [SerializeField, Header("Название параметра игрока")]
         private string _name;
 
         [SerializeField, Header("Высота на которой будет находиться линия после создания"), Range(0, 10)]

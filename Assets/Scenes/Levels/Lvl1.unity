@@ -6824,6 +6824,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2303965879517134158, guid: 7c711957769ccbe49b8e2c8b565f42a3,
         type: 3}
+      propertyPath: settings
+      value: 
+      objectReference: {fileID: 11400000, guid: e2f927f771c66dc46b94d76bcd019761,
+        type: 2}
+    - target: {fileID: 2303965879517134158, guid: 7c711957769ccbe49b8e2c8b565f42a3,
+        type: 3}
       propertyPath: _keyIsEnemy
       value: 1
       objectReference: {fileID: 0}

@@ -5,26 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParametersPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParametersPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/InteractionArrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/InteractionArrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DirectionalArrowControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DirectionalArrowControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ScreenTapHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ScreenTapHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovingToAnotherObject/BodySwitchPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovingToAnotherObject/BodySwitchPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ParametersParentEnemyEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ParametersParentEnemyEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicParametersEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicParametersEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParentEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParentEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/EnemyRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/EnemyRifle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PhysicsObjects/MovementObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PhysicsObjects/MovementObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CrashingIntoEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CrashingIntoEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HealthPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HealthPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParametersPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParametersPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Training/Conditions/ConditionRelocationToAnotherObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Training/Conditions/ConditionRelocationToAnotherObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/MainComponents.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/MainComponents.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Chair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Chair.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/UI/UI Scripts/UIscript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/UI/UI Scripts/UIscript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +98,8 @@
       <workItem from="1640633493230" duration="2500000" />
       <workItem from="1640683685978" duration="3017000" />
       <workItem from="1640772982111" duration="720000" />
-      <workItem from="1640904408750" duration="6709000" />
+      <workItem from="1640904408750" duration="7338000" />
+      <workItem from="1641138484609" duration="2236000" />
     </task>
     <servers />
   </component>

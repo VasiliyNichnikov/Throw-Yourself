@@ -16,8 +16,7 @@ namespace PhysicsObjects
                     _speed = value;
             }
         }
-
-        // [SerializeField, Header("Сила удара"), Range(0, 100)] private float _speed;
+        
         private float _speed;
         private bool _playerInMotion;
         private IEnumerator _runningCheck;
