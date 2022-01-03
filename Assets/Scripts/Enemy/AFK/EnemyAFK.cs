@@ -1,9 +1,9 @@
 ﻿using System;
-using LifeSlider;
 using UnityEngine;
 
 namespace Enemy.AFK
 {
+    
     public class EnemyAFK : ParentEnemy
     {
         private StatesEnemyAFK _states;
@@ -36,7 +36,7 @@ namespace Enemy.AFK
             {
                 if (_mainParameters.DistanceFromPlayerToEnemy <= _mainParameters.Settings.MaxAttackDistance)
                 {
-                    BasicParameters.CreatorPlayerSound.Create(BasicParameters.AttackPlayer);
+                    BasicParameters.CreatorPlayerSound.Create(BasicParameters.Settings.AttackSound);
                     BasicParameters.SelectedPlayer.Main.Health.DealDamage(_mainParameters.Settings.DamageWhenAttacking);
                 }
 

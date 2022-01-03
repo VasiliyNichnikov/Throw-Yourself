@@ -6426,6 +6426,12 @@ MonoBehaviour:
       m_RotationOrder: 4
   RemapZero: {x: 0, y: 0}
   RemapOne: {x: 1, y: 1}
+--- !u!1 &1794555124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8363850521518047520, guid: 7c711957769ccbe49b8e2c8b565f42a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1972859778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1799059449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6828,6 +6834,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e2f927f771c66dc46b94d76bcd019761,
         type: 2}
+    - target: {fileID: 2303965879517134158, guid: 7c711957769ccbe49b8e2c8b565f42a3,
+        type: 3}
+      propertyPath: _drawArea
+      value: 
+      objectReference: {fileID: 1794555124}
     - target: {fileID: 2303965879517134158, guid: 7c711957769ccbe49b8e2c8b565f42a3,
         type: 3}
       propertyPath: _keyIsEnemy
@@ -10037,7 +10048,7 @@ PrefabInstance:
     - target: {fileID: 7029130124574613455, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.999756
+      value: -7.9995117
       objectReference: {fileID: 0}
     - target: {fileID: 7029130124653298541, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}

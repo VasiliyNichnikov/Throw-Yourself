@@ -13,6 +13,7 @@ namespace Enemy
         public float DelayAttack => _delayAttack;
         public float DamageWhenAttacking => _damageWhenAttacking;
         public bool KeyIsEnemy => _keyIsEnemy;
+        public AudioClip AttackSound => _attackSound;
         public float MinStoppingDistance => _minStoppingDistance;
 
         [SerializeField, Header("Название параметра врага")]
@@ -20,7 +21,7 @@ namespace Enemy
 
         [SerializeField, Header("Находится ли ключ в этом враге")]
         private bool _keyIsEnemy;
-        
+
         [SerializeField, Range(1, 20), Header("Скорость вращения")]
         private float _speedRotation;
 
@@ -30,11 +31,14 @@ namespace Enemy
         [SerializeField, Range(0, 100), Tooltip("Враг будет идти пока расстояние не станет меньше")]
         private float _minWalkingDistance;
 
-        [SerializeField, Range(0, 100), Tooltip("Враг начнет аттаковать, когда расстояние станет меньше")]
-        private float _maxAttackDistance;
-
         [SerializeField, Range(0, 10), Tooltip("Враг будет идти до выбранной точки пока расстояние не станет меньше")]
         private float _minSelectedPointDistance;
+
+        [SerializeField, Header("Звук при атаке")]
+        private AudioClip _attackSound;
+
+        [SerializeField, Range(0, 100), Tooltip("Враг начнет аттаковать, когда расстояние станет меньше")]
+        private float _maxAttackDistance;
 
         [SerializeField, Range(0, 10), Header("Задержка между атаками")]
         private float _delayAttack;

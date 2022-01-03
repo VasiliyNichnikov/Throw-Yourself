@@ -24,7 +24,7 @@ namespace Enemy.Rifle
                     _mainParameters.Settings.DamageWhenAttacking);
                 BasicParameters.CreatorOfParticulars.Create(_mainParameters.ParticleShooting,
                     _mainParameters.PositionCreateBullet, Quaternion.Euler(0, angleY, 0));
-                BasicParameters.CreatorPlayerSound.Create(BasicParameters.AttackPlayer, 0.1f);
+                BasicParameters.CreatorPlayerSound.Create(BasicParameters.Settings.AttackSound, 0.1f);
                 StartCoroutine(_mainParameters.Timer.ToRun(_mainParameters.Settings.DelayAttack));
             }
         }
@@ -43,6 +43,7 @@ namespace Enemy.Rifle
                 case TypeMovementObject.SelectedPoint:
                     target = _mainParameters.SelectedPoint;
                     break;
+                case TypeMovementObject.StartPosition:
                 default:
                     throw new ArgumentOutOfRangeException(nameof(typeObj), typeObj, null);
             }

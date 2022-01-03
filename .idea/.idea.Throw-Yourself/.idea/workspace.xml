@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ParametersParentEnemyEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ParametersParentEnemyEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parameters/StickmanAFK.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parameters/StickmanAFK.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicParametersEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicParametersEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParentEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParentEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/EnemyRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/EnemyRifle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PhysicsObjects/MovementObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PhysicsObjects/MovementObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParametersPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParametersPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +95,8 @@
       <workItem from="1640683685978" duration="3017000" />
       <workItem from="1640772982111" duration="720000" />
       <workItem from="1640904408750" duration="7338000" />
-      <workItem from="1641138484609" duration="2236000" />
+      <workItem from="1641138484609" duration="2558000" />
+      <workItem from="1641147361968" duration="1602000" />
     </task>
     <servers />
   </component>
