@@ -4,8 +4,8 @@ namespace DirectionMovement
 {
     public class InteractionArrow : MonoBehaviour
     {
-        private CreatorArrow _creatorArrow;
         private Transform _thisTransform;
+        private CreatorArrow _creatorArrow;
         private MeshRenderer _renderer;
         private Transform _parentArrow;
 
@@ -14,32 +14,35 @@ namespace DirectionMovement
 
         public void SetVisible(bool state)
         {
-            if (_parentArrow == null) return; // TODO избавиться от вечной проверки
+            if (IsParentArrowCreated() == false) return;
             _visibility.ToChange(state);
         }
 
         public void Stretch(Vector3 direction)
         {
-            if (_parentArrow == null) return; // TODO избавиться от вечной проверки
+            if (IsParentArrowCreated() == false) return;
             _stretching.Stretch(direction);
         }
-        
+
         public void ChangePosition()
         {
-            if (_parentArrow == null) return; // TODO избавиться от вечной проверки
+            if (IsParentArrowCreated() == false) return;
             Vector3 center = _renderer.bounds.center;
             _parentArrow.position = new Vector3(center.x, _creatorArrow.Height, center.z);
         }
 
         public void ChangeAngleZ(Vector3 direction)
         {
-            if (_parentArrow == null) return; // TODO избавиться от вечной проверки
+            if (IsParentArrowCreated() == false) return;
             float newAngleY = MyUtils.GetAngleBetweenDirectionAndForward(direction);
             _parentArrow.rotation = Quaternion.Euler(0, newAngleY, 0);
         }
 
         public void Install(TypesArrow type)
         {
+            if (IsParentArrowCreated())
+                Remove();
+            
             var arrows = _creatorArrow.Create(type, _thisTransform.position, _thisTransform.rotation);
             _parentArrow = arrows.parent;
             _visibility = arrows.created.GetComponent<ChangerVisibility>();
@@ -49,10 +52,15 @@ namespace DirectionMovement
 
         public void Remove()
         {
-            if (_parentArrow == null) return; // TODO избавиться от вечной проверки
+            if (IsParentArrowCreated() == false) return;
             Destroy(_parentArrow.gameObject);
         }
-        
+
+        private bool IsParentArrowCreated()
+        {
+            return _parentArrow != null;
+        }
+
         private void Start()
         {
             _thisTransform = transform;

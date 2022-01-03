@@ -16,6 +16,9 @@ namespace Player
         public MovementObject Engine { get; private set; }
         public HealthPlayer Health { get; private set; }
 
+        [SerializeField, Header("Параметры игрока")] private ParametersPlayer _parameters;
+        private CrashingIntoEnemy _crashingIntoEnemy;
+
         public bool PlayerInMotion
         {
             get
@@ -48,11 +51,26 @@ namespace Player
         private void Start()
         {
             InteractionArrow = GetComponent<InteractionArrow>();
-            _renderer = GetComponent<MeshRenderer>();
             Engine = GetComponent<MovementObject>();
             BodySwitch = GetComponent<BodySwitchPlayer>();
             Health = GetComponent<HealthPlayer>();
+            _crashingIntoEnemy = GetComponent<CrashingIntoEnemy>();
+
+            _renderer = GetComponent<MeshRenderer>();
             _enemyEvents = FindObjectOfType<EventKeeper>().EnemyEvents;
+            InitParameters();
+        }
+
+        private void InitParameters()
+        {
+            if (_parameters == null)
+                throw new Exception("Error, there is no parameter!");
+            Engine.Speed = _parameters.ForceOfPush;
+            BodySwitch.HeightRay = _parameters.HeightRay;
+            _crashingIntoEnemy.MinRelativeVelocityForKilling = _parameters.MinRelativeVelocityForKilling;
+            _crashingIntoEnemy.ActivatorParticle = _parameters.ActivatorParticle;
+            _crashingIntoEnemy.HitEnemy = _parameters.HitEnemy;
+            _crashingIntoEnemy.HitWall = _parameters.HitWall;
         }
     }
 }

@@ -6,8 +6,8 @@ namespace Player
 {
     public class HealthPlayer : MonoBehaviour
     {
-        [SerializeField, Header("Максимальное кол-во здоровья"), Range(0, 100)]
-        private float _maxHp;
+        // [SerializeField, Header("Максимальное кол-во здоровья"), Range(0, 100)]
+        // private float _maxHp;
         private float _nowHp;
         private TransitionBetweenLevels _transitionBetween;
         private Transform _thisTransform;
@@ -15,12 +15,12 @@ namespace Player
 
         private void Start()
         {
-            _nowHp = _maxHp;
+            _nowHp = 100f;
             _thisTransform = transform;
             _transitionBetween = FindObjectOfType<TransitionBetweenLevels>();
             _lifeSlider = FindObjectOfType<CreatorLifeSlider>();
         }
-        
+
 
         public void DealDamage(float qty)
         {
