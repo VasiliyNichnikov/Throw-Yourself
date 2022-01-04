@@ -55,7 +55,7 @@ namespace Enemy
 
         public virtual bool IsGoToAttack()
         {
-            return _basicParameters.DistanceFromPlayerToEnemy <= _basicParameters.MinAttackDistance &&
+            return _basicParameters.DistanceFromPlayerToEnemy <= _basicParameters.Settings.MaxAttackDistance &&
                    _basicParameters.AnalyzerOfPlayerGettingIntoZone.InArea &&
                    _basicParameters.PlayerIsNoticed;
         }
@@ -69,15 +69,16 @@ namespace Enemy
         public virtual bool IsGoToBehindPlayerFromAttack()
         {
             return _basicParameters.AnalyzerOfPlayerGettingIntoZone.InArea &&
-                   _basicParameters.DistanceFromPlayerToEnemy > _basicParameters.MinAttackDistance &&
+                   _basicParameters.DistanceFromPlayerToEnemy > _basicParameters.Settings.MaxAttackDistance &&
                    _basicParameters.PlayerIsNoticed;
         }
 
         public void ChangeRotationWithLerp()
         {
-            Quaternion newRotation = MyUtils.GetLookRotation(ThisTransform.position, _basicParameters.TransformPlayer.position);
+            Quaternion newRotation =
+                MyUtils.GetLookRotation(ThisTransform.position, _basicParameters.TransformPlayer.position);
             ThisTransform.rotation = Quaternion.Lerp(ThisTransform.rotation, newRotation,
-                Time.deltaTime * _basicParameters.SpeedRotation);
+                Time.deltaTime * _basicParameters.Settings.SpeedRotation);
         }
 
         public virtual void ChangeLocalRotationArmatureWithLerp(float angle)
@@ -91,8 +92,8 @@ namespace Enemy
 
         public void Death()
         {
-            if(IsAlive == false) return;
-            
+            if (IsAlive == false) return;
+
             IsAlive = false;
             ChangeConditionAgentStop(true);
             _basicParameters.Animator.enabled = false;
@@ -104,7 +105,7 @@ namespace Enemy
 
         private void CheckingKey()
         {
-            if (BasicParameters.KeyIsEnemy)
+            if (BasicParameters.Settings.KeyIsEnemy)
             {
                 BasicParameters.CreatorKey.Create(ThisTransform.position);
             }

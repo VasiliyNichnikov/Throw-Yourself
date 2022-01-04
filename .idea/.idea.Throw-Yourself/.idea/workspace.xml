@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parameters/StickmanAFK.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parameters/StickmanAFK.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicParametersEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicParametersEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/EnemyRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/EnemyRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +31,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/PropertyDrawers/SpriteStateDrawer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e395ed1557354db1a729173c553a159b118800/60/4587e91e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Tests/Editor/SpritePackageTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/RootCanvasTests.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -43,6 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,6 +93,10 @@
       <workItem from="1640616765952" duration="599000" />
       <workItem from="1640633493230" duration="2500000" />
       <workItem from="1640683685978" duration="3017000" />
+      <workItem from="1640772982111" duration="720000" />
+      <workItem from="1640904408750" duration="7338000" />
+      <workItem from="1641138484609" duration="2558000" />
+      <workItem from="1641147361968" duration="1602000" />
     </task>
     <servers />
   </component>

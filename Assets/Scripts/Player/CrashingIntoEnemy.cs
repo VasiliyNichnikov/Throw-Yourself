@@ -8,13 +8,47 @@ namespace Player
 {
     public class CrashingIntoEnemy : MonoBehaviour
     {
-        [SerializeField, Range(0, 50)] private float _minRelativeVelocityForKilling;
-        [SerializeField] private ActivatorParticle _activatorParticle;
-        [SerializeField] private AudioClip _hitEnemy;
-        [SerializeField] private AudioClip _hitWall;
+        public float MinRelativeVelocityForKilling
+        {
+            set
+            {
+                if (value >= 0) _minRelativeVelocityForKilling = value;
+            }
+        }
+
+        public ActivatorParticle ActivatorParticle
+        {
+            set
+            {
+                if (value != null) _activatorParticle = value;
+            }
+        }
+
+        public AudioClip HitEnemy
+        {
+            set
+            {
+                if (value != null) _hitEnemy = value;
+            }
+        }
+
+        public AudioClip HitWall
+        {
+            set
+            {
+                if (value != null) _hitWall = value;
+            }
+        }
+
+        private float _minRelativeVelocityForKilling;
+        private ActivatorParticle _activatorParticle;
+        private AudioClip _hitEnemy;
+        private AudioClip _hitWall;
+
+        private CreatorOfParticulars _creatorOfParticulars;
         private CreatorPlayerSound _creatorPlayerSound;
         private MovementObject _movement;
-        private CreatorOfParticulars _creatorOfParticulars;
+
         private int _layerCustom; // TODO сделать выбор слоя через Unity
         private Timer _timer;
 
@@ -30,7 +64,7 @@ namespace Player
         private void OnCollisionEnter(Collision collision)
         {
             ParentEnemy enemy = collision.collider.GetComponent<ParentEnemy>();
-            
+
             if (enemy != null && collision.relativeVelocity.magnitude >= _minRelativeVelocityForKilling &&
                 _movement.PlayerInMotion)
             {

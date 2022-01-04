@@ -7,8 +7,18 @@ namespace PhysicsObjects
     public class MovementObject : MonoBehaviour
     {
         public bool PlayerInMotion => _playerInMotion;
-        [SerializeField, Header("Сила удара")] private float _speed;
-        [SerializeField] private bool _playerInMotion;
+
+        public float Speed
+        {
+            set
+            {
+                if (value >= 0)
+                    _speed = value;
+            }
+        }
+        
+        private float _speed;
+        private bool _playerInMotion;
         private IEnumerator _runningCheck;
         private Rigidbody _rb;
 
@@ -21,13 +31,14 @@ namespace PhysicsObjects
             StartCoroutine(_runningCheck);
         }
 
-        public void StopCheckingPlayerMovement(bool stopMotion=false)
+        public void StopCheckingPlayerMovement(bool stopMotion = false)
         {
-            if(_runningCheck != null)
+            if (_runningCheck != null)
                 StopCoroutine(_runningCheck);
-            if(stopMotion)
+            if (stopMotion)
                 _playerInMotion = false;
         }
+
         private void Start()
         {
             _rb = GetComponent<Rigidbody>();
@@ -42,8 +53,8 @@ namespace PhysicsObjects
             {
                 yield return new WaitForFixedUpdate();
             }
+
             _playerInMotion = false;
         }
-        
     }
 }

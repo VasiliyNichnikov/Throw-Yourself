@@ -5,24 +5,27 @@ namespace Enemy.Rifle
 {
     public class EnemyRifle : ParentEnemy
     {
-        private ParametersEnemyRifle _parameters;
+        private ParametersEnemyRifle _mainParameters;
         private TypeMovementObject _typeObject;
 
         public override void Attack()
         {
             base.Attack();
-            if (_parameters.Timer.IsLaunched == false)
+            if (_mainParameters.Timer.IsLaunched == false)
             {
                 Vector3 thisPosition = ThisTransform.position;
-                Vector3 playerPosition = _parameters.TransformPlayer.position;
-                
-                Vector3 direction = playerPosition  - new Vector3(thisPosition.x, _parameters.PositionCreateBullet.y, thisPosition.z);
+                Vector3 playerPosition = _mainParameters.TransformPlayer.position;
+
+                Vector3 direction = playerPosition -
+                                    new Vector3(thisPosition.x, _mainParameters.PositionCreateBullet.y, thisPosition.z);
                 float angleY = Vector3.Angle(direction, Vector3.right);
                 angleY = direction.z < 0 ? angleY : -angleY;
-                _parameters.Gun.Shoot(_parameters.PositionCreateBullet, direction, _parameters.DamagePlayerWhenAttacking);
-                BasicParameters.CreatorOfParticulars.Create(_parameters.ParticleShooting, _parameters.PositionCreateBullet, Quaternion.Euler(0, angleY, 0));
-                BasicParameters.CreatorPlayerSound.Create(BasicParameters.AttackPlayer, 0.1f);
-                StartCoroutine(_parameters.Timer.ToRun(_parameters.DelayAttack));
+                _mainParameters.Gun.Shoot(_mainParameters.PositionCreateBullet, direction,
+                    _mainParameters.Settings.DamageWhenAttacking);
+                BasicParameters.CreatorOfParticulars.Create(_mainParameters.ParticleShooting,
+                    _mainParameters.PositionCreateBullet, Quaternion.Euler(0, angleY, 0));
+                BasicParameters.CreatorPlayerSound.Create(BasicParameters.Settings.AttackSound, 0.1f);
+                StartCoroutine(_mainParameters.Timer.ToRun(_mainParameters.Settings.DelayAttack));
             }
         }
 
@@ -34,41 +37,43 @@ namespace Enemy.Rifle
             switch (typeObj)
             {
                 case TypeMovementObject.Player:
-                    target = _parameters.TransformPlayer.position;
-                    stoppingDistance = _parameters.MinStoppingDistance;
+                    target = _mainParameters.TransformPlayer.position;
+                    stoppingDistance = _mainParameters.Settings.MinStoppingDistance;
                     break;
                 case TypeMovementObject.SelectedPoint:
-                    target = _parameters.SelectedPoint;
+                    target = _mainParameters.SelectedPoint;
                     break;
+                case TypeMovementObject.StartPosition:
                 default:
                     throw new ArgumentOutOfRangeException(nameof(typeObj), typeObj, null);
             }
 
             CheckingTransitionBetweenPoints();
-            _parameters.Agent.stoppingDistance = stoppingDistance;
-            _parameters.Agent.SetDestination(target);
+            _mainParameters.Agent.stoppingDistance = stoppingDistance;
+            _mainParameters.Agent.SetDestination(target);
         }
 
         public override void ChangeLocalRotationArmatureWithLerp(float angleY)
         {
             Quaternion newRotation = Quaternion.Euler(0, angleY, 0);
-            _parameters.Armature.localRotation = Quaternion.Lerp(_parameters.Armature.localRotation, newRotation,
-                Time.deltaTime * _parameters.SpeedRotation);
+            _mainParameters.Armature.localRotation = Quaternion.Lerp(_mainParameters.Armature.localRotation,
+                newRotation,
+                Time.deltaTime * _mainParameters.Settings.SpeedRotation);
         }
 
         public override void Start()
         {
             SettingUpAnimations = new SettingUpAnimationsEnemyRifle(this);
-            _parameters = GetComponent<ParametersEnemyRifle>();
+            _mainParameters = GetComponent<ParametersEnemyRifle>();
             base.Start();
         }
 
         private void CheckingTransitionBetweenPoints()
         {
             if (_typeObject == TypeMovementObject.SelectedPoint
-                && _parameters.DistanceFromSelectedPointToEnemy < _parameters.MinDistanceToSelectedPoint)
+                && _mainParameters.DistanceFromSelectedPointToEnemy < _mainParameters.Settings.MinSelectedPointDistance)
             {
-                _parameters.GoToNextPoint();
+                _mainParameters.GoToNextPoint();
             }
         }
     }

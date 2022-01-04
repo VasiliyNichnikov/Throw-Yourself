@@ -5,14 +5,20 @@ namespace MovingToAnotherObject
 {
     public class BodySwitchPlayer : MonoBehaviour
     {
-        public bool FirstSwitchBody => _firstSwitchBody; // TODO Удалить переменную (Была сделанна для обучения)
+        // [SerializeField, Range(0, 10), Header("Высота на которой будет находится направляющая линия")] private float _heightRay;
+        public float HeightRay
+        {
+            set
+            {
+                if (value >= 0) _heightRay = value;
+            }
+        }
 
-        [SerializeField, Range(0, 10)] private float _heightRay;
+        private float _heightRay;
         private SelectedPlayer _selectedPlayer;
         private Transform _thisTransform;
         private ParentPlayer _newPlayer;
 
-        private bool _firstSwitchBody;
         private MeshRenderer _renderer;
         private Vector3 _hitPoint;
 
@@ -21,6 +27,7 @@ namespace MovingToAnotherObject
         /// сохраняем этого игрока в отдельную переменную
         /// </summary>
         /// <param name="direction">Направление луча</param>
+        /// <param name="heightRay">Высотка на которой находится направляющая линия</param>
         public void BeamThrow(Vector3 direction)
         {
             Vector3 center = _renderer.bounds.center;
@@ -34,15 +41,14 @@ namespace MovingToAnotherObject
                 _newPlayer = newPlayer;
             }
         }
-        
-        
+
+
         /// <summary>
         /// Если новое тело выбрано, меняем тело игрока на новое
         /// </summary>
         public void MoveToNew()
         {
             if (_newPlayer == null) return;
-            _firstSwitchBody = true;
             _selectedPlayer.Main.Disconnection(_selectedPlayer.LayerController, _selectedPlayer.PlayerController);
             _selectedPlayer.Main = _newPlayer;
             _selectedPlayer.Main.Connection(_selectedPlayer.LayerPlayer, _selectedPlayer.PlayerSelected);
