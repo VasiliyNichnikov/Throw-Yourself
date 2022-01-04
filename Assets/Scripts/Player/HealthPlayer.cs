@@ -1,5 +1,6 @@
 ﻿using Level;
 using LifeSlider;
+using Player.FeedBacks;
 using UnityEngine;
 
 namespace Player
@@ -10,10 +11,12 @@ namespace Player
         private TransitionBetweenLevels _transitionBetween;
         private Transform _thisTransform;
         private CreatorLifeSlider _lifeSlider;
+        private ConnectingFeedBacks _feedBacks;
 
         private void Start()
         {
             _nowHp = 100f;
+            _feedBacks = GetComponent<ConnectingFeedBacks>();
             _thisTransform = transform;
             _transitionBetween = FindObjectOfType<TransitionBetweenLevels>();
             _lifeSlider = FindObjectOfType<CreatorLifeSlider>();
@@ -24,9 +27,11 @@ namespace Player
         {
             _nowHp -= qty;
             _lifeSlider.ActivateLifeSlider(_thisTransform, _nowHp, qty, true);
+            _feedBacks.PlayDamagePlayerFeedBack();
             if (_nowHp <= 0)
             {
-                _transitionBetween.Restart();
+                _feedBacks.PlayPlayerDeath();
+                // _transitionBetween.Restart();
             }
         }
 

@@ -22,7 +22,6 @@ namespace Enemy
 
         [Header("Враг в состояние атаки руками по игроку")]
         public bool IsAttack;
-
         public BasicParametersEnemy BasicSettings => _basicSettings;
         public IStatesEnemy States => _states;
         public SettingUpAnimations SettingUpAnimations { get; protected set; }
@@ -35,17 +34,15 @@ namespace Enemy
         protected float DistanceFromPlayerToEnemy =>
             Vector3.Distance(ThisTransform.position, _basicSettings.TransformPlayer.position);
 
-        // public Collider Collider => _collider;
-        // public ManagementStateRagdoll StateRagdoll => _stateRagdoll;
-        // public DestroyerOfVisualizationComponents DestroyerOfVisualization => _destroyerOfVisualization;
         protected Transform ThisTransform;
         [Space] [SerializeField] private GameObject _drawArea;
 
         [SerializeField, Header("Настройки врага")]
         private BasicParametersEnemy _basicSettings;
-        [SerializeField, Header("Вращение поля, которое отвечает за обзор")] 
+
+        [SerializeField, Header("Вращение поля, которое отвечает за обзор")]
         private RotationOfFieldOfView _rotationOfFieldOfView;
-        
+
         private Vector3 _startPoint;
         private NavMeshAgent _agent;
         private Animator _animator;
@@ -55,7 +52,7 @@ namespace Enemy
         private Timer _timer;
         private IStatesEnemy _states;
         private AnalyzerOfPlayerGettingIntoZone _analyzerOfPlayerGettingIntoZone;
-        
+
         private FieldOfViewEnemy _fieldOfView;
         private StateMachineEnemy _stateMachine;
         public abstract void Move(TypeMovementObject typeObj);

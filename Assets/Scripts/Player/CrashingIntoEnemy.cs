@@ -1,6 +1,7 @@
 ﻿using Enemy;
 using Particulars;
 using PhysicsObjects;
+using Player.FeedBacks;
 using Sound;
 using UnityEngine;
 
@@ -42,6 +43,8 @@ namespace Player
 
         private float _minRelativeVelocityForKilling;
         private ActivatorParticle _activatorParticle;
+        private ConnectingFeedBacks _feedBacks;
+        
         private AudioClip _hitEnemy;
         private AudioClip _hitWall;
 
@@ -55,6 +58,7 @@ namespace Player
         private void Start()
         {
             _layerCustom = LayerMask.NameToLayer("Custom");
+            _feedBacks = GetComponent<ConnectingFeedBacks>();
             _movement = GetComponent<MovementObject>();
             _creatorOfParticulars = FindObjectOfType<CreatorOfParticulars>();
             _creatorPlayerSound = FindObjectOfType<CreatorPlayerSound>();
@@ -70,6 +74,7 @@ namespace Player
             {
                 _creatorOfParticulars.Create(_activatorParticle, collision.GetContact(0).point);
                 _creatorPlayerSound.Create(_hitEnemy);
+                _feedBacks.PlayEnemyAttack();
                 enemy.Death();
             }
             else if (collision.gameObject.layer == _layerCustom && _timer.IsLaunched == false)

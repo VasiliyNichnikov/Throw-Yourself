@@ -3,6 +3,7 @@ using DirectionMovement;
 using Events;
 using MovingToAnotherObject;
 using PhysicsObjects;
+using Player.FeedBacks;
 using UnityEngine;
 
 namespace Player
@@ -16,7 +17,9 @@ namespace Player
         public MovementObject Engine { get; private set; }
         public HealthPlayer Health { get; private set; }
 
-        [SerializeField, Header("Параметры игрока")] private ParametersPlayer _parameters;
+        [SerializeField, Header("Параметры игрока")]
+        private ParametersPlayer _parameters;
+
         private CrashingIntoEnemy _crashingIntoEnemy;
 
         public bool PlayerInMotion
