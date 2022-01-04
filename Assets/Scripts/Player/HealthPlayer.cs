@@ -6,8 +6,6 @@ namespace Player
 {
     public class HealthPlayer : MonoBehaviour
     {
-        // [SerializeField, Header("Максимальное кол-во здоровья"), Range(0, 100)]
-        // private float _maxHp;
         private float _nowHp;
         private TransitionBetweenLevels _transitionBetween;
         private Transform _thisTransform;
