@@ -6,11 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Parameters/StickmanAFK.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parameters/StickmanAFK.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ParametersParentEnemyEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ParentEnemyEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ParametersParentEnemyEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ParentEnemyEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parameters/StickmanAFK.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parameters/StickmanAFK.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/ParametersEnemyAFK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/ParametersEnemyAFK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/SettingUpAnimationsEnemyAFK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/SettingUpAnimationsEnemyAFK.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicParametersEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/BasicParametersEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParametersEnemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParentEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParentEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/EnemyRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/EnemyRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/ParametersEnemyRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/ParametersEnemyRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/SettingUpAnimationsEnemyRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/SettingUpAnimationsEnemyRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/ShootingAtPlayerEnemyRifle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Rifle/ShootingAtPlayerEnemyRifle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/StateIdle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/StateIdle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/StateMovementBehindPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/StateMovementBehindPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/StateMovementToSelectedPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/StateMovementToSelectedPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/StateMovementToStartingPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/States/StateMovementToStartingPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/MainComponents.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/MainComponents.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/NpcRifle New.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/NpcRifle New.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanAFK 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanAFK 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanAFK.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanAFK.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanAfk new.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanAfk new.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanRifle 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanRifle 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/NPC/StickmanRifle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +56,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e395ed1557354db1a729173c553a159b118800/60/4587e91e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Tests/Editor/SpritePackageTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/RootCanvasTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/ParentEnemyEditor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -70,10 +93,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14252">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="14252" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -97,6 +120,8 @@
       <workItem from="1640904408750" duration="7338000" />
       <workItem from="1641138484609" duration="2558000" />
       <workItem from="1641147361968" duration="1602000" />
+      <workItem from="1641258875258" duration="106000" />
+      <workItem from="1641296971682" duration="6408000" />
     </task>
     <servers />
   </component>

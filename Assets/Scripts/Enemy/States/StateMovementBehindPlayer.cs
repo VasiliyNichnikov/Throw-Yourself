@@ -9,7 +9,7 @@
         public override void Enter()
         {
             base.Enter();
-            Enemy.BasicParameters.PlayerIsNoticed = true;
+            Enemy.BasicSettings.PlayerIsNoticed = true;
             Enemy.IsMovementBehindPlayer = true;
             Enemy.ChangeConditionAgentStop(false);
             Enemy.SettingUpAnimations.LauncherMovementBehindPlayer();

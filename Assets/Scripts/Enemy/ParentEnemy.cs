@@ -1,7 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using Enemy.Dead;
+using Enemy.FieldOfView;
+using UnityEngine;
+using UnityEngine.AI;
 
 namespace Enemy
 {
+    [RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(ManagementStateRagdoll))]
+    [RequireComponent(typeof(DestroyerOfVisualizationComponents))]
     public abstract class ParentEnemy : MonoBehaviour
     {
         public bool IsAlive { get; private set; }
@@ -17,19 +23,46 @@ namespace Enemy
         [Header("Враг в состояние атаки руками по игроку")]
         public bool IsAttack;
 
-        public BasicParametersEnemy BasicParameters => _basicParameters;
+        public BasicParametersEnemy BasicSettings => _basicSettings;
         public IStatesEnemy States => _states;
         public SettingUpAnimations SettingUpAnimations { get; protected set; }
+        protected Timer Timer => _timer;
+        protected Vector3 StartPoint => _startPoint;
+        public Animator Animator => _animator;
+        protected NavMeshAgent Agent => _agent;
+        protected float DistanceFromSelectedPositionToEnemy => Vector3.Distance(ThisTransform.position, _startPoint);
 
+        protected float DistanceFromPlayerToEnemy =>
+            Vector3.Distance(ThisTransform.position, _basicSettings.TransformPlayer.position);
+
+        // public Collider Collider => _collider;
+        // public ManagementStateRagdoll StateRagdoll => _stateRagdoll;
+        // public DestroyerOfVisualizationComponents DestroyerOfVisualization => _destroyerOfVisualization;
         protected Transform ThisTransform;
+        [Space] [SerializeField] private GameObject _drawArea;
+
+        [SerializeField, Header("Настройки врага")]
+        private BasicParametersEnemy _basicSettings;
+        [SerializeField, Header("Вращение поля, которое отвечает за обзор")] 
+        private RotationOfFieldOfView _rotationOfFieldOfView;
+        
+        private Vector3 _startPoint;
+        private NavMeshAgent _agent;
+        private Animator _animator;
+        private Collider _collider;
+        private ManagementStateRagdoll _stateRagdoll;
+        private DestroyerOfVisualizationComponents _destroyerOfVisualization;
+        private Timer _timer;
         private IStatesEnemy _states;
+        private AnalyzerOfPlayerGettingIntoZone _analyzerOfPlayerGettingIntoZone;
+        
+        private FieldOfViewEnemy _fieldOfView;
         private StateMachineEnemy _stateMachine;
-        private BasicParametersEnemy _basicParameters;
         public abstract void Move(TypeMovementObject typeObj);
 
         public void ChangeConditionAgentStop(bool condition)
         {
-            _basicParameters.Agent.isStopped = condition;
+            _agent.isStopped = condition;
         }
 
         public virtual void Attack()
@@ -43,42 +76,42 @@ namespace Enemy
 
         public virtual bool IsGoToSelectedPointFromMovementBehind()
         {
-            return _basicParameters.AnalyzerOfPlayerGettingIntoZone.InArea == false ||
-                   _basicParameters.PlayerIsNoticed == false;
+            return _analyzerOfPlayerGettingIntoZone.InArea == false ||
+                   _basicSettings.PlayerIsNoticed == false;
         }
 
         public virtual bool IsGoToSelectedPointFromAttack()
         {
-            return _basicParameters.AnalyzerOfPlayerGettingIntoZone.InArea == false ||
-                   _basicParameters.PlayerIsNoticed == false;
+            return _analyzerOfPlayerGettingIntoZone.InArea == false ||
+                   _basicSettings.PlayerIsNoticed == false;
         }
 
         public virtual bool IsGoToAttack()
         {
-            return _basicParameters.DistanceFromPlayerToEnemy <= _basicParameters.Settings.MaxAttackDistance &&
-                   _basicParameters.AnalyzerOfPlayerGettingIntoZone.InArea &&
-                   _basicParameters.PlayerIsNoticed;
+            return DistanceFromPlayerToEnemy <= _basicSettings.MaxAttackDistance &&
+                   _analyzerOfPlayerGettingIntoZone.InArea &&
+                   _basicSettings.PlayerIsNoticed;
         }
 
         public virtual bool IsGoToBehindPlayer()
         {
-            return _basicParameters.AnalyzerOfPlayerGettingIntoZone.InArea &&
-                   _basicParameters.PlayerInMotion;
+            return _analyzerOfPlayerGettingIntoZone.InArea &&
+                   _basicSettings.PlayerInMotion;
         }
 
         public virtual bool IsGoToBehindPlayerFromAttack()
         {
-            return _basicParameters.AnalyzerOfPlayerGettingIntoZone.InArea &&
-                   _basicParameters.DistanceFromPlayerToEnemy > _basicParameters.Settings.MaxAttackDistance &&
-                   _basicParameters.PlayerIsNoticed;
+            return _analyzerOfPlayerGettingIntoZone.InArea &&
+                   DistanceFromPlayerToEnemy > _basicSettings.MaxAttackDistance &&
+                   _basicSettings.PlayerIsNoticed;
         }
 
         public void ChangeRotationWithLerp()
         {
             Quaternion newRotation =
-                MyUtils.GetLookRotation(ThisTransform.position, _basicParameters.TransformPlayer.position);
+                MyUtils.GetLookRotation(ThisTransform.position, _basicSettings.TransformPlayer.position);
             ThisTransform.rotation = Quaternion.Lerp(ThisTransform.rotation, newRotation,
-                Time.deltaTime * _basicParameters.Settings.SpeedRotation);
+                Time.deltaTime * _basicSettings.SpeedRotation);
         }
 
         public virtual void ChangeLocalRotationArmatureWithLerp(float angle)
@@ -87,7 +120,7 @@ namespace Enemy
 
         public void ChangeRotationFieldOfView(bool state)
         {
-            _basicParameters.RotationOfFieldOfView.ChangeRotationState(state);
+            _rotationOfFieldOfView.ChangeRotationState(state);
         }
 
         public void Death()
@@ -96,29 +129,41 @@ namespace Enemy
 
             IsAlive = false;
             ChangeConditionAgentStop(true);
-            _basicParameters.Animator.enabled = false;
+            _animator.enabled = false;
             CheckingKey();
-            Destroy(_basicParameters.Collider);
-            _basicParameters.StateRagdoll.Destruction();
-            _basicParameters.DestroyerOfVisualization.Destruction();
+            Destroy(_collider);
+            _stateRagdoll.Destruction();
+            _destroyerOfVisualization.Destruction();
         }
 
         private void CheckingKey()
         {
-            if (BasicParameters.Settings.KeyIsEnemy)
+            if (BasicSettings.KeyIsEnemy)
             {
-                BasicParameters.CreatorKey.Create(ThisTransform.position);
+                BasicSettings.CreatorKey.Create(ThisTransform.position);
             }
         }
 
         public virtual void Start()
         {
+            if (_drawArea == null)
+                throw new Exception($"There is no component {nameof(GameObject)} (DrawArea)");
+
             IsAlive = true;
             ThisTransform = transform;
+            _startPoint = ThisTransform.position;
+            _agent = GetComponent<NavMeshAgent>();
+            _animator = GetComponent<Animator>();
+            _collider = GetComponent<Collider>();
+            _destroyerOfVisualization = GetComponent<DestroyerOfVisualizationComponents>();
+            _timer = new Timer();
+            _stateRagdoll = GetComponent<ManagementStateRagdoll>();
+            _analyzerOfPlayerGettingIntoZone = _drawArea.GetComponent<AnalyzerOfPlayerGettingIntoZone>();
+            _fieldOfView = _drawArea.GetComponent<FieldOfViewEnemy>();
+            _fieldOfView.ViewDistance = _basicSettings.MinWalkingDistance;
             _states = GetComponent<IStatesEnemy>();
-            _basicParameters = GetComponent<BasicParametersEnemy>();
-            _basicParameters.Init();
-            _basicParameters.EventKeeper.EnemyEvents.ResetIsNoticesPlayer.AddListener(ResetPlayerIsNoticed);
+            _basicSettings.Init();
+            _basicSettings.EventKeeper.EnemyEvents.ResetIsNoticesPlayer.AddListener(ResetPlayerIsNoticed);
             InitStates();
         }
 
@@ -131,7 +176,7 @@ namespace Enemy
 
         private void ResetPlayerIsNoticed()
         {
-            _basicParameters.PlayerIsNoticed = false;
+            _basicSettings.PlayerIsNoticed = false;
         }
 
         private void Update()

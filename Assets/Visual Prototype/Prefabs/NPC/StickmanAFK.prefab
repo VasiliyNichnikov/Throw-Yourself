@@ -1870,11 +1870,10 @@ GameObject:
   - component: {fileID: 5416953748424075232}
   - component: {fileID: 5416953748424075233}
   - component: {fileID: 5416953748424075245}
-  - component: {fileID: 2303965879517134158}
+  - component: {fileID: 9039856072369378163}
   - component: {fileID: 5416953748424075235}
   - component: {fileID: 5416953748424075244}
   - component: {fileID: 5619304085076852671}
-  - component: {fileID: 9039856072369378163}
   m_Layer: 0
   m_Name: StickmanAFK
   m_TagString: Untagged
@@ -1971,7 +1970,7 @@ NavMeshAgent:
   m_BaseOffset: -0.08
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2303965879517134158
+--- !u!114 &9039856072369378163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1980,13 +1979,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5416953748424075247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5adab98a88054085b93b2b33a7cf55bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 11a4d3781a4973e41b2eba6ec5c659f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerIsNoticed: 0
-  settings: {fileID: 11400000, guid: e2f927f771c66dc46b94d76bcd019761, type: 2}
-  _rotationOfFieldOfView: {fileID: 4753271554044797878}
+  IsIdle: 0
+  IsMovementBehindPlayer: 0
+  IsMovementToSelectedPoint: 0
+  IsAttack: 0
   _drawArea: {fileID: 8363850521518047520}
+  _basicSettings: {fileID: 11400000, guid: 2d58ad958a8bf974ea0b6bfcb4763a33, type: 2}
+  _rotationOfFieldOfView: {fileID: 4753271554044797878}
 --- !u!114 &5416953748424075235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,22 +2052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c6c4b95a30d4fcbab7cc522915297ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9039856072369378163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5416953748424075247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11a4d3781a4973e41b2eba6ec5c659f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsIdle: 0
-  IsMovementBehindPlayer: 0
-  IsMovementToSelectedPoint: 0
-  IsAttack: 0
 --- !u!1 &5416953748492752524
 GameObject:
   m_ObjectHideFlags: 0
