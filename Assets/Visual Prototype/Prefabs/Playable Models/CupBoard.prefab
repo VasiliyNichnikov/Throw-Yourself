@@ -142,8 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d34600fc4df9040b65d21b9be73dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 50
-  _playerInMotion: 0
 --- !u!114 &5323681041621176873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,11 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44425234079254e4d878e1ffec93c0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minRelativeVelocityForKilling: 10
-  _activatorParticle: {fileID: 152536513538389812, guid: 40d8b946d5d2f8e4c9143c2521f27f35,
-    type: 3}
-  _hitEnemy: {fileID: 8300000, guid: 7d99a5b934999964ba9a489bcc5e6f16, type: 3}
-  _hitWall: {fileID: 8300000, guid: 26f02cb8af9db1345af45d65bf2f048d, type: 3}
 --- !u!114 &6640159733453097900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1ca82b588c4c98b2fae2f007344963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heightRay: 0
 --- !u!114 &8208648758776143872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d161690bd76a5347b9f41b58b962899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _parameters: {fileID: 11400000, guid: 492a1cd15ebfbd747b7b164dd9608dce, type: 2}
 --- !u!114 &2403145849046811633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284296de7b114ff3a7e9385eee048829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHp: 100
 --- !u!114 &6785103208114892951
 MonoBehaviour:
   m_ObjectHideFlags: 0

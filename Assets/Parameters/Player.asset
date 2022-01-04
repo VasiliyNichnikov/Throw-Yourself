@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5299afde40ed441798f505d99726062b, type: 3}
-  m_Name: Armchair
+  m_Name: Player
   m_EditorClassIdentifier: 
   _name: "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u0434\u043B\u044F
     \u043A\u0440\u0435\u0441\u043B\u0430"

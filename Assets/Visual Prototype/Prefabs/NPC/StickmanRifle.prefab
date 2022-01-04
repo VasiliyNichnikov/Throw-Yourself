@@ -1562,18 +1562,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIsNoticed: 0
-  _keyIsEnemy: 0
-  _speedRotation: 5
-  _minStoppingDistance: 1
-  _minWalkingDistance: 10
-  _minAttackDistance: 5
-  _minDistanceToSelectedPoint: 0.15
-  _delayAttack: 0.5
-  _damagePlayerWhenAttacking: 30
-  _attackPlayer: {fileID: 8300000, guid: 81149cce2af38e749a20c51bf28ff759, type: 3}
+  settings: {fileID: 11400000, guid: e2f927f771c66dc46b94d76bcd019761, type: 2}
   _rotationOfFieldOfView: {fileID: 6672078647042819261}
-  _analyzerOfPlayerGettingIntoZone: {fileID: 6672078646551646892}
-  _fieldOfView: {fileID: 6672078646551646864}
+  _drawArea: {fileID: 6672078646551646895}
   _pointCreateBullet: {fileID: 1975311217988746081}
   _route: {fileID: 6672078646212400635}
   _armature: {fileID: 1883336914300859283}

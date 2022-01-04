@@ -1984,11 +1984,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerIsNoticed: 0
-  settings: {fileID: 0}
-  _attackPlayer: {fileID: 8300000, guid: 39a333ba5b84dff468ca9a8cbeb4662a, type: 3}
+  settings: {fileID: 11400000, guid: e2f927f771c66dc46b94d76bcd019761, type: 2}
   _rotationOfFieldOfView: {fileID: 4753271554044797878}
-  _analyzerOfPlayerGettingIntoZone: {fileID: 2629756563135813534}
-  _fieldOfView: {fileID: 889039972388298074}
+  _drawArea: {fileID: 8363850521518047520}
 --- !u!114 &5416953748424075235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,30 +2638,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a411330062c54e8cac054de4055d70dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2629756563135813534 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8021516847880470644, guid: 8283c88afbd175345b81917cb4d6e8f0,
+--- !u!1 &8363850521518047520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4557289912470132426, guid: 8283c88afbd175345b81917cb4d6e8f0,
     type: 3}
   m_PrefabInstance: {fileID: 5416953748814321642}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b15773276af4bf295432720c1bfef0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &889039972388298074 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5150538658329103024, guid: 8283c88afbd175345b81917cb4d6e8f0,
-    type: 3}
-  m_PrefabInstance: {fileID: 5416953748814321642}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37fe717249ab45a0b6fa0fbeefcf4a76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &554072381796202030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5520453676220375492, guid: 8283c88afbd175345b81917cb4d6e8f0,
