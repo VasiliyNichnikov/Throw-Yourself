@@ -25,11 +25,11 @@ namespace Enemy
         public BasicParametersEnemy BasicSettings => _basicSettings;
         public IStatesEnemy States => _states;
         public SettingUpAnimations SettingUpAnimations { get; protected set; }
-        protected Timer Timer => _timer;
-        protected Vector3 StartPoint => _startPoint;
-        public Animator Animator => _animator;
-        protected NavMeshAgent Agent => _agent;
-        protected float DistanceFromSelectedPositionToEnemy => Vector3.Distance(ThisTransform.position, _startPoint);
+        protected Timer Timer { get; private set; }
+        protected Vector3 StartPoint { get; private set; }
+        public Animator Animator { get; private set; }
+        protected NavMeshAgent Agent { get; private set; }
+        protected float DistanceFromSelectedPositionToEnemy => Vector3.Distance(ThisTransform.position, StartPoint);
 
         protected float DistanceFromPlayerToEnemy =>
             Vector3.Distance(ThisTransform.position, _basicSettings.TransformPlayer.position);
@@ -43,13 +43,9 @@ namespace Enemy
         [SerializeField, Header("Вращение поля, которое отвечает за обзор")]
         private RotationOfFieldOfView _rotationOfFieldOfView;
 
-        private Vector3 _startPoint;
-        private NavMeshAgent _agent;
-        private Animator _animator;
         private Collider _collider;
         private ManagementStateRagdoll _stateRagdoll;
         private DestroyerOfVisualizationComponents _destroyerOfVisualization;
-        private Timer _timer;
         private IStatesEnemy _states;
         private AnalyzerOfPlayerGettingIntoZone _analyzerOfPlayerGettingIntoZone;
 
@@ -59,7 +55,7 @@ namespace Enemy
 
         public void ChangeConditionAgentStop(bool condition)
         {
-            _agent.isStopped = condition;
+            Agent.isStopped = condition;
         }
 
         public virtual void Attack()
@@ -126,7 +122,7 @@ namespace Enemy
 
             IsAlive = false;
             ChangeConditionAgentStop(true);
-            _animator.enabled = false;
+            Animator.enabled = false;
             CheckingKey();
             Destroy(_collider);
             _stateRagdoll.Destruction();
@@ -148,12 +144,12 @@ namespace Enemy
 
             IsAlive = true;
             ThisTransform = transform;
-            _startPoint = ThisTransform.position;
-            _agent = GetComponent<NavMeshAgent>();
-            _animator = GetComponent<Animator>();
+            StartPoint = ThisTransform.position;
+            Agent = GetComponent<NavMeshAgent>();
+            Animator = GetComponent<Animator>();
             _collider = GetComponent<Collider>();
             _destroyerOfVisualization = GetComponent<DestroyerOfVisualizationComponents>();
-            _timer = new Timer();
+            Timer = new Timer();
             _stateRagdoll = GetComponent<ManagementStateRagdoll>();
             _analyzerOfPlayerGettingIntoZone = _drawArea.GetComponent<AnalyzerOfPlayerGettingIntoZone>();
             _fieldOfView = _drawArea.GetComponent<FieldOfViewEnemy>();

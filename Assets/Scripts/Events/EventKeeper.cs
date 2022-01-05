@@ -5,24 +5,23 @@ namespace Events
     [RequireComponent(typeof(MovingToAnotherObject), typeof(EnemyEvents))]
     public class EventKeeper : MonoBehaviour
     {
-        public MovingToAnotherObject MovingToAnotherObject => _movingToAnotherObject;
-        public EnemyEvents EnemyEvents => _enemyEvents;
-
-        private MovingToAnotherObject _movingToAnotherObject;
-        private EnemyEvents _enemyEvents;
+        public MovingToAnotherObject MovingToAnotherObject { get; private set; }
+        public EnemyEvents EnemyEvents { get; private set; }
+        public KillCounterEvents KillCounter { get; private set; }
 
         private void Awake()
         {
-            _movingToAnotherObject = GetComponent<MovingToAnotherObject>();
-            _enemyEvents = GetComponent<EnemyEvents>();
-
+            MovingToAnotherObject = GetComponent<MovingToAnotherObject>();
+            EnemyEvents = GetComponent<EnemyEvents>();
+            KillCounter = GetComponent<KillCounterEvents>();
             InitAllEvents();
         }
 
         private void InitAllEvents()
         {
-            _movingToAnotherObject.Init();
-            _enemyEvents.Init();
+            MovingToAnotherObject.Init();
+            EnemyEvents.Init();
+            KillCounter.Init();
         }
     }
 }
