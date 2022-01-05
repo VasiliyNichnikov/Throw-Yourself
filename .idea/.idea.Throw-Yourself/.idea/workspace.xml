@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/KillCounterEvents.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/KillCounterEvents.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KilCounter/TextOfKillCounter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KilCounter/TextOfKillCounter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Key/KeyStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Key/KeyStatus.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Key/MovingKeyToUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Key/MovingKeyToUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParentEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/ParentEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EventKeeper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EventKeeper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CrashingIntoEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CrashingIntoEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parameters/EnemyAFK.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parameters/EnemyAFK.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Parameters/EnemyRifle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parameters/EnemyRifle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingDOTween.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingDOTween.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/CreatorKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key/CreatorKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/EventsKey.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/EventsKey.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/MovingToTheUserInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key/MovingToTheUserInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/ObjectKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key/ObjectKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/UIKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key/UIKey.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/MainComponents.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/MainComponents.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Player/Key Preafab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Player/Key Preafab.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +113,7 @@
       <workItem from="1641147361968" duration="1602000" />
       <workItem from="1641258875258" duration="106000" />
       <workItem from="1641296971682" duration="10517000" />
-      <workItem from="1641395296538" duration="1201000" />
+      <workItem from="1641395296538" duration="5408000" />
     </task>
     <servers />
   </component>

@@ -1,36 +1,34 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Key
 {
     public class UIKey : MonoBehaviour
     {
-        [SerializeField] private Image[] _icons;
-        private int _index;
-        private CreatorKey _creator;
-
-        private void OnEnable()
+        public KeyStatus SelectedKey
         {
-            EventsKey.EventAddKey += AddKey;
+            get
+            {
+                if (_selectedKey != null)
+                    return _selectedKey;
+                throw new Exception("There is no selected key, since no key is matched");
+            }
         }
 
-        private void OnDisable()
-        {
-            EventsKey.EventAddKey -= AddKey;
-        }
+        [SerializeField] private KeyStatus[] _keys;
+        [SerializeField] private GameManager _gameManager;
+        private KeyStatus _selectedKey;
 
-        private void Start()
+        public void CollectKey(Sprite collectedIcon)
         {
-            _index = 0;
-            _creator = FindObjectOfType<CreatorKey>();
-        }
-
-        private void AddKey()
-        {
-            if (_index < _icons.Length)
-                _icons[_index].sprite = _creator.KeyIsAssembled;
-            _index++;
+            foreach (var key in _keys)
+            {
+                if (key.IsAssembled == false)
+                {
+                    key.GetKey(collectedIcon);
+                    _selectedKey = key;
+                }
+            }
         }
     }
 }

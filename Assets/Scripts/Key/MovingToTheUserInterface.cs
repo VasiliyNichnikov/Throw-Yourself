@@ -13,24 +13,22 @@ namespace Key
 
         [FormerlySerializedAs("_animationTime")] [SerializeField, Range(0, 5)]
         private float _animationTimeMovement;
-
         [SerializeField, Range(0, 5)] private float _animationTimeResize;
         private Camera _camera;
 
         private void Start()
         {
             _camera = Camera.main;
-            // Инициализация DOTween
             DOTween.Init();
         }
 
-        private void Update()
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                AnimationKey();
-            }
-        }
+        // private void Update()
+        // {
+        //     if (Input.GetMouseButtonDown(0))
+        //     {
+        //         AnimationKey();
+        //     }
+        // }
 
         private void AnimationKey()
         {
