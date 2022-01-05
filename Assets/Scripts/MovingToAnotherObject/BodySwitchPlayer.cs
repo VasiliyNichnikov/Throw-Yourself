@@ -65,7 +65,7 @@ namespace MovingToAnotherObject
         private void OnDrawGizmos()
         {
             if (_selectedPlayer != null && _selectedPlayer.Main != null &&
-                _thisTransform == _selectedPlayer.Main.transform)
+                _selectedPlayer.Main.transform == _thisTransform)
             {
                 Gizmos.color = Color.red;
                 Vector3 center = _renderer.bounds.center;

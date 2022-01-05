@@ -25,7 +25,6 @@ namespace Key
         {
             Rect = GetComponent<RectTransform>();
             _image = GetComponent<Image>();
-            print(_image);
         }
     }
 }
