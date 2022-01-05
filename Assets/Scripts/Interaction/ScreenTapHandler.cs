@@ -1,5 +1,6 @@
 ﻿using DirectionMovement;
 using Events;
+using Player;
 using UnityEngine;
 
 namespace Interaction

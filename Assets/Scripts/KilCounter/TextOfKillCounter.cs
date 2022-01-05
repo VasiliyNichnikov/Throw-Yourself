@@ -17,11 +17,16 @@ namespace KilCounter
             _textCounter = GetComponent<Text>();
             _eventKeeper = FindObjectOfType<EventKeeper>();
             _eventKeeper.KillCounter.AddValueToTextCounter.AddListener(AddingKill);
+            UpdateText();
         }
 
         private void AddingKill()
         {
             _counter++;
+            UpdateText();
+        }
+        private void UpdateText()
+        {
             _textCounter.text = _counter.ToString();
         }
     }

@@ -12,6 +12,7 @@ namespace Player
         private Transform _thisTransform;
         private CreatorLifeSlider _lifeSlider;
         private ConnectingFeedBacks _feedBacks;
+        private bool _isDeath; // TODO костыль, чтобы звук не дублировался
 
         private void Start()
         {
@@ -28,9 +29,10 @@ namespace Player
             _nowHp -= qty;
             _lifeSlider.ActivateLifeSlider(_thisTransform, _nowHp, qty, true);
             _feedBacks.PlayDamagePlayerFeedBack();
-            if (_nowHp <= 0)
+            if (_nowHp <= 0 && _isDeath == false)
             {
                 _feedBacks.PlayPlayerDeath();
+                _isDeath = true;
                 // _transitionBetween.Restart();
             }
         }

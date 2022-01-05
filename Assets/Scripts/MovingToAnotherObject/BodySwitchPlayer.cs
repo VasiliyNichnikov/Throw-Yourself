@@ -18,6 +18,7 @@ namespace MovingToAnotherObject
         private SelectedPlayer _selectedPlayer;
         private Transform _thisTransform;
         private ParentPlayer _newPlayer;
+        private CreatorSoul _soul;
 
         private MeshRenderer _renderer;
         private Vector3 _hitPoint;
@@ -49,6 +50,20 @@ namespace MovingToAnotherObject
         public void MoveToNew()
         {
             if (_newPlayer == null) return;
+            LaunchSoul();
+            ChangeBody();
+        }
+
+        private void LaunchSoul()
+        {
+            Vector3 center = _renderer.bounds.center;
+            Vector3 creationPosition = new Vector3(_thisTransform.position.x, center.y, _thisTransform.position.z);
+            Vector3 endPosition = new Vector3(_hitPoint.x, center.y, _hitPoint.z);
+            _soul.CreateAndMove(creationPosition, endPosition);
+        }
+
+        private void ChangeBody()
+        {
             _selectedPlayer.Main.Disconnection(_selectedPlayer.LayerController, _selectedPlayer.PlayerController);
             _selectedPlayer.Main = _newPlayer;
             _selectedPlayer.Main.Connection(_selectedPlayer.LayerPlayer, _selectedPlayer.PlayerSelected);
@@ -58,6 +73,7 @@ namespace MovingToAnotherObject
         private void Start()
         {
             _renderer = GetComponent<MeshRenderer>();
+            _soul = FindObjectOfType<CreatorSoul>();
             _selectedPlayer = FindObjectOfType<SelectedPlayer>();
             _thisTransform = transform;
         }

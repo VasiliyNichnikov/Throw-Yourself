@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 3823754610150072504}
   - component: {fileID: 3203911430221664997}
   - component: {fileID: 7150302967148353436}
+  - component: {fileID: 7618872246438404250}
+  - component: {fileID: 3663654520025318539}
   - component: {fileID: 6614575061083606507}
   - component: {fileID: 9164450064736978773}
   - component: {fileID: 6079952618293491044}
   - component: {fileID: 784768879749824389}
-  - component: {fileID: 3663654520025318539}
-  - component: {fileID: 7618872246438404250}
   - component: {fileID: 2958686742352675603}
   - component: {fileID: -8658351220792704465}
   - component: {fileID: 78037512304133188}
@@ -105,6 +105,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &7618872246438404250
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967101111390516713}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3609677013819277373, guid: 971149bbd7060ae468035cbcfa3b1d24, type: 3}
+--- !u!114 &3663654520025318539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967101111390516713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d161690bd76a5347b9f41b58b962899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parameters: {fileID: 11400000, guid: 492a1cd15ebfbd747b7b164dd9608dce, type: 2}
 --- !u!114 &6614575061083606507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,33 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1ca82b588c4c98b2fae2f007344963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3663654520025318539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967101111390516713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d161690bd76a5347b9f41b58b962899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parameters: {fileID: 11400000, guid: 492a1cd15ebfbd747b7b164dd9608dce, type: 2}
---- !u!64 &7618872246438404250
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967101111390516713}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3609677013819277373, guid: 971149bbd7060ae468035cbcfa3b1d24, type: 3}
 --- !u!114 &2958686742352675603
 MonoBehaviour:
   m_ObjectHideFlags: 0

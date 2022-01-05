@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99999946, g: 0, b: 0.99999946, a: 1}
+  m_IndirectSpecularColor: {r: 0.027105564, g: 0.26182187, b: 0.40529728, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2093,7 +2093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692159616}
   m_Layer: 0
-  m_Name: '---------------NPC------------------------'
+  m_Name: ---------------NPC------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3070,7 +3070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 951832756}
   m_Layer: 0
-  m_Name: '---------------Level Walls-----------------'
+  m_Name: ---------------Level Walls-----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5298,7 +5298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844250453}
   m_Layer: 0
-  m_Name: '---------------BG-------------------------'
+  m_Name: ---------------BG-------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5346,7 +5346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1892459455}
   m_Layer: 0
-  m_Name: '---------------Level Models------------------------'
+  m_Name: ---------------Level Models------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5728,11 +5728,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7921295623726812303, guid: f88cbd88b1856f0418c9bea6d9192a03,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 22cd36f537a2cac43939ba276d19bea4, type: 2}
     - target: {fileID: 8028638000315765843, guid: f88cbd88b1856f0418c9bea6d9192a03,
         type: 3}
       propertyPath: m_Name

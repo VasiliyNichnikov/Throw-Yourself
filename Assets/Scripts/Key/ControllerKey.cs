@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Key
 {
-    public class UIKey : MonoBehaviour
+    public class ControllerKey : MonoBehaviour
     {
         public KeyStatus SelectedKey
         {
@@ -16,9 +16,20 @@ namespace Key
         }
 
         [SerializeField] private KeyStatus[] _keys;
-        [SerializeField] private GameManager _gameManager;
         private KeyStatus _selectedKey;
 
+        public bool LevelPassed()
+        {
+            int numberOfKeysCollected = 0;
+            foreach (var key in _keys)
+            {
+                if (key.IsAssembled)
+                    numberOfKeysCollected++;
+            }
+
+            return numberOfKeysCollected == _keys.Length;
+        }
+        
         public void CollectKey(Sprite collectedIcon)
         {
             foreach (var key in _keys)

@@ -15,7 +15,7 @@ namespace Key
         [SerializeField, Header("Иконка, ключ собран")]
         private Sprite _collectedIcon;
 
-        [SerializeField] private UIKey _uiKey;
+        [SerializeField] private ControllerKey _controllerKey;
         [SerializeField] private MovingKeyToUI _movingKeyToUI;
 
         private Transform _thisTransform;
@@ -31,8 +31,8 @@ namespace Key
             GameObject newKey = Instantiate(_prefabKey, position, Quaternion.Euler(_rotation));
             newKey.transform.SetParent(_thisTransform);
 
-            _uiKey.CollectKey(_collectedIcon);
-            _movingKeyToUI.AnimationRun(newKey.transform, _uiKey.SelectedKey);
+            _controllerKey.CollectKey(_collectedIcon);
+            _movingKeyToUI.AnimationRun(newKey.transform, _controllerKey.SelectedKey);
         }
     }
 }

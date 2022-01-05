@@ -46,8 +46,7 @@ namespace Enemy.AFK
 
         public override bool IsGoToIdle()
         {
-            return DistanceFromSelectedPositionToEnemy <
-                   _settings.MinSelectedPointDistance;
+            return DistanceFromSelectedPositionToEnemy < _settings.MinSelectedPointDistance;
         }
 
 

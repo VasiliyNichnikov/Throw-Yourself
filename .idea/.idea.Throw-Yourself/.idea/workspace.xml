@@ -5,12 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CreatorSoul.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CreatorSoul.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/EngineOfSoul.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/EngineOfSoul.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Parameters/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Parameters/Player.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameAlpha.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/KeyStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key/KeyStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl10.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl12.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl13.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl13.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl17.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl17.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl18.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl18.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl8.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl9.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EndLevelDoor/CompletingLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EndLevelDoor/CompletingLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/AFK/EnemyAFK.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ScreenTapHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ScreenTapHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/CreatorKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key/CreatorKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/UIKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key/ControllerKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Key/UIKey.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Key/ControllerKey.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KilCounter/TextOfKillCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KilCounter/TextOfKillCounter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovingToAnotherObject/BodySwitchPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovingToAnotherObject/BodySwitchPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HealthPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HealthPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/MainComponents.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/MainComponents.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Bed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Bed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Chair2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Chair2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Char1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Char1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Christmas Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Christmas Tree.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/CupBoard.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/CupBoard.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Flower1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Flower1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Flower2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Flower2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Flower3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Flower3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Present1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Present1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Shelf.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Shelf.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Sofa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Sofa.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Table.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Table.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/TableSmall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/TableSmall.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +134,7 @@
       <workItem from="1641147361968" duration="1602000" />
       <workItem from="1641258875258" duration="106000" />
       <workItem from="1641296971682" duration="10517000" />
-      <workItem from="1641395296538" duration="6388000" />
+      <workItem from="1641395296538" duration="15466000" />
     </task>
     <servers />
   </component>
