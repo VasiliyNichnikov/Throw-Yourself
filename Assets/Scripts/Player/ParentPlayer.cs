@@ -16,12 +16,13 @@ namespace Player
         public BodySwitchPlayer BodySwitch { get; private set; }
         public MovementObject Engine { get; private set; }
         public HealthPlayer Health { get; private set; }
+        public MeshRenderer Renderer { get; private set; }
+        public bool RelocationIsAllowed => _parameters.RelocationIsAllowed;
 
         [SerializeField, Header("Параметры игрока")]
         private ParametersPlayer _parameters;
 
         private CrashingIntoEnemy _crashingIntoEnemy;
-        public MeshRenderer Renderer { get; private set; }
 
 
         public bool PlayerInMotion

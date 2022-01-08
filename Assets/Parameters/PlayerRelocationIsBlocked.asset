@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5299afde40ed441798f505d99726062b, type: 3}
-  m_Name: Player
+  m_Name: PlayerRelocationIsBlocked
   m_EditorClassIdentifier: 
   _name: "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B \u0434\u043B\u044F
-    \u043A\u0440\u0435\u0441\u043B\u0430"
+    \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u043E\u0432, \u0432 \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+    \u043D\u0435\u043B\u044C\u0437\u044F \u043F\u0435\u0440\u0435\u0441\u0435\u043B\u0438\u0442\u044C\u0441\u044F"
   _heightRay: 0
-  _forceOfPust: 50
-  _minRelativeVelocityForKilling: 10
-  _relocationIsAllowed: 1
+  _forceOfPust: 0
+  _minRelativeVelocityForKilling: 0
+  _relocationIsAllowed: 0
   _activatorParticle: {fileID: 152536513538389812, guid: 40d8b946d5d2f8e4c9143c2521f27f35,
     type: 3}
   _hitEnemy: {fileID: 8300000, guid: 26f02cb8af9db1345af45d65bf2f048d, type: 3}
-  _hitWall: {fileID: 8300000, guid: 7d99a5b934999964ba9a489bcc5e6f16, type: 3}
+  _hitWall: {fileID: 8300000, guid: 26f02cb8af9db1345af45d65bf2f048d, type: 3}

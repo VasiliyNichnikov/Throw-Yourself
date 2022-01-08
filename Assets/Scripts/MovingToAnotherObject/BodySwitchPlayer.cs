@@ -36,7 +36,7 @@ namespace MovingToAnotherObject
                     _selectedPlayer.MaxDistance, ~_selectedPlayer.LayerController) == false) return;
             _hitPoint = hit.point;
             ParentPlayer newPlayer = hit.collider.GetComponent<ParentPlayer>();
-            if (newPlayer != null)
+            if (newPlayer != null && newPlayer.RelocationIsAllowed)
             {
                 _newPlayer = newPlayer;
             }
