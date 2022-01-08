@@ -21,6 +21,8 @@ namespace Player
         private ParametersPlayer _parameters;
 
         private CrashingIntoEnemy _crashingIntoEnemy;
+        public MeshRenderer Renderer { get; private set; }
+
 
         public bool PlayerInMotion
         {
@@ -31,20 +33,19 @@ namespace Player
             }
         }
 
-        private MeshRenderer _renderer;
         private EnemyEvents _enemyEvents;
 
 
         public void Connection(int layer, Material mat)
         {
             gameObject.layer = layer;
-            _renderer.material = mat;
+            Renderer.material = mat;
         }
 
         public void Disconnection(int layer, Material mat)
         {
             gameObject.layer = layer;
-            _renderer.material = mat;
+            Renderer.material = mat;
             InteractionArrow.Remove();
             Engine.StopCheckingPlayerMovement(true);
             Health.RemoveSlider();
@@ -59,7 +60,7 @@ namespace Player
             Health = GetComponent<HealthPlayer>();
             _crashingIntoEnemy = GetComponent<CrashingIntoEnemy>();
 
-            _renderer = GetComponent<MeshRenderer>();
+            Renderer = GetComponent<MeshRenderer>();
             _enemyEvents = FindObjectOfType<EventKeeper>().EnemyEvents;
             InitParameters();
         }

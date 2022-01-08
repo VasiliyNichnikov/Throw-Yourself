@@ -5,7 +5,6 @@ namespace MovingToAnotherObject
 {
     public class BodySwitchPlayer : MonoBehaviour
     {
-        // [SerializeField, Range(0, 10), Header("Высота на которой будет находится направляющая линия")] private float _heightRay;
         public float HeightRay
         {
             set
@@ -51,15 +50,13 @@ namespace MovingToAnotherObject
         {
             if (_newPlayer == null) return;
             LaunchSoul();
-            ChangeBody();
         }
 
         private void LaunchSoul()
         {
-            Vector3 center = _renderer.bounds.center;
-            Vector3 creationPosition = new Vector3(_thisTransform.position.x, center.y, _thisTransform.position.z);
-            Vector3 endPosition = new Vector3(_hitPoint.x, center.y, _hitPoint.z);
-            _soul.CreateAndMove(creationPosition, endPosition);
+            Vector3 creationPosition = _renderer.bounds.center;
+            Vector3 endPosition = _newPlayer.Renderer.bounds.center;
+            _soul.TransmigrationAfterCompletionOfSoulMovement(creationPosition, endPosition, ChangeBody);
         }
 
         private void ChangeBody()

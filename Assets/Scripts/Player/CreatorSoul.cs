@@ -14,13 +14,31 @@ namespace Player
 
         public void CreateAndMove(Vector3 creationPosition, Vector3 endPosition)
         {
+            float duration = GetDuration(creationPosition, endPosition);
+            EngineOfSoul soul = GetNewSoul(creationPosition);
+            soul.Move(endPosition, duration);
+        }
+
+        public void TransmigrationAfterCompletionOfSoulMovement(Vector3 creationPosition, Vector3 endPosition,
+            EngineOfSoul.CompletionOfMovement action)
+        {
+            float duration = GetDuration(creationPosition, endPosition);
+            EngineOfSoul soul = GetNewSoul(creationPosition);
+            soul.Move(endPosition, duration, action);
+        }
+
+        private EngineOfSoul GetNewSoul(Vector3 creationPosition)
+        {
             EngineOfSoul soul = Instantiate(_prefabSoul, creationPosition, Quaternion.identity)
                 .GetComponent<EngineOfSoul>();
-
-            float duration = Vector3.Distance(creationPosition, endPosition) / _speed;
             soul.Init();
             soul.transform.SetParent(_thisTransform);
-            soul.Move(endPosition, duration);
+            return soul;
+        }
+
+        private float GetDuration(Vector3 creationPosition, Vector3 endPosition)
+        {
+            return Vector3.Distance(creationPosition, endPosition) / _speed;
         }
 
         private void Start()
