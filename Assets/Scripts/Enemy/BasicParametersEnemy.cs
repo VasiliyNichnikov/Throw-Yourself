@@ -1,90 +1,80 @@
-﻿using System;
-using Enemy.Dead;
-using Enemy.FieldOfView;
-using Events;
+﻿using Events;
 using Key;
 using Particulars;
 using Player;
 using Sound;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Enemy
 {
-    [RequireComponent(typeof(NavMeshAgent), typeof(Animator), typeof(ManagementStateRagdoll))]
-    [RequireComponent(typeof(DestroyerOfVisualizationComponents))]
-    public abstract class BasicParametersEnemy : MonoBehaviour
+    public abstract class BasicParametersEnemy : ScriptableObject
     {
-        public float DistanceFromSelectedPositionToEnemy => Vector3.Distance(ThisTransform.position, _startPoint);
-
-        public float DistanceFromPlayerToEnemy => Vector3.Distance(ThisTransform.position, TransformPlayer.position);
-        
-        public Timer Timer => _timer;
-        public Vector3 StartPoint => _startPoint;
-
+        public string Name => _name;
+        public float SpeedRotation => _speedRotation;
+        public float MinWalkingDistance => _minWalkingDistance;
+        public float MaxAttackDistance => _maxAttackDistance;
+        public float MinSelectedPointDistance => _minSelectedPointDistance;
+        public float DelayAttack => _delayAttack;
+        public float DamageWhenAttacking => _damageWhenAttacking;
+        public bool KeyIsEnemy => _keyIsEnemy;
+        public AudioClip AttackSound => _attackSound;
+        public float MinStoppingDistance => _minStoppingDistance;
         public bool PlayerInMotion => _selectedPlayer.Main.PlayerInMotion;
         public CreatorKey CreatorKey => _creatorKey;
 
         public Transform TransformPlayer =>
             _selectedPlayer.Main.GetComponent<Transform>(); // TODO слишком частые запросы к GetComponent
-
-        public ParametersEnemy Settings => settings;
+        
         public SelectedPlayer SelectedPlayer => _selectedPlayer;
         public CreatorPlayerSound CreatorPlayerSound => _creatorPlayerSound;
-        public Animator Animator => _animator;
-        public NavMeshAgent Agent => _agent;
-        public Collider Collider => _collider;
         public EventKeeper EventKeeper => _eventKeeper;
-        public ManagementStateRagdoll StateRagdoll => _stateRagdoll;
-        public DestroyerOfVisualizationComponents DestroyerOfVisualization => _destroyerOfVisualization;
         public CreatorOfParticulars CreatorOfParticulars => _creatorOfParticulars;
-        public RotationOfFieldOfView RotationOfFieldOfView => _rotationOfFieldOfView;
-        public AnalyzerOfPlayerGettingIntoZone AnalyzerOfPlayerGettingIntoZone => _analyzerOfPlayerGettingIntoZone;
-        protected Transform ThisTransform;
 
         [HideInInspector] public bool PlayerIsNoticed;
 
         private SelectedPlayer _selectedPlayer;
-        private Vector3 _startPoint;
-        private NavMeshAgent _agent;
-        private Animator _animator;
-        private Collider _collider;
-        private ManagementStateRagdoll _stateRagdoll;
-        private DestroyerOfVisualizationComponents _destroyerOfVisualization;
-        private Timer _timer;
         private CreatorOfParticulars _creatorOfParticulars;
         private CreatorKey _creatorKey;
         private CreatorPlayerSound _creatorPlayerSound;
         private EventKeeper _eventKeeper;
 
-        [SerializeField] private ParametersEnemy settings;
-        [SerializeField] private RotationOfFieldOfView _rotationOfFieldOfView;
-        [SerializeField] private GameObject _drawArea;
-        private AnalyzerOfPlayerGettingIntoZone _analyzerOfPlayerGettingIntoZone;
-        private FieldOfViewEnemy _fieldOfView;
+        [SerializeField, Header("Название параметра врага")]
+        private string _name;
+
+        [SerializeField, Header("Находится ли ключ в этом враге")]
+        private bool _keyIsEnemy;
+
+        [SerializeField, Range(1, 20), Header("Скорость вращения")]
+        private float _speedRotation;
+
+        [SerializeField, Range(0.1f, 10f), Tooltip("Враг не будет останавливаться, пока расстояние не станет меньше")]
+        private float _minStoppingDistance;
+
+        [SerializeField, Range(0, 100), Tooltip("Враг будет идти пока расстояние не станет меньше")]
+        private float _minWalkingDistance;
+
+        [SerializeField, Range(0, 10), Tooltip("Враг будет идти до выбранной точки пока расстояние не станет меньше")]
+        private float _minSelectedPointDistance;
+
+        [SerializeField, Header("Звук при атаке")]
+        private AudioClip _attackSound;
+
+        [SerializeField, Range(0, 100), Tooltip("Враг начнет аттаковать, когда расстояние станет меньше")]
+        private float _maxAttackDistance;
+
+        [SerializeField, Range(0, 10), Header("Задержка между атаками")]
+        private float _delayAttack;
+
+        [SerializeField, Range(0, 100), Header("Урон наносимый при атаке")]
+        private float _damageWhenAttacking;
 
         public void Init()
         {
-            if (settings == null)
-                throw new Exception("There is no component responsible for the parameters.");
-            if (_drawArea == null)
-                throw new Exception("There is no component DrawArea");
-            ThisTransform = transform;
-            _startPoint = ThisTransform.position;
-            _agent = GetComponent<NavMeshAgent>();
-            _animator = GetComponent<Animator>();
-            _collider = GetComponent<Collider>();
-            _timer = new Timer();
-            _stateRagdoll = GetComponent<ManagementStateRagdoll>();
-            _analyzerOfPlayerGettingIntoZone = _drawArea.GetComponent<AnalyzerOfPlayerGettingIntoZone>();
-            _fieldOfView = _drawArea.GetComponent<FieldOfViewEnemy>();
-            _destroyerOfVisualization = GetComponent<DestroyerOfVisualizationComponents>();
             _selectedPlayer = FindObjectOfType<SelectedPlayer>();
             _creatorOfParticulars = FindObjectOfType<CreatorOfParticulars>();
             _creatorKey = FindObjectOfType<CreatorKey>();
             _creatorPlayerSound = FindObjectOfType<CreatorPlayerSound>();
             _eventKeeper = FindObjectOfType<EventKeeper>();
-            _fieldOfView.ViewDistance = settings.MinWalkingDistance;
         }
     }
 }

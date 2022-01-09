@@ -6,14 +6,13 @@ namespace Key
 {
     public class ObjectKey : MonoBehaviour
     {
-        [SerializeField, Header("Задержка прежде чем включить коллайдер")]
+        [SerializeField, Header("Задержка прежде чем удалить ключ")]
         private float _delay;
 
         [SerializeField, Header("Звук при подборе ключа")]
         private AudioClip _keySelection;
 
         private CreatorPlayerSound _creatorPlayerSound;
-        private BoxCollider _collider;
 
 
         public void Remove()
@@ -23,21 +22,15 @@ namespace Key
 
         private void Start()
         {
-            _collider = GetComponent<BoxCollider>();
             _creatorPlayerSound = FindObjectOfType<CreatorPlayerSound>();
-            StartCoroutine(LaunchingCollider());
+            StartCoroutine(LaunchingDestroyer());
         }
 
-        private IEnumerator LaunchingCollider()
+        private IEnumerator LaunchingDestroyer()
         {
             yield return new WaitForSeconds(_delay);
-            _collider.enabled = true;
-        }
-
-        private void OnDestroy()
-        {
             _creatorPlayerSound.Create(_keySelection);
-            EventsKey.LauncherEventAddKey();
+            Destroy(this.gameObject);
         }
     }
 }

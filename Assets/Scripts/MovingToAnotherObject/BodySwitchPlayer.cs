@@ -5,7 +5,6 @@ namespace MovingToAnotherObject
 {
     public class BodySwitchPlayer : MonoBehaviour
     {
-        // [SerializeField, Range(0, 10), Header("Высота на которой будет находится направляющая линия")] private float _heightRay;
         public float HeightRay
         {
             set
@@ -18,6 +17,7 @@ namespace MovingToAnotherObject
         private SelectedPlayer _selectedPlayer;
         private Transform _thisTransform;
         private ParentPlayer _newPlayer;
+        private CreatorSoul _soul;
 
         private MeshRenderer _renderer;
         private Vector3 _hitPoint;
@@ -36,7 +36,7 @@ namespace MovingToAnotherObject
                     _selectedPlayer.MaxDistance, ~_selectedPlayer.LayerController) == false) return;
             _hitPoint = hit.point;
             ParentPlayer newPlayer = hit.collider.GetComponent<ParentPlayer>();
-            if (newPlayer != null)
+            if (newPlayer != null && newPlayer.RelocationIsAllowed)
             {
                 _newPlayer = newPlayer;
             }
@@ -49,6 +49,18 @@ namespace MovingToAnotherObject
         public void MoveToNew()
         {
             if (_newPlayer == null) return;
+            LaunchSoul();
+        }
+
+        private void LaunchSoul()
+        {
+            Vector3 creationPosition = _renderer.bounds.center;
+            Vector3 endPosition = _newPlayer.Renderer.bounds.center;
+            _soul.TransmigrationAfterCompletionOfSoulMovement(creationPosition, endPosition, ChangeBody);
+        }
+
+        private void ChangeBody()
+        {
             _selectedPlayer.Main.Disconnection(_selectedPlayer.LayerController, _selectedPlayer.PlayerController);
             _selectedPlayer.Main = _newPlayer;
             _selectedPlayer.Main.Connection(_selectedPlayer.LayerPlayer, _selectedPlayer.PlayerSelected);
@@ -58,6 +70,7 @@ namespace MovingToAnotherObject
         private void Start()
         {
             _renderer = GetComponent<MeshRenderer>();
+            _soul = FindObjectOfType<CreatorSoul>();
             _selectedPlayer = FindObjectOfType<SelectedPlayer>();
             _thisTransform = transform;
         }
@@ -65,7 +78,7 @@ namespace MovingToAnotherObject
         private void OnDrawGizmos()
         {
             if (_selectedPlayer != null && _selectedPlayer.Main != null &&
-                _thisTransform == _selectedPlayer.Main.transform)
+                _selectedPlayer.Main.transform == _thisTransform)
             {
                 Gizmos.color = Color.red;
                 Vector3 center = _renderer.bounds.center;

@@ -3,6 +3,7 @@ using DirectionMovement;
 using Events;
 using MovingToAnotherObject;
 using PhysicsObjects;
+using Player.FeedBacks;
 using UnityEngine;
 
 namespace Player
@@ -15,9 +16,15 @@ namespace Player
         public BodySwitchPlayer BodySwitch { get; private set; }
         public MovementObject Engine { get; private set; }
         public HealthPlayer Health { get; private set; }
+        public MeshRenderer Renderer { get; private set; }
+        public ConnectingFeedBacks FeedBacks { get; private set; }
+        public bool RelocationIsAllowed => _parameters.RelocationIsAllowed;
 
-        [SerializeField, Header("Параметры игрока")] private ParametersPlayer _parameters;
+        [SerializeField, Header("Параметры игрока")]
+        private ParametersPlayer _parameters;
+
         private CrashingIntoEnemy _crashingIntoEnemy;
+
 
         public bool PlayerInMotion
         {
@@ -28,20 +35,19 @@ namespace Player
             }
         }
 
-        private MeshRenderer _renderer;
         private EnemyEvents _enemyEvents;
 
 
         public void Connection(int layer, Material mat)
         {
             gameObject.layer = layer;
-            _renderer.material = mat;
+            Renderer.material = mat;
         }
 
         public void Disconnection(int layer, Material mat)
         {
             gameObject.layer = layer;
-            _renderer.material = mat;
+            Renderer.material = mat;
             InteractionArrow.Remove();
             Engine.StopCheckingPlayerMovement(true);
             Health.RemoveSlider();
@@ -54,9 +60,10 @@ namespace Player
             Engine = GetComponent<MovementObject>();
             BodySwitch = GetComponent<BodySwitchPlayer>();
             Health = GetComponent<HealthPlayer>();
+            FeedBacks = GetComponent<ConnectingFeedBacks>();
             _crashingIntoEnemy = GetComponent<CrashingIntoEnemy>();
 
-            _renderer = GetComponent<MeshRenderer>();
+            Renderer = GetComponent<MeshRenderer>();
             _enemyEvents = FindObjectOfType<EventKeeper>().EnemyEvents;
             InitParameters();
         }

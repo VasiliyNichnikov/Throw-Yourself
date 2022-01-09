@@ -1,35 +1,36 @@
 using Enemy;
+using Player;
 using UnityEditor;
 using UnityEngine;
 
 namespace Editor
 {
-    [CustomEditor(typeof(BasicParametersEnemy), true)]
+    [CustomEditor(typeof(ParentEnemy), true)]
     [CanEditMultipleObjects]
-    public class ParametersParentEnemyEditor : UnityEditor.Editor
+    public class ParentEnemyEditor : UnityEditor.Editor
     {
-        private BasicParametersEnemy _enemy;
+        private ParentEnemy _enemy;
         private Transform _handleTransform;
         private Quaternion _handleRotation;
 
         public void OnEnable()
         {
-            _enemy = target as BasicParametersEnemy;
+            _enemy = target as ParentEnemy;
         }
 
         public void OnSceneGUI()
         {
-            if(_enemy.Settings == null) return;
+            if(_enemy.BasicSettings == null) return;
             
             _handleTransform = _enemy.transform;
             _handleRotation = Tools.pivotRotation == PivotRotation.Local
                 ? _handleTransform.rotation
                 : Quaternion.identity;
-        
-            DrawRadiusParameter("Stopping Distance", _enemy.Settings.MinStoppingDistance, Color.green, Color.black);
-            DrawRadiusParameter("Attack Distance", _enemy.Settings.MaxAttackDistance, Color.red, Color.black);
-            DrawRadiusParameter("Walking Distance", _enemy.Settings.MinWalkingDistance, Color.magenta, Color.black);
-            DrawRadiusParameter("Distance to selected point", _enemy.Settings.MinSelectedPointDistance, Color.cyan,
+            
+            DrawRadiusParameter("Stopping Distance", _enemy.BasicSettings.MinStoppingDistance, Color.green, Color.black);
+            DrawRadiusParameter("Attack Distance", _enemy.BasicSettings.MaxAttackDistance, Color.red, Color.black);
+            DrawRadiusParameter("Walking Distance", _enemy.BasicSettings.MinWalkingDistance, Color.magenta, Color.black);
+            DrawRadiusParameter("Distance to selected point", _enemy.BasicSettings.MinSelectedPointDistance, Color.cyan,
                 Color.black);
         }
 
