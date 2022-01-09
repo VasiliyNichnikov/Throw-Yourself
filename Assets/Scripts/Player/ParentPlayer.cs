@@ -17,6 +17,7 @@ namespace Player
         public MovementObject Engine { get; private set; }
         public HealthPlayer Health { get; private set; }
         public MeshRenderer Renderer { get; private set; }
+        public ConnectingFeedBacks FeedBacks { get; private set; }
         public bool RelocationIsAllowed => _parameters.RelocationIsAllowed;
 
         [SerializeField, Header("Параметры игрока")]
@@ -59,6 +60,7 @@ namespace Player
             Engine = GetComponent<MovementObject>();
             BodySwitch = GetComponent<BodySwitchPlayer>();
             Health = GetComponent<HealthPlayer>();
+            FeedBacks = GetComponent<ConnectingFeedBacks>();
             _crashingIntoEnemy = GetComponent<CrashingIntoEnemy>();
 
             Renderer = GetComponent<MeshRenderer>();
