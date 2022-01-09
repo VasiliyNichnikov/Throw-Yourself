@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CrashingIntoEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CrashingIntoEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ConnectingFeedBacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ConnectingFeedBacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SelectedPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/SelectedPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Partricles/Npc/Shooting particle.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +97,7 @@
       <workItem from="1641296971682" duration="10517000" />
       <workItem from="1641395296538" duration="15466000" />
       <workItem from="1641670386384" duration="6112000" />
-      <workItem from="1641687114336" duration="366000" />
+      <workItem from="1641687114336" duration="864000" />
     </task>
     <servers />
   </component>
