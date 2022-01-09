@@ -10,6 +10,7 @@ namespace Interaction
         public void Push(Vector3 direction)
         {
             _player.Main.Engine.Push(direction);
+            _player.Main.FeedBacks.PlayThrowingPlayer();
         }
 
         public void ChangeBody()

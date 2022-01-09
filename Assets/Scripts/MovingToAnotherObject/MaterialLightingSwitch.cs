@@ -1,4 +1,5 @@
 ﻿using Events;
+using Player;
 using UnityEngine;
 
 namespace MovingToAnotherObject
@@ -7,14 +8,20 @@ namespace MovingToAnotherObject
     {
         private MeshRenderer _renderer;
         private Events.MovingToAnotherObject _event;
+        private ParentPlayer _player;
 
-        private static readonly int LightingSwitch = Shader.PropertyToID("OnOffLighting"); // TODO вынести в отдельный статический класс
+        private static readonly int
+            LightingSwitch = Shader.PropertyToID("OnOffLighting"); // TODO вынести в отдельный статический класс
 
         private void Start()
         {
-            _event = FindObjectOfType<EventKeeper>().MovingToAnotherObject;
-            _event.Glow.AddListener(ChangeLighting);
-            _renderer = GetComponent<MeshRenderer>();
+            _player = GetComponent<ParentPlayer>();
+            if (_player.RelocationIsAllowed)
+            {
+                _event = FindObjectOfType<EventKeeper>().MovingToAnotherObject;
+                _event.Glow.AddListener(ChangeLighting);
+                _renderer = GetComponent<MeshRenderer>();
+            }
         }
 
         private void ChangeLighting(float val)

@@ -10,7 +10,7 @@
         public override void Enter()
         {
             base.Enter();
-            Enemy.BasicParameters.PlayerIsNoticed = false;
+            Enemy.BasicSettings.PlayerIsNoticed = false;
             Enemy.IsMovementToSelectedPoint = true;
             Enemy.ChangeConditionAgentStop(false);
             Enemy.SettingUpAnimations.LauncherMovementToSelectedPoint();

@@ -10,7 +10,7 @@
         {
             base.Enter();
             Enemy.IsIdle = true;
-            Enemy.BasicParameters.PlayerIsNoticed = false;
+            Enemy.BasicSettings.PlayerIsNoticed = false;
             Enemy.ChangeConditionAgentStop(true);
             Enemy.ChangeRotationFieldOfView(true);
             Enemy.SettingUpAnimations.LauncherIdle();

@@ -1,5 +1,6 @@
 ﻿using DirectionMovement;
 using Events;
+using Player;
 using UnityEngine;
 
 namespace Interaction
@@ -20,29 +21,29 @@ namespace Interaction
             {
                 _eventMovingToAnotherObject.Glow.Invoke(1);
             }
-
-            LaunchingActionsArrow(doubleClick, positionStart, positionEnd);
+            Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
+            LaunchingActionsArrow(doubleClick, direction);
         }
 
         public void OnUp(bool doubleClick, Vector3 positionStart, Vector3 positionEnd)
         {
             _firstDrag = false;
+            Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
             if (doubleClick)
             {
                 _eventMovingToAnotherObject.Glow.Invoke(0);
-                ChangeBodyPlayer();
+                ChangeBodyPlayer(direction);
             }
             else
             {
-                MovePlayer(positionStart, positionEnd);
+                MovePlayer(direction);
             }
 
             _arrowControl.Remove();
         }
 
-        private void LaunchingActionsArrow(bool doubleClick, Vector3 positionStart, Vector3 positionEnd)
+        private void LaunchingActionsArrow(bool doubleClick, Vector3 direction)
         {
-            Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
             if (_firstDrag == false)
             {
                 TypesArrow type = GettingTypeArrow.Get(doubleClick);
@@ -53,18 +54,17 @@ namespace Interaction
             _arrowControl.Move();
             _arrowControl.Rotate(direction);
             _arrowControl.Stretch(direction);
-            _arrowControl.LaunchDisplacementBeam(direction);
             _arrowControl.Show();
         }
 
-        private void MovePlayer(Vector3 positionStart, Vector3 positionEnd)
+        private void MovePlayer(Vector3 direction)
         {
-            Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
             _playerControl.Push(direction);
         }
 
-        private void ChangeBodyPlayer()
+        private void ChangeBodyPlayer(Vector3 direction)
         {
+            _arrowControl.LaunchDisplacementBeam(direction);
             _playerControl.ChangeBody();
         }
 

@@ -1395,13 +1395,12 @@ GameObject:
   - component: {fileID: 6565480045331514249}
   - component: {fileID: 5788979281725413690}
   - component: {fileID: 5788979281725413685}
-  - component: {fileID: 5788979281725413684}
-  - component: {fileID: 5788979281725413687}
   - component: {fileID: 5788979281725413681}
   - component: {fileID: 5788979281725413691}
-  - component: {fileID: 5788979281725413680}
-  - component: {fileID: 5788979281725413688}
   - component: {fileID: 5788979281725413689}
+  - component: {fileID: 5788979281725413684}
+  - component: {fileID: 5788979281725413687}
+  - component: {fileID: 5788979281725413688}
   - component: {fileID: 8073904804017394271}
   m_Layer: 0
   m_Name: Body
@@ -1468,6 +1467,58 @@ NavMeshAgent:
   m_BaseOffset: -0.08
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &5788979281725413681
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5788979281725413683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.48817253
+  m_Height: 2.173634
+  m_Direction: 1
+  m_Center: {x: 0.001377821, y: 1.081187, z: -0.018091202}
+--- !u!54 &5788979281725413691
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5788979281725413683}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &5788979281725413689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5788979281725413683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c392d5cfa19d5439b262e30a14707b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsIdle: 0
+  IsMovementBehindPlayer: 0
+  IsMovementToSelectedPoint: 0
+  IsAttack: 0
+  _drawArea: {fileID: 6672078646551646895}
+  _basicSettings: {fileID: 11400000, guid: 733871b439ad61a41b519cd647c8b844, type: 2}
+  _rotationOfFieldOfView: {fileID: 6672078647042819261}
+  _pointCreateBullet: {fileID: 1975311217988746081}
+  _route: {fileID: 6672078646212400635}
+  _armature: {fileID: 1883336914300859283}
 --- !u!114 &5788979281725413684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,68 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectsToDelete:
-  - {fileID: 0}
   - {fileID: 6672078647042819263}
---- !u!136 &5788979281725413681
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5788979281725413683}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.48817253
-  m_Height: 2.173634
-  m_Direction: 1
-  m_Center: {x: 0.001377821, y: 1.081187, z: -0.018091202}
---- !u!54 &5788979281725413691
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5788979281725413683}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!114 &5788979281725413680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5788979281725413683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7fee6c8e82c4b0a8777ebbfcafc6afb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerIsNoticed: 0
-  _keyIsEnemy: 0
-  _speedRotation: 5
-  _minStoppingDistance: 1
-  _minWalkingDistance: 10
-  _minAttackDistance: 5
-  _minDistanceToSelectedPoint: 0.15
-  _delayAttack: 0.5
-  _damagePlayerWhenAttacking: 30
-  _attackPlayer: {fileID: 8300000, guid: 81149cce2af38e749a20c51bf28ff759, type: 3}
-  _rotationOfFieldOfView: {fileID: 6672078647042819261}
-  _analyzerOfPlayerGettingIntoZone: {fileID: 6672078646551646892}
-  _fieldOfView: {fileID: 6672078646551646864}
-  _pointCreateBullet: {fileID: 1975311217988746081}
-  _route: {fileID: 6672078646212400635}
-  _armature: {fileID: 1883336914300859283}
-  _particleShooting: {fileID: 2540096539703319479, guid: 49ef2eb11153ae34eb5f527f91f8dc9e,
-    type: 3}
 --- !u!114 &5788979281725413688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,22 +1581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca16cd502554b68a79ecaac7681ba76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5788979281725413689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5788979281725413683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81c392d5cfa19d5439b262e30a14707b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsIdle: 0
-  IsMovementBehindPlayer: 0
-  IsMovementToSelectedPoint: 0
-  IsAttack: 0
 --- !u!114 &8073904804017394271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,9 +1593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d809b8af27945c0abd2396d6c4da2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentBullet: {fileID: 0}
-  _prefabBullet: {fileID: 3467298607794404804, guid: 2ccc7d41b5ced694fbcf1455df7f295b,
-    type: 3}
 --- !u!1 &5794450205067141881
 GameObject:
   m_ObjectHideFlags: 0

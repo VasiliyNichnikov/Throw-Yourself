@@ -1399,7 +1399,6 @@ GameObject:
   - component: {fileID: 5788979281725413687}
   - component: {fileID: 5788979281725413681}
   - component: {fileID: 5788979281725413691}
-  - component: {fileID: 5788979281725413680}
   - component: {fileID: 5788979281725413688}
   - component: {fileID: 5788979281725413689}
   - component: {fileID: 8073904804017394271}
@@ -1549,36 +1548,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &5788979281725413680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5788979281725413683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7fee6c8e82c4b0a8777ebbfcafc6afb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerIsNoticed: 0
-  _keyIsEnemy: 1
-  _speedRotation: 5
-  _minStoppingDistance: 1
-  _minWalkingDistance: 10
-  _minAttackDistance: 5
-  _minDistanceToSelectedPoint: 0.3
-  _delayAttack: 0.5
-  _damagePlayerWhenAttacking: 25
-  _attackPlayer: {fileID: 8300000, guid: 81149cce2af38e749a20c51bf28ff759, type: 3}
-  _rotationOfFieldOfView: {fileID: 6672078647042819261}
-  _analyzerOfPlayerGettingIntoZone: {fileID: 6672078646551646892}
-  _fieldOfView: {fileID: 6672078646551646864}
-  _pointCreateBullet: {fileID: 1975311217988746081}
-  _route: {fileID: 6672078646212400635}
-  _armature: {fileID: 1883336914300859283}
-  _particleShooting: {fileID: 2540096539703319479, guid: 49ef2eb11153ae34eb5f527f91f8dc9e,
-    type: 3}
 --- !u!114 &5788979281725413688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,7 +1588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d809b8af27945c0abd2396d6c4da2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parentBullet: {fileID: 0}
   _prefabBullet: {fileID: 3467298607794404804, guid: 2ccc7d41b5ced694fbcf1455df7f295b,
     type: 3}
 --- !u!1 &5794450205067141881

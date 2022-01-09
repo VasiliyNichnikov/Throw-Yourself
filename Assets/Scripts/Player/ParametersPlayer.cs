@@ -13,6 +13,7 @@ namespace Player
         public ActivatorParticle ActivatorParticle => _activatorParticle;
         public AudioClip HitEnemy => _hitEnemy;
         public AudioClip HitWall => _hitWall;
+        public bool RelocationIsAllowed => _relocationIsAllowed;
 
         [SerializeField, Header("Название параметра игрока")]
         private string _name;
@@ -25,9 +26,17 @@ namespace Player
 
         [SerializeField, Header("Минимальная сила удара для убийства врага"), Range(0, 50)]
         private float _minRelativeVelocityForKilling;
-        
-        [SerializeField, Header("Партикл срабатывающий при столкновение с игроком")] private ActivatorParticle _activatorParticle;
-        [SerializeField, Header("Звук при столкновении с врагом")] private AudioClip _hitEnemy;
-        [SerializeField, Header("Звук при столкновении со стеной")] private AudioClip _hitWall;
+
+        [SerializeField, Header("Можно ли переселиться в данный предмет")]
+        private bool _relocationIsAllowed;
+
+        [SerializeField, Header("Партикл срабатывающий при столкновение с врагом")]
+        private ActivatorParticle _activatorParticle;
+
+        [SerializeField, Header("Звук при столкновении с врагом")]
+        private AudioClip _hitEnemy;
+
+        [SerializeField, Header("Звук при столкновении со стеной")]
+        private AudioClip _hitWall;
     }
 }

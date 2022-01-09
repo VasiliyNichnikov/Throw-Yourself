@@ -4,8 +4,6 @@ namespace Key
 {
     public class CreatorKey : MonoBehaviour
     {
-        public Sprite KeyIsAssembled => _keyIsAssembled;
-
         [SerializeField, Header("Углы поворота на разные оси")]
         private Vector3 _rotation;
 
@@ -15,7 +13,10 @@ namespace Key
         [SerializeField] private GameObject _prefabKey;
 
         [SerializeField, Header("Иконка, ключ собран")]
-        private Sprite _keyIsAssembled;
+        private Sprite _collectedIcon;
+
+        [SerializeField] private ControllerKey _controllerKey;
+        [SerializeField] private MovingKeyToUI _movingKeyToUI;
 
         private Transform _thisTransform;
 
@@ -29,6 +30,9 @@ namespace Key
             position.y = _height;
             GameObject newKey = Instantiate(_prefabKey, position, Quaternion.Euler(_rotation));
             newKey.transform.SetParent(_thisTransform);
+
+            _controllerKey.CollectKey(_collectedIcon);
+            _movingKeyToUI.AnimationRun(newKey.transform, _controllerKey.SelectedKey);
         }
     }
 }

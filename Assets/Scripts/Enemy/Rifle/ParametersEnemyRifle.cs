@@ -3,39 +3,20 @@ using UnityEngine;
 
 namespace Enemy.Rifle
 {
+    [CreateAssetMenu(fileName = "Enemy", menuName = "Parameters/EnemyRifle", order = 0)]
     public class ParametersEnemyRifle : BasicParametersEnemy
     {
-        public Vector3 SelectedPoint => _route.SelectedPoint;
-        public Transform Armature => _armature;
-        public ShootingAtPlayerEnemyRifle Gun => _gun;
         public ActivatorParticle ParticleShooting => _particleShooting;
+        public float HeightRoute => _heightRoute;
+        public GameObject PrefabBullet => _prefabBullet;
 
-        public float DistanceFromSelectedPointToEnemy =>
-            Vector3.Distance(ThisTransform.position, _route.SelectedPoint);
+        [SerializeField, Header("Скрипт для создания и активации частиц")]
+        private ActivatorParticle _particleShooting;
 
-        public Vector3 PositionCreateBullet => _pointCreateBullet.position;
+        [SerializeField, Header("Префаб пули")]
+        private GameObject _prefabBullet;
 
-        [SerializeField] private Transform _pointCreateBullet;
-        [SerializeField] private EnemyRoute _route;
-        [SerializeField] private Transform _armature;
-        [SerializeField] private ActivatorParticle _particleShooting;
-        private ShootingAtPlayerEnemyRifle _gun;
-
-        private void Start()
-        {
-            _gun = GetComponent<ShootingAtPlayerEnemyRifle>();
-        }
-
-        public void GoToNextPoint()
-        {
-            if (_route.IndexSelectedPoint + 1 < _route.MovingPoints.Length)
-            {
-                _route.IndexSelectedPoint++;
-            }
-            else
-            {
-                _route.IndexSelectedPoint = 0;
-            }
-        }
+        [SerializeField, Range(0, 1), Header("Высота на которой находится путь")]
+        private float _heightRoute;
     }
 }

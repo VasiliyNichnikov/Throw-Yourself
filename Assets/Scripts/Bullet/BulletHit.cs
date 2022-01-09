@@ -20,11 +20,6 @@ namespace Bullet
         [SerializeField] private LayerMask _layerPlayer;
         private float _damage;
 
-        private void Start()
-        {
-            _layerPlayer = LayerMask.NameToLayer("Player");
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.layer == MyUtils.GetLayerNumberByMask(_layerPlayer))

@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 3823754610150072504}
   - component: {fileID: 3203911430221664997}
   - component: {fileID: 7150302967148353436}
+  - component: {fileID: 7618872246438404250}
+  - component: {fileID: 3663654520025318539}
   - component: {fileID: 6614575061083606507}
   - component: {fileID: 9164450064736978773}
   - component: {fileID: 6079952618293491044}
   - component: {fileID: 784768879749824389}
-  - component: {fileID: 3663654520025318539}
-  - component: {fileID: 7618872246438404250}
   - component: {fileID: 2958686742352675603}
   - component: {fileID: -8658351220792704465}
   - component: {fileID: 78037512304133188}
@@ -105,6 +105,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &7618872246438404250
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967101111390516713}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3609677013819277373, guid: 971149bbd7060ae468035cbcfa3b1d24, type: 3}
+--- !u!114 &3663654520025318539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967101111390516713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d161690bd76a5347b9f41b58b962899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parameters: {fileID: 11400000, guid: 492a1cd15ebfbd747b7b164dd9608dce, type: 2}
 --- !u!114 &6614575061083606507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,8 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d34600fc4df9040b65d21b9be73dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 50
-  _playerInMotion: 0
 --- !u!114 &6079952618293491044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,11 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44425234079254e4d878e1ffec93c0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minRelativeVelocityForKilling: 10
-  _activatorParticle: {fileID: 152536513538389812, guid: 40d8b946d5d2f8e4c9143c2521f27f35,
-    type: 3}
-  _hitEnemy: {fileID: 8300000, guid: 7d99a5b934999964ba9a489bcc5e6f16, type: 3}
-  _hitWall: {fileID: 8300000, guid: 26f02cb8af9db1345af45d65bf2f048d, type: 3}
 --- !u!114 &784768879749824389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,33 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1ca82b588c4c98b2fae2f007344963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heightRay: 0
---- !u!114 &3663654520025318539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967101111390516713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d161690bd76a5347b9f41b58b962899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!64 &7618872246438404250
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1967101111390516713}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3609677013819277373, guid: 971149bbd7060ae468035cbcfa3b1d24, type: 3}
 --- !u!114 &2958686742352675603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284296de7b114ff3a7e9385eee048829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHp: 100
 --- !u!114 &-8658351220792704465
 MonoBehaviour:
   m_ObjectHideFlags: 0
