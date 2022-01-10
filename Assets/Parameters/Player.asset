@@ -18,7 +18,7 @@ MonoBehaviour:
   _forceOfPust: 50
   _minRelativeVelocityForKilling: 10
   _relocationIsAllowed: 1
-  _activatorParticle: {fileID: 152536513538389812, guid: 40d8b946d5d2f8e4c9143c2521f27f35,
+  _activatorParticle: {fileID: 5976178523487606693, guid: ddf19be0d7725d141817c5f856072611,
     type: 3}
-  _hitEnemy: {fileID: 8300000, guid: 26f02cb8af9db1345af45d65bf2f048d, type: 3}
-  _hitWall: {fileID: 8300000, guid: 7d99a5b934999964ba9a489bcc5e6f16, type: 3}
+  _hitEnemy: {fileID: 8300000, guid: 7d99a5b934999964ba9a489bcc5e6f16, type: 3}
+  _hitWall: {fileID: 8300000, guid: 26f02cb8af9db1345af45d65bf2f048d, type: 3}

@@ -4829,9 +4829,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3718467157315128825}
-  - component: {fileID: -1173364219498942018}
+  - component: {fileID: 152536513538389812}
   m_Layer: 0
-  m_Name: Npc Punch Particles
+  m_Name: Npc Punch Particles1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4853,7 +4853,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1173364219498942018
+--- !u!114 &152536513538389812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
