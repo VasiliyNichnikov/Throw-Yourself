@@ -32,6 +32,12 @@ public static class MyUtils
         return new Vector2(x, y) / scaleFactor;
     }
 
+    public static float GetTensionValue(Vector3 direction)
+    {
+        float length = direction.magnitude;
+        return Mathf.Clamp01(length);
+    }
+
     public static (Vector2 min, Vector2 max) GetAnchorsForAnObjectInViewport(Vector3 viewportPoint,
         RectTransform rectTransform)
     {

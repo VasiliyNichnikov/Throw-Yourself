@@ -229,7 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ced40c7eda413bae5a1dd1f4d0c706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _throwingPlayerFeedBack: {fileID: 5241419175361033731}
+  _throwingPlayerFirstFeedBack: {fileID: 5241419175361033731}
+  _throwingPlayerSecondFeedBack: {fileID: 5241419175361033731}
+  _throwingPlayerThirdFeedBack: {fileID: 5241419175361033731}
   _deathPlayerFeedBack: {fileID: 4630811592827668197}
   _damagePlayerFeedBack: {fileID: 2207233834312400475}
 --- !u!1001 &3959762208716104136
