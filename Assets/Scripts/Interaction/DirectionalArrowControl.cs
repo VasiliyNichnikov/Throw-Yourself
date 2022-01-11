@@ -33,9 +33,19 @@ namespace Interaction
             _player.Main.BodySwitch.BeamThrow(direction);
         }
 
+        public void ResetArrow()
+        {
+            _player.Main.InteractionArrow.ResetArrow();
+        }
+
         public void Show()
         {
             _player.Main.InteractionArrow.SetVisible(true);
+        }
+
+        public void Hide()
+        {
+            _player.Main.InteractionArrow.SetVisible(false);
         }
 
         public void Remove()

@@ -56,7 +56,9 @@ namespace Interaction
             _pointerHasBeenCreated = false;
             Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
             MovePlayer(direction);
-            _arrowControl.Remove();
+            // _arrowControl.Remove();
+            _arrowControl.ResetArrow();
+            _arrowControl.Hide();
             _isDrag = false;
         }
 
@@ -77,11 +79,11 @@ namespace Interaction
 
         private void LaunchingActionsArrow(Vector3 direction)
         {
-            if (_pointerHasBeenCreated == false)
-            {
-                _arrowControl.ToCreate(TypesArrow.MotionSelection);
-                _pointerHasBeenCreated = true;
-            }
+            // if (_pointerHasBeenCreated == false)
+            // {
+            //     // _arrowControl.ToCreate(TypesArrow.MotionSelection);
+            //     _pointerHasBeenCreated = true;
+            // }
 
             _arrowControl.Move();
             _arrowControl.Rotate(direction);
@@ -107,6 +109,13 @@ namespace Interaction
             _arrowControl = GetComponent<DirectionalArrowControl>();
             _playerControl = GetComponent<PlayerControl>();
             _directionCalculator = new MotionVectorCalculator(_camera, _sensitivity);
+            InitArrow();
+        }
+
+        private void InitArrow()
+        {
+            _arrowControl.ToCreate(TypesArrow.MotionSelection);
+            _arrowControl.Hide();
         }
     }
 }

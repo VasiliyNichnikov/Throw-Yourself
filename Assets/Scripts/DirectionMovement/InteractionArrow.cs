@@ -50,6 +50,12 @@ namespace DirectionMovement
             SetVisible(true);
         }
 
+        public void ResetArrow()
+        {
+            if(IsParentArrowCreated() == false) return;
+            _stretching.Stretch(Vector3.zero);
+        }
+        
         public void Remove()
         {
             if (IsParentArrowCreated() == false) return;
