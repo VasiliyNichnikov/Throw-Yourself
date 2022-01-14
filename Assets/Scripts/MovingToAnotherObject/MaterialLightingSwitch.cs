@@ -16,7 +16,7 @@ namespace MovingToAnotherObject
         private void Start()
         {
             _player = GetComponent<ParentPlayer>();
-            if (_player.RelocationIsAllowed)
+            if (_player.Parameters.RelocationIsAllowed)
             {
                 _event = FindObjectOfType<EventKeeper>().MovingToAnotherObject;
                 _event.Glow.AddListener(ChangeLighting);

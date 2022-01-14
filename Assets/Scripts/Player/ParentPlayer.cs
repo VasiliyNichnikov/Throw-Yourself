@@ -17,8 +17,9 @@ namespace Player
         public MovementObject Engine { get; private set; }
         public HealthPlayer Health { get; private set; }
         public MeshRenderer Renderer { get; private set; }
-        public ConnectingFeedBacks FeedBacks { get; private set; }
-        public bool RelocationIsAllowed => _parameters.RelocationIsAllowed;
+        private ConnectingFeedBacks FeedBacks { get; set; }
+        public ParametersPlayer Parameters => _parameters;
+        // public bool RelocationIsAllowed => _parameters.RelocationIsAllowed;
 
         [SerializeField, Header("Параметры игрока")]
         private ParametersPlayer _parameters;
