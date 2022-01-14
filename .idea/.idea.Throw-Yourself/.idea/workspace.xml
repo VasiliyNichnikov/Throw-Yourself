@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/ConnectingFeedBacksToDirectionMovementEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/ConnectingFeedBacksToDirectionMovementEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/ConnectingFeedBacksDirectionMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/ConnectingFeedBacksDirectionMovement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/SettingsFeedBackDirectionMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/SettingsFeedBackDirectionMovement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MinMaxValues.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MinMaxValues.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/ChangerVisibility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/ChangerVisibility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/InteractionArrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/InteractionArrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/DirectionalArrowControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/DirectionalArrowControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/ScreenTapHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/ScreenTapHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ConnectingFeedBacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ConnectingFeedBacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParametersPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParametersPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ParentPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Player/DirectionMovement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Player/DirectionMovement.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +101,7 @@
       <workItem from="1641687114336" duration="366000" />
       <workItem from="1641831892513" duration="3086000" />
       <workItem from="1641879287658" duration="4313000" />
-      <workItem from="1642144475305" duration="5911000" />
+      <workItem from="1642144475305" duration="6541000" />
     </task>
     <servers />
   </component>
