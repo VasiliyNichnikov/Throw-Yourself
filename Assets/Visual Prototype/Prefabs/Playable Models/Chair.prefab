@@ -230,7 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ced40c7eda413bae5a1dd1f4d0c706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _throwingPlayerFeedBack: {fileID: 5241419175361033731}
   _deathPlayerFeedBack: {fileID: 4630811592827668197}
   _damagePlayerFeedBack: {fileID: 2207233834312400475}
 --- !u!114 &2019509342
@@ -542,6 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
 --- !u!114 &5241419175361033731 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8684033223921408378, guid: 4216a0c8626bf7f46b6afb7977d02f88,
@@ -614,3 +615,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376d98efc7809f24693ecc03cdc3e05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+>>>>>>> Visual

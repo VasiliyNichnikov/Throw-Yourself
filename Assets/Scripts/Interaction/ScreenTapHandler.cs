@@ -13,7 +13,8 @@ namespace Interaction
         private MotionVectorCalculator _directionCalculator;
         private DirectionalArrowControl _arrowControl;
         private PlayerControl _playerControl;
-        private bool _firstDrag;
+        private bool _pointerHasBeenCreated;
+        private bool _isDrag;
 
         public void OnDrag(bool doubleClick, Vector3 positionStart, Vector3 positionEnd)
         {
@@ -21,13 +22,14 @@ namespace Interaction
             {
                 _eventMovingToAnotherObject.Glow.Invoke(1);
             }
+
             Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
             LaunchingActionsArrow(doubleClick, direction);
         }
 
         public void OnUp(bool doubleClick, Vector3 positionStart, Vector3 positionEnd)
         {
-            _firstDrag = false;
+            _pointerHasBeenCreated = false;
             Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
             if (doubleClick)
             {
@@ -42,13 +44,30 @@ namespace Interaction
             _arrowControl.Remove();
         }
 
+        public void OnDrag(Vector3 positionStart, Vector3 positionEnd)
+        {
+            _isDrag = true;
+            Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
+            LaunchingActionsArrow(direction);
+        }
+
+        public void OnUp(Vector3 positionStart, Vector3 positionEnd)
+        {
+            _pointerHasBeenCreated = false;
+            Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
+            MovePlayer(direction);
+            _arrowControl.ResetArrow();
+            _arrowControl.Hide(direction);
+            _isDrag = false;
+        }
+
         private void LaunchingActionsArrow(bool doubleClick, Vector3 direction)
         {
-            if (_firstDrag == false)
+            if (_pointerHasBeenCreated == false)
             {
                 TypesArrow type = GettingTypeArrow.Get(doubleClick);
                 _arrowControl.ToCreate(type);
-                _firstDrag = true;
+                _pointerHasBeenCreated = true;
             }
 
             _arrowControl.Move();
@@ -57,8 +76,17 @@ namespace Interaction
             _arrowControl.Show();
         }
 
+        private void LaunchingActionsArrow(Vector3 direction)
+        {
+            _arrowControl.Move();
+            _arrowControl.Rotate(direction);
+            _arrowControl.Stretch(direction);
+            _arrowControl.Show();
+        }
+
         private void MovePlayer(Vector3 direction)
         {
+            if(_isDrag == false) return;
             _playerControl.Push(direction);
         }
 
@@ -74,6 +102,13 @@ namespace Interaction
             _arrowControl = GetComponent<DirectionalArrowControl>();
             _playerControl = GetComponent<PlayerControl>();
             _directionCalculator = new MotionVectorCalculator(_camera, _sensitivity);
+            InitArrow();
+        }
+
+        private void InitArrow()
+        {
+            _arrowControl.ToCreate(TypesArrow.MotionSelection);
+            _arrowControl.Hide(Vector3.zero);
         }
     }
 }

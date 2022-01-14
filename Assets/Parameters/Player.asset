@@ -22,3 +22,7 @@ MonoBehaviour:
     type: 3}
   _hitEnemy: {fileID: 8300000, guid: 7d99a5b934999964ba9a489bcc5e6f16, type: 3}
   _hitWall: {fileID: 8300000, guid: 26f02cb8af9db1345af45d65bf2f048d, type: 3}
+  _minimumForceTensionArrow: 10
+  _tensionLevelForFirstFeedBackArrow: 35
+  _tensionLevelForSecondFeedBackArrow: 70
+  _tensionLevelForThirdFeedBackArrow: 100

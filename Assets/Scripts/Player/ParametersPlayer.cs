@@ -13,6 +13,7 @@ namespace Player
         public ActivatorParticle ActivatorParticle => _activatorParticle;
         public AudioClip HitEnemy => _hitEnemy;
         public AudioClip HitWall => _hitWall;
+
         public bool RelocationIsAllowed => _relocationIsAllowed;
 
         [SerializeField, Header("Название параметра игрока")]

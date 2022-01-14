@@ -4,13 +4,12 @@ namespace DirectionMovement
 {
     public class ChangerVisibility : MonoBehaviour
     {
+        [SerializeField, Header("Компоненты, которые нужно скрыть")] private Transform[] _objs;
         private Transform _thisTransform;
-        private Transform[] _objs;
 
         private void Awake()
         {
             _thisTransform = transform;
-            _objs = _thisTransform.GetComponentsInChildren<Transform>();
         }
 
         private void Start()

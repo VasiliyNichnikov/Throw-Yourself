@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DirectionMovement.FeedBacks;
+using UnityEngine;
 
 namespace DirectionMovement
 {
@@ -11,6 +12,7 @@ namespace DirectionMovement
 
         private ChangerVisibility _visibility;
         private StretchingAnimation _stretching;
+        private ConnectingFeedBacksDirectionMovement _feedBacks;
 
         public void SetVisible(bool state)
         {
@@ -47,15 +49,28 @@ namespace DirectionMovement
             _parentArrow = arrows.parent;
             _visibility = arrows.created.GetComponent<ChangerVisibility>();
             _stretching = arrows.created.GetComponent<StretchingAnimation>();
+            _feedBacks = arrows.created.GetComponent<ConnectingFeedBacksDirectionMovement>();
             SetVisible(true);
         }
 
+        public void ResetArrow()
+        {
+            if(IsParentArrowCreated() == false) return;
+            _stretching.Stretch(Vector3.zero);
+        }
+        
         public void Remove()
         {
             if (IsParentArrowCreated() == false) return;
             Destroy(_parentArrow.gameObject);
         }
 
+        public void EnablingFeedBack(Vector3 direction)
+        {
+            float value = MyUtils.GetTensionValue(direction);
+            _feedBacks.LaunchPushFeedBack(value);
+        }
+        
         private bool IsParentArrowCreated()
         {
             return _parentArrow != null;
