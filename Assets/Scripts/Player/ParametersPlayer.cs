@@ -14,46 +14,6 @@ namespace Player
         public AudioClip HitEnemy => _hitEnemy;
         public AudioClip HitWall => _hitWall;
 
-        public float MinimumForceTensionArrow
-        {
-            get
-            {
-                if (_minimumForceTensionArrow != 0)
-                    return _minimumForceTensionArrow / 100f;
-                return 0;
-            }
-        }
-
-        public float TensionLevelForFirstFeedBackArrow
-        {
-            get
-            {
-                if (_tensionLevelForFirstFeedBackArrow != 0)
-                    return _tensionLevelForFirstFeedBackArrow / 100f;
-                return 0;
-            }
-        }
-
-        public float TensionLevelForSecondFeedBackArrow
-        {
-            get
-            {
-                if (_tensionLevelForSecondFeedBackArrow != 0)
-                    return _tensionLevelForSecondFeedBackArrow / 100f;
-                return 0;
-            }
-        }
-
-        public float TensionLevelForThirdFeedBackArrow
-        {
-            get
-            {
-                if (_tensionLevelForThirdFeedBackArrow != 0)
-                    return _tensionLevelForThirdFeedBackArrow / 100f;
-                return 0;
-            }
-        }
-
         public bool RelocationIsAllowed => _relocationIsAllowed;
 
         [SerializeField, Header("Название параметра игрока")]
@@ -79,20 +39,5 @@ namespace Player
 
         [SerializeField, Header("Звук при столкновении со стеной")]
         private AudioClip _hitWall;
-
-        [Space]
-        [SerializeField, Header("Информация при наведение"),
-         Tooltip("Минимальное натяжение, если натяжение меньше выбранного значения, эффекты воспроизводиться не будут"),
-         Range(0, 100)]
-        private float _minimumForceTensionArrow;
-
-        [SerializeField, Header("При следующем натяжение будет активирован первый feedBack курсора"), Range(0, 100)]
-        private float _tensionLevelForFirstFeedBackArrow;
-
-        [SerializeField, Header("При следующем натяжение будет активирован второй feedBack курсора"), Range(0, 100)]
-        private float _tensionLevelForSecondFeedBackArrow;
-
-        [SerializeField, Header("При следующем натяжение будет активирован третий feedBack курсора"), Range(0, 100)]
-        private float _tensionLevelForThirdFeedBackArrow;
     }
 }

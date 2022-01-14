@@ -10,8 +10,6 @@ namespace Interaction
         public void Push(Vector3 direction)
         {
             _player.Main.Engine.Push(direction);
-            float value = MyUtils.GetTensionValue(direction);
-            _player.Main.FeedBacks.PlayThrowingPlayer(value);
         }
 
         public void ChangeBody()

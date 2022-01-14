@@ -43,8 +43,9 @@ namespace Interaction
             _player.Main.InteractionArrow.SetVisible(true);
         }
 
-        public void Hide()
+        public void Hide(Vector3 direction)
         {
+            _player.Main.InteractionArrow.EnablingFeedBack(direction);
             _player.Main.InteractionArrow.SetVisible(false);
         }
 

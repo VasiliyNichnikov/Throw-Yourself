@@ -57,7 +57,7 @@ namespace Interaction
             Vector3 direction = _directionCalculator.GetDirectionsFromScreen(positionStart, positionEnd);
             MovePlayer(direction);
             _arrowControl.ResetArrow();
-            _arrowControl.Hide();
+            _arrowControl.Hide(direction);
             _isDrag = false;
         }
 
@@ -108,7 +108,7 @@ namespace Interaction
         private void InitArrow()
         {
             _arrowControl.ToCreate(TypesArrow.MotionSelection);
-            _arrowControl.Hide();
+            _arrowControl.Hide(Vector3.zero);
         }
     }
 }
