@@ -7,17 +7,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NPC WIever Material
-  m_Shader: {fileID: -6465566751694194690, guid: 80ad049960504e14d8972f111991a093,
-    type: 3}
-  m_ShaderKeywords: 
+  m_Name: Player DeathCubes ParticleMaterial
+  m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
+  m_ShaderKeywords: _RECEIVE_SHADOWS_OFF _SPECULAR_COLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses:
-  - SHADOWCASTER
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -45,27 +44,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_D497BF2C_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 1f3a259367f7f0f47b34c3adb9629978, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_48D0A140: 1.03
-    - Vector1_8DFDAEC6: 0.52
-    - Vector1_B2CECDC7: 0.33
-    - Vector1_C8E16C05: 0.1
-    - Vector1_C9756DF6: 2
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DstBlend: 10
-    - _EnvironmentReflections: 1
+    - _DstBlend: 0
+    - _EnvironmentReflections: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossinessSource: 0
@@ -73,25 +63,23 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
-    - _SampleGI: 0
+    - _ReceiveShadows: 0
     - _Shininess: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.094
     - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SpecSource: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 5
-    - _Surface: 1
+    - _SpecularHighlights: 0
+    - _SrcBlend: 1
+    - _Surface: 0
     - _WorkflowMode: 1
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
-    - Color_FF6AC699: {r: 0.816, g: 0.816, b: 0.816, a: 1}
-    - _BaseColor: {r: 1, g: 0, b: 0, a: 0.36862746}
+    - _BaseColor: {r: 0.7, g: 0.46051204, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &8451607934613544650
+    - _SpecColor: {r: 0.19999978, g: 0.19999978, b: 0.19999978, a: 0.094}
+--- !u!114 &324716952288466248
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
