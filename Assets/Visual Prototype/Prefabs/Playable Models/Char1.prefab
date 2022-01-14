@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 94ad0db89b0985c49b73c6552f353b1f, type: 2}
+  - {fileID: 2100000, guid: 032660dec0fafc7439f373dcd77d4e3e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,12 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d161690bd76a5347b9f41b58b962899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   _parameters: {fileID: 11400000, guid: 492a1cd15ebfbd747b7b164dd9608dce, type: 2}
 --- !u!114 &-7946537587771559951
-=======
---- !u!114 &5650548091538998300
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,11 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b970fae02255423dab788efd81b007e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!114 &5868635082023600452
-=======
---- !u!114 &8897382082927526999
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,11 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d34600fc4df9040b65d21b9be73dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!114 &5650548091538998300
-=======
---- !u!114 &3106633884853852948
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1ca82b588c4c98b2fae2f007344963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parameters: {fileID: 0}
 --- !u!114 &4359569744531351021
 MonoBehaviour:
   m_ObjectHideFlags: 0
