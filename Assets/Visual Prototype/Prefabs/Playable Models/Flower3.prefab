@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 94ad0db89b0985c49b73c6552f353b1f, type: 2}
+  - {fileID: 2100000, guid: 032660dec0fafc7439f373dcd77d4e3e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,18 +129,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-<<<<<<< Updated upstream
   serializedVersion: 2
   m_Size: {x: 0.8100497, y: 1.7510675, z: 0.43501544}
   m_Center: {x: 0.0064108074, y: 0.87553376, z: 0.0016092062}
 --- !u!114 &4791041852599639236
-=======
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93d34600fc4df9040b65d21b9be73dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1290016048481751878
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,12 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d161690bd76a5347b9f41b58b962899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   _parameters: {fileID: 11400000, guid: 492a1cd15ebfbd747b7b164dd9608dce, type: 2}
 --- !u!114 &-6073569554005394649
-=======
---- !u!114 &7776694873604071818
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,11 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b970fae02255423dab788efd81b007e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!114 &7533647221749083124
-=======
---- !u!114 &4791041852599639236
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,14 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d34600fc4df9040b65d21b9be73dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
 --- !u!114 &1290016048481751878
 MonoBehaviour:
-=======
-  _parameters: {fileID: 0}
---- !u!65 &7005086472006514975
-BoxCollider:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
