@@ -17,9 +17,9 @@ MonoBehaviour:
     \u0432\u0440\u0430\u0433\u0430 \u0441 \u043E\u0440\u0443\u0436\u0438\u0435\u043C"
   _keyIsEnemy: 1
   _speedRotation: 5
-  _minStoppingDistance: 1
+  _minStoppingDistance: 1.2
   _minWalkingDistance: 4
-  _minSelectedPointDistance: 2
+  _minSelectedPointDistance: 0.2
   _attackSound: {fileID: 8300000, guid: 39a333ba5b84dff468ca9a8cbeb4662a, type: 3}
   _maxAttackDistance: 10
   _delayAttack: 2

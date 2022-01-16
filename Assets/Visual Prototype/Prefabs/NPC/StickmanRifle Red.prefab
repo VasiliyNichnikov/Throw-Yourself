@@ -1272,7 +1272,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -2970367259137308046, guid: 5f767ae03a1bb8241812543f593d9ecc, type: 3}
+  m_Mesh: {fileID: -3129184034281849086, guid: 1edeb48146b32134db0ae5ed357fc80d, type: 3}
   m_Bones:
   - {fileID: 2553795024294265744}
   - {fileID: 8242371576107088955}
@@ -1464,7 +1464,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: -0.08
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!136 &5788979281725413681
@@ -1568,6 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _objectsToDelete:
+  - {fileID: 0}
   - {fileID: 6672078647042819263}
 --- !u!114 &5788979281725413688
 MonoBehaviour:
@@ -1805,7 +1806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6672078646378152805}
   m_Layer: 0
-  m_Name: StickmanRifle
+  m_Name: StickmanRifle Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2001,7 +2002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6672078647042819263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6672078646551646893}
