@@ -262,7 +262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ced40c7eda413bae5a1dd1f4d0c706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _throwingPlayerFeedBack: {fileID: 7067243530632555887}
   _deathPlayerFeedBack: {fileID: 7704907925501140361}
   _damagePlayerFeedBack: {fileID: 3751231368617436471}
 --- !u!114 &3075578613266390834
@@ -577,18 +576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7067243530632555887 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2995487500146213302, guid: fe14dbd4cd0822e4195d96bc7d7df618,
-    type: 3}
-  m_PrefabInstance: {fileID: 5440903116559051993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5626547794363039506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -681,12 +668,24 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6518231774748132660, guid: 6492ac5c18aae7a448590e534cf3e5f3,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518231774865646717, guid: 6492ac5c18aae7a448590e534cf3e5f3,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8802954486571681746, guid: 6492ac5c18aae7a448590e534cf3e5f3,
         type: 3}
       propertyPath: m_Name
       value: Player Components
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6518231774586599651, guid: 6492ac5c18aae7a448590e534cf3e5f3, type: 3}
+    - {fileID: 6518231774865646717, guid: 6492ac5c18aae7a448590e534cf3e5f3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6492ac5c18aae7a448590e534cf3e5f3, type: 3}
 --- !u!4 &7620360865851686831 stripped
 Transform:
