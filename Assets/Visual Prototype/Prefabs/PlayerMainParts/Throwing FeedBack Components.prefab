@@ -24196,7 +24196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 54215610276926312}
   m_Layer: 0
-  m_Name: Throwind FeedBack Components
+  m_Name: Throwing FeedBack Components
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
