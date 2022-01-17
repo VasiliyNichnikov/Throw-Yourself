@@ -17,7 +17,7 @@ namespace Enemy
         [Header("Враг в состояние движения за игроком")]
         public bool IsMovementBehindPlayer;
 
-        [Header("Враг в состояние движения к стартовой точке")]
+        [Header("Враг в состояние движения к выбранной точке")]
         public bool IsMovementToSelectedPoint;
 
         [Header("Враг в состояние атаки руками по игроку")]
