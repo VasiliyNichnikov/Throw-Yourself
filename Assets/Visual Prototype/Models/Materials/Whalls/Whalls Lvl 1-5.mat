@@ -50,8 +50,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_20E8F98F: 2.83
-    - Vector1_28FB13C1: 2.6
-    - Vector1_9A50520D: 5.24
+    - Vector1_28FB13C1: 2.51
+    - Vector1_9A50520D: 4.84
     - Vector1_CFF3B980: 0.63
     - Vector1_F6674D0E: 1.2
     - Vector1_FBACC90D: -0.85
