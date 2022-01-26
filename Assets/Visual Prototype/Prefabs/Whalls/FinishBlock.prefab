@@ -5733,6 +5733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Whall DoorWay
       objectReference: {fileID: 0}
+    - target: {fileID: 5313309326764755521, guid: b80ee1cf54fc79c46a068f90ed1cdc0f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94ad0db89b0985c49b73c6552f353b1f, type: 2}
     - target: {fileID: 8674858048007838904, guid: b80ee1cf54fc79c46a068f90ed1cdc0f,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
