@@ -325,6 +325,21 @@ PrefabInstance:
       propertyPath: BoundRenderer
       value: 
       objectReference: {fileID: 4755425465716437635}
+    - target: {fileID: 311791392625629540, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.b
+      value: 14.754423
+      objectReference: {fileID: 0}
+    - target: {fileID: 311791392625629540, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.g
+      value: 14.754423
+      objectReference: {fileID: 0}
+    - target: {fileID: 311791392625629540, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.r
+      value: 14.754423
+      objectReference: {fileID: 0}
     - target: {fileID: 787548057278407833, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: BoundParticleSystem
@@ -509,6 +524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804033836928785276, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5841729706012540464, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}

@@ -5246,6 +5246,12 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000001937151
       objectReference: {fileID: 0}
+    - target: {fileID: 9039856072369378163, guid: 7c711957769ccbe49b8e2c8b565f42a3,
+        type: 3}
+      propertyPath: _basicSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bc0f799dc0e6e548a023587547a8546,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c711957769ccbe49b8e2c8b565f42a3, type: 3}
 --- !u!1001 &2014895980

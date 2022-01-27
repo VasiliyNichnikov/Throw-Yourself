@@ -15,6 +15,7 @@ namespace EndLevelDoor
         private GameManager _gameManager;
         private int _layerPlayer;
 
+
         private void Start()
         {
             _gameManager = FindObjectOfType<GameManager>();
@@ -47,6 +48,10 @@ namespace EndLevelDoor
         {
             yield return new WaitForSeconds(_gameManager.Delay);
             _transitionLevels.LoadToNextScene();
+
+     
+
+
         }
     }
 }
