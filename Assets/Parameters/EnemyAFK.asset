@@ -18,9 +18,9 @@ MonoBehaviour:
   _keyIsEnemy: 0
   _speedRotation: 5
   _minStoppingDistance: 1
-  _minWalkingDistance: 6
+  _minWalkingDistance: 8
   _minSelectedPointDistance: 2
-  _attackSound: {fileID: 8300000, guid: 39a333ba5b84dff468ca9a8cbeb4662a, type: 3}
-  _maxAttackDistance: 3
+  _attackSound: {fileID: 0}
+  _maxAttackDistance: 2
   _delayAttack: 1
-  _damageWhenAttacking: 15
+  _damageWhenAttacking: 20

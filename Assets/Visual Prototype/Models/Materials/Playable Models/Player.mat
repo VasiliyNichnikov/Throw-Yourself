@@ -221,7 +221,7 @@ Material:
     - _RampLight: {r: 1, g: 1, b: 1, a: 0}
     - _RimColor: {r: 0, g: 0.7342432, b: 1, a: 1}
     - _ShadowColor: {r: 1, g: 0, b: 0.11576597, a: 1}
-    - _SpecColor: {r: 0.19998881, g: 0.19998881, b: 0.19998881, a: 0}
+    - _SpecColor: {r: 0.1999883, g: 0.1999883, b: 0.1999883, a: 0}
     - _SpecularColor: {r: 2, g: 2, b: 2, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
