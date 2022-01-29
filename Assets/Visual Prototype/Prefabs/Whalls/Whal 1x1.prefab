@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3009820828905623268}
   - component: {fileID: 2229674878781631208}
   - component: {fileID: 8270090719015107698}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Whal 1x1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -23,4 +23,4 @@ MonoBehaviour:
   _attackSound: {fileID: 0}
   _maxAttackDistance: 2
   _delayAttack: 1
-  _damageWhenAttacking: 20
+  _damageWhenAttacking: 15

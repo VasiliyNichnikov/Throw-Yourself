@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 1082761785129835870}
   - component: {fileID: 8623828982390617500}
   - component: {fileID: 3560614473395838929}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Whall 1x1 3 Croner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

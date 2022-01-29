@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7723725017889704832}
   - component: {fileID: 8977826430536894469}
   - component: {fileID: 5340187829465329201}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Window Cave Big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,8 +66,6 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 27f65d5024ba39148a83f8783bca7900, type: 2}
   - {fileID: 2100000, guid: 69f5203ddc33e7a45b883f49febede03, type: 2}
-  - {fileID: 2100000, guid: 27f65d5024ba39148a83f8783bca7900, type: 2}
-  - {fileID: 2100000, guid: 27f65d5024ba39148a83f8783bca7900, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
