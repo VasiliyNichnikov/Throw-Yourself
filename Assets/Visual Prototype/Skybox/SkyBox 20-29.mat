@@ -73,7 +73,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_84504E50: {r: 0.71599996, g: 1, b: 0.8722001, a: 0}
-    - Color_DF8F50C0: {r: 1, g: 0.8008167, b: 0.297, a: 0}
+    - Color_DF8F50C0: {r: 1, g: 0.2980392, b: 0.2980392, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
