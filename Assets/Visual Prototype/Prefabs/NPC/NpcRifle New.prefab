@@ -1424,7 +1424,7 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 8192
-  _fov: 90
+  _fov: 120
   _rayCount: 200
 --- !u!23 &7036837683799309882
 MeshRenderer:

@@ -16,7 +16,7 @@ MonoBehaviour:
     \u043A\u0440\u0435\u0441\u043B\u0430"
   _heightRay: 0
   _forceOfPust: 50
-  _minRelativeVelocityForKilling: 7
+  _minRelativeVelocityForKilling: 8
   _relocationIsAllowed: 0
   _activatorParticle: {fileID: 5976178523487606693, guid: ddf19be0d7725d141817c5f856072611,
     type: 3}

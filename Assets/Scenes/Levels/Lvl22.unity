@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 7f6a87bb4c2995341ad024a02907bd22, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 518b0eb614365484ebfcbc840b88c483, type: 2}
 --- !u!20 &47396594 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1205375827749156618, guid: 5a3774e3d56097949a90325ab94d9a52,

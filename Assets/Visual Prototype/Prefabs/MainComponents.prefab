@@ -298,8 +298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3cbb0fa54843378b58c51bc4b92508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLevel: 17
-  _sceneReturn: 5
+  _maxLevel: 100
+  _sceneReturn: 10
   _player: {fileID: 7029130124076354471}
 --- !u!1 &1441511400383111580
 GameObject:

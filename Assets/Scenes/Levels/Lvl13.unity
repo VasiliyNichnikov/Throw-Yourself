@@ -4215,6 +4215,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 692159616}
     m_Modifications:
+    - target: {fileID: 889039972388298074, guid: 7c711957769ccbe49b8e2c8b565f42a3,
+        type: 3}
+      propertyPath: _fov
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 5416953746983556322, guid: 7c711957769ccbe49b8e2c8b565f42a3,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -7361,6 +7366,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 692159616}
     m_Modifications:
+    - target: {fileID: 889039972388298074, guid: 7c711957769ccbe49b8e2c8b565f42a3,
+        type: 3}
+      propertyPath: _fov
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 5416953746983556322, guid: 7c711957769ccbe49b8e2c8b565f42a3,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
