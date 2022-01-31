@@ -8719,8 +8719,8 @@ Transform:
   - {fileID: 429671389}
   - {fileID: 1194221437}
   - {fileID: 384843694}
-  - {fileID: 947774202}
   - {fileID: 1229003996}
+  - {fileID: 947774202}
   - {fileID: 1736172783}
   - {fileID: 98800033}
   - {fileID: 1518950568}
@@ -11986,7 +11986,7 @@ PrefabInstance:
     - target: {fileID: 4423079217976853230, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4802991801478023756, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
@@ -12091,7 +12091,7 @@ PrefabInstance:
     - target: {fileID: 7029130124076354470, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7029130124076354471, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}

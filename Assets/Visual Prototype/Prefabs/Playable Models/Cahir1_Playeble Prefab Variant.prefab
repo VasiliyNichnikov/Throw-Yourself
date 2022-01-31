@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 3751231368617436471, guid: 01c9a41bb6685694a86db81ebd8c6c31,
         type: 3}
       propertyPath: Feedbacks.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3751231368617436471, guid: 01c9a41bb6685694a86db81ebd8c6c31,
         type: 3}
@@ -91,7 +91,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Feedbacks.Array.data[4]
       value: 
-      objectReference: {fileID: 3809268284953098332}
+      objectReference: {fileID: 0}
     - target: {fileID: 7342495931408389672, guid: 01c9a41bb6685694a86db81ebd8c6c31,
         type: 3}
       propertyPath: m_Name
@@ -140,17 +140,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8fe7e41857f44348b52714b3238715c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3809268284953098332 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1914037234066526953, guid: 01c9a41bb6685694a86db81ebd8c6c31,
-    type: 3}
-  m_PrefabInstance: {fileID: 3336388781830990517}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27131831afa28b499cb120fc9059997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

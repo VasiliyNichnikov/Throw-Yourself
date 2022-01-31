@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3635,7 +3635,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh237492
+  m_Name: pb_Mesh155238
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5018,7 +5018,7 @@ PrefabInstance:
     - target: {fileID: 528710156474359313, guid: f78a9b814d3a67547a5abf7573d7c1b7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.59
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 528710156474359313, guid: f78a9b814d3a67547a5abf7573d7c1b7,
         type: 3}
@@ -5028,7 +5028,7 @@ PrefabInstance:
     - target: {fileID: 528710156474359313, guid: f78a9b814d3a67547a5abf7573d7c1b7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.09
+      value: 22.08
       objectReference: {fileID: 0}
     - target: {fileID: 528710156474359313, guid: f78a9b814d3a67547a5abf7573d7c1b7,
         type: 3}
@@ -9851,6 +9851,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 1544487914324207659, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2603561627221391015, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -9994,13 +9999,13 @@ PrefabInstance:
     - target: {fileID: 7029130124076354470, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7029130124076354471, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 900585054}
     - target: {fileID: 7029130124806670780, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_RootOrder
@@ -10106,6 +10111,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8494155750647641198, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 900585054}
     - target: {fileID: 8670367653617682812, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_IsActive

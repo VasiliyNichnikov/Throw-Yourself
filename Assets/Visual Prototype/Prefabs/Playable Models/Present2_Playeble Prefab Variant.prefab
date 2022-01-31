@@ -79,5 +79,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8444785029287463121, guid: 6295ae1825d7cc249b016011ec5ee246,
         type: 3}
+    - target: {fileID: 9120886758460245645, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120886758460245645, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120886758460245645, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01c9a41bb6685694a86db81ebd8c6c31, type: 3}
