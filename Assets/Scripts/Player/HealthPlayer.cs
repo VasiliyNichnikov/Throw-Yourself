@@ -33,7 +33,7 @@ namespace Player
             {
                 _feedBacks.PlayPlayerDeath();
                 _isDeath = true;
-                // _transitionBetween.Restart();
+                _transitionBetween.Restart();
             }
         }
 
