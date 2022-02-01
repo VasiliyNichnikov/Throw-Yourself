@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WhalsNewEx
-  m_Shader: {fileID: -6465566751694194690, guid: f4959a88ef65a464582dc826de2a5b58,
+  m_Name: wallsNewEx
+  m_Shader: {fileID: -6465566751694194690, guid: db3786e6821bb114c8c00e3cdc80adb3,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
