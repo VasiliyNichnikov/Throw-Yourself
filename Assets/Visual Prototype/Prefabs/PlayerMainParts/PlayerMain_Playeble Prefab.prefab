@@ -444,7 +444,7 @@ PrefabInstance:
         type: 3}
       propertyPath: TargetAudioSource
       value: 
-      objectReference: {fileID: 1815548592491452599}
+      objectReference: {fileID: 2922849280036526061}
     - target: {fileID: 4139375753518170461, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: TargetAudioSource
@@ -608,12 +608,12 @@ PrefabInstance:
     - target: {fileID: 6158573367314221389, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: MaxPitch
-      value: 1.55
+      value: 1.65
       objectReference: {fileID: 0}
     - target: {fileID: 6158573367314221389, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: MinPitch
-      value: 1.4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6158573367314221389, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
@@ -1062,6 +1062,12 @@ ParticleSystem:
 --- !u!82 &1815548592491452599 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6280160536075036581, guid: 6492ac5c18aae7a448590e534cf3e5f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5626547794363039506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2922849280036526061 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7387460880097700095, guid: 6492ac5c18aae7a448590e534cf3e5f3,
     type: 3}
   m_PrefabInstance: {fileID: 5626547794363039506}
   m_PrefabAsset: {fileID: 0}
