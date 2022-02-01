@@ -20,7 +20,7 @@ MonoBehaviour:
   _minStoppingDistance: 1
   _minWalkingDistance: 7
   _minSelectedPointDistance: 2
-  _attackSound: {fileID: 8300000, guid: 39a333ba5b84dff468ca9a8cbeb4662a, type: 3}
+  _attackSound: {fileID: 8300000, guid: 16c139601cc5446448c74d1ecd68f142, type: 3}
   _maxAttackDistance: 10
   _delayAttack: 0.5
   _damageWhenAttacking: 15
