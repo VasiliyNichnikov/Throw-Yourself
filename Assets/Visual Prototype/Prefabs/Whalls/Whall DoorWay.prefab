@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 3657526171283661444}
   - component: {fileID: 253425005001940186}
   - component: {fileID: 6937061870691465532}
+  - component: {fileID: 5756205627893519563}
   m_Layer: 0
   m_Name: DoorWay
   m_TagString: Untagged
@@ -158,6 +159,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5756205627893519563
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872486673405961850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2204874, y: 2.7262163, z: 0.3035067}
+  m_Center: {x: 1.28206, y: 0.75408447, z: 0.000000029802322}
 --- !u!1 &3342207970776328444
 GameObject:
   m_ObjectHideFlags: 0
