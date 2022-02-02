@@ -2725,6 +2725,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map Components
       objectReference: {fileID: 0}
+    - target: {fileID: 8529099608125295756, guid: 2151d9d50c87ef548ac506786ce4f8b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2151d9d50c87ef548ac506786ce4f8b6, type: 3}
 --- !u!4 &2204054011048133272 stripped
@@ -2744,6 +2749,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camera Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116450356851537942, guid: 5a3774e3d56097949a90325ab94d9a52,
+        type: 3}
+      propertyPath: m_RequiresDepthTextureOption
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116450356851537942, guid: 5a3774e3d56097949a90325ab94d9a52,
+        type: 3}
+      propertyPath: m_RequiresOpaqueTextureOption
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205375827749156618, guid: 5a3774e3d56097949a90325ab94d9a52,
+        type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2837765023127634712, guid: 5a3774e3d56097949a90325ab94d9a52,
         type: 3}
@@ -2994,7 +3014,7 @@ PrefabInstance:
     - target: {fileID: 556772642128104530, guid: d7c1eee750473e3488ec958639f81bc4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 673514857673760630, guid: d7c1eee750473e3488ec958639f81bc4,
         type: 3}
