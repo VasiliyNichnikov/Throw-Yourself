@@ -2003,7 +2003,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh150248
+  m_Name: pb_Mesh152052
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5165,20 +5165,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3118652398666932561, guid: ff94bef6b5688d545bbbf31edd55fff5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 233.51855
-      objectReference: {fileID: 0}
-    - target: {fileID: 6700687182969746719, guid: ff94bef6b5688d545bbbf31edd55fff5,
+    - target: {fileID: 6155664089453876107, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7029130123895940049, guid: ff94bef6b5688d545bbbf31edd55fff5,
-        type: 3}
-      propertyPath: _points.Array.data[0].z
-      value: 14.131921
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7029130124076354471, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
@@ -5245,11 +5235,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainComponents
       objectReference: {fileID: 0}
-    - target: {fileID: 8494155750647641198, guid: ff94bef6b5688d545bbbf31edd55fff5,
-        type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 277031900}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff94bef6b5688d545bbbf31edd55fff5, type: 3}
 --- !u!108 &7029130123752577903 stripped
