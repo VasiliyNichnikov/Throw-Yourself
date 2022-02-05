@@ -2925,12 +2925,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 429671388}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &435465798 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 609904933729477016, guid: b12b91cf6862d604196d921079218429,
-    type: 3}
-  m_PrefabInstance: {fileID: 8816319566826368683}
-  m_PrefabAsset: {fileID: 0}
 --- !u!108 &441882183 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 914456046114559348, guid: 2151d9d50c87ef548ac506786ce4f8b6,
@@ -7340,7 +7334,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _basicSettings
       value: 
-      objectReference: {fileID: 11400000, guid: 7680658ae99ca9c4789112cf2955682a,
+      objectReference: {fileID: 11400000, guid: 934b0601e846fbc4db664ecb44414259,
         type: 2}
     - target: {fileID: 8311457634902613147, guid: 0b423a3c14880fa44b8d3b40df19fc02,
         type: 3}
@@ -7968,12 +7962,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4691840733818903565, guid: 5ef02b56c6a04a146aba6975f7d89180,
     type: 3}
   m_PrefabInstance: {fileID: 1552656246}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1418238313 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3404568650887886894, guid: b12b91cf6862d604196d921079218429,
-    type: 3}
-  m_PrefabInstance: {fileID: 8816319566826368683}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1419850692 stripped
 GameObject:
@@ -12141,12 +12129,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _meshCombiner._targetRenderer
       value: 
-      objectReference: {fileID: 1418238313}
+      objectReference: {fileID: 0}
     - target: {fileID: 5989583795383317606, guid: b12b91cf6862d604196d921079218429,
         type: 3}
       propertyPath: _meshCombiner._resultSceneObject
       value: 
-      objectReference: {fileID: 435465798}
+      objectReference: {fileID: 0}
     - target: {fileID: 5989583795383317606, guid: b12b91cf6862d604196d921079218429,
         type: 3}
       propertyPath: _meshCombiner._textureBakeResults

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6020,6 +6020,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000005662442
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067945459356910165, guid: 0b423a3c14880fa44b8d3b40df19fc02,
+        type: 3}
+      propertyPath: Timing.TimescaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067945459356910165, guid: 0b423a3c14880fa44b8d3b40df19fc02,
+        type: 3}
+      propertyPath: Timing.CooldownDuration
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b423a3c14880fa44b8d3b40df19fc02, type: 3}

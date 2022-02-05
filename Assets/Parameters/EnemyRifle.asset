@@ -26,6 +26,6 @@ MonoBehaviour:
   _damageWhenAttacking: 20
   _particleShooting: {fileID: 2540096539703319479, guid: 49ef2eb11153ae34eb5f527f91f8dc9e,
     type: 3}
-  _prefabBullet: {fileID: 4585612863893744827, guid: 1d6ffea69c67b864a928e2e6be4e5c59,
+  _prefabBullet: {fileID: 919132149155446097, guid: 04907ad69d712194b8dfaf47ee196db1,
     type: 3}
   _heightRoute: 0.1
