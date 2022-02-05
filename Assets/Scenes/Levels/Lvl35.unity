@@ -1374,7 +1374,7 @@ AudioSource:
   m_GameObject: {fileID: 162247996}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -2302046117368993272, guid: c214ffd57e6aa0740a1170f5ae196cf9,
+  OutputAudioMixerGroup: {fileID: -2273146209696275378, guid: 7e984f512e89b60468e829489e8883e3,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 80a7b1d358604cc4e884c5b126279038, type: 3}
   m_PlayOnAwake: 1
@@ -2918,12 +2918,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6070078632087330273, guid: 5f92f13502c8126438b0a3119441f09d,
     type: 3}
   m_PrefabInstance: {fileID: 429671388}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &435465798 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 609904933729477016, guid: b12b91cf6862d604196d921079218429,
-    type: 3}
-  m_PrefabInstance: {fileID: 8816319566826368683}
   m_PrefabAsset: {fileID: 0}
 --- !u!108 &441882183 stripped
 Light:
@@ -7885,12 +7879,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1552656246}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &1418238313 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3404568650887886894, guid: b12b91cf6862d604196d921079218429,
-    type: 3}
-  m_PrefabInstance: {fileID: 8816319566826368683}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1419850692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2972669535150822900, guid: ff94bef6b5688d545bbbf31edd55fff5,
@@ -12431,12 +12419,12 @@ PrefabInstance:
         type: 3}
       propertyPath: _meshCombiner._targetRenderer
       value: 
-      objectReference: {fileID: 1418238313}
+      objectReference: {fileID: 0}
     - target: {fileID: 5989583795383317606, guid: b12b91cf6862d604196d921079218429,
         type: 3}
       propertyPath: _meshCombiner._resultSceneObject
       value: 
-      objectReference: {fileID: 435465798}
+      objectReference: {fileID: 0}
     - target: {fileID: 5989583795383317606, guid: b12b91cf6862d604196d921079218429,
         type: 3}
       propertyPath: _meshCombiner._textureBakeResults
