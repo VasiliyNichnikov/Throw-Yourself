@@ -1301,7 +1301,7 @@ MonoBehaviour:
   Chance: 100
   Timing:
     TimescaleMode: 0
-    InitialDelay: 1
+    InitialDelay: 0
     CooldownDuration: 0
     ExcludeFromHoldingPauses: 0
     InterruptsOnStop: 1
@@ -1503,7 +1503,7 @@ MonoBehaviour:
   Chance: 100
   Timing:
     TimescaleMode: 0
-    InitialDelay: 1
+    InitialDelay: 0
     CooldownDuration: 0
     ExcludeFromHoldingPauses: 0
     InterruptsOnStop: 1

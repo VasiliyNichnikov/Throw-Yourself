@@ -20,12 +20,12 @@ MonoBehaviour:
   _minStoppingDistance: 1
   _minWalkingDistance: 7
   _minSelectedPointDistance: 2
-  _attackSound: {fileID: 8300000, guid: 16c139601cc5446448c74d1ecd68f142, type: 3}
+  _attackSound: {fileID: 0}
   _maxAttackDistance: 10
   _delayAttack: 0.5
   _damageWhenAttacking: 20
   _particleShooting: {fileID: 2540096539703319479, guid: 49ef2eb11153ae34eb5f527f91f8dc9e,
     type: 3}
-  _prefabBullet: {fileID: 3467298607794404804, guid: 2ccc7d41b5ced694fbcf1455df7f295b,
+  _prefabBullet: {fileID: 919132149155446097, guid: 04907ad69d712194b8dfaf47ee196db1,
     type: 3}
   _heightRoute: 0.1
