@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using MoreMountains.Feedbacks;
 
 namespace Enemy.Rifle
 {
@@ -22,10 +23,11 @@ namespace Enemy.Rifle
         private ShootingAtPlayerEnemyRifle _gun;
         private ParametersEnemyRifle _settings;
         private TypeMovementObject _typeObject;
+		public MMFeedbacks _bulletSndFeedback;
 
         public override void Attack()
         {
-            base.Attack();
+			base.Attack();
             if (Timer.IsLaunched == false)
             {
                 Vector3 thisPosition = ThisTransform.position;
@@ -39,8 +41,9 @@ namespace Enemy.Rifle
                 _gun.Shoot(_settings.PrefabBullet, positionBullet, direction, _settings.DamageWhenAttacking);
                 _settings.CreatorOfParticulars.Create(_settings.ParticleShooting, positionBullet,
                     Quaternion.Euler(0, angleY, 0));
-                _settings.CreatorPlayerSound.Create(_settings.AttackSound, 0.1f);
-                StartCoroutine(Timer.ToRun(_settings.DelayAttack));
+                // _settings.CreatorPlayerSound.Create(_settings.AttackSound, 0.1f);
+				_bulletSndFeedback.PlayFeedbacks();
+				StartCoroutine(Timer.ToRun(_settings.DelayAttack));
             }
         }
 

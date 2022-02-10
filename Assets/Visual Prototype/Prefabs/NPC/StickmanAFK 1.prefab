@@ -1558,7 +1558,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d4745584d932e284e8c7ffc2674cf3ef, type: 2}
+  - {fileID: 2100000, guid: 94ad0db89b0985c49b73c6552f353b1f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2049,6 +2049,9 @@ MonoBehaviour:
   IsMovementBehindPlayer: 0
   IsMovementToSelectedPoint: 0
   IsAttack: 0
+  _drawArea: {fileID: 0}
+  _basicSettings: {fileID: 0}
+  _rotationOfFieldOfView: {fileID: 0}
 --- !u!1 &5416953748492752524
 GameObject:
   m_ObjectHideFlags: 0
