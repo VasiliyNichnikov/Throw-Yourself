@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/ConnectingFeedBacksDirectionMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/ConnectingFeedBacksDirectionMovement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics/LevelInformation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics/LevelInformation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics/TypesOfLevelDifficulties.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics/TypesOfLevelDifficulties.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3d6d6a4a6d7c4ec2aa654b7d8f54a096795400/dc/554fb526/EditorGUILayout.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ce9a2a611214ae39e2e4557a81347ec10000/79/21d2de91/AndroidJavaObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/PropertyDrawers/SpriteStateDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e395ed1557354db1a729173c553a159b118800/60/4587e91e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Tests/Editor/SpritePackageTests.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,6 +113,7 @@
       <workItem from="1642144475305" duration="6541000" />
       <workItem from="1642351140332" duration="1083000" />
       <workItem from="1643724542214" duration="1767000" />
+      <workItem from="1644517498604" duration="3810000" />
     </task>
     <servers />
   </component>
