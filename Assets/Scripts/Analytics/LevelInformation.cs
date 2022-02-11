@@ -5,13 +5,12 @@ namespace Analytics
 {
     public class LevelInformation : MonoBehaviour
     {
-        public int LevelNumber => SceneManager.GetActiveScene().buildIndex + 1;
-        public string LevelName => SceneManager.GetActiveScene().name;
-        public TypesOfLevelDifficulties LevelDifficulties => _levelDifficulties;
-        
-        
+        public int Number => SceneManager.GetActiveScene().buildIndex + 1;
+        public string Name => SceneManager.GetActiveScene().name;
+        public TypesOfLevelDifficulties Difficulty => _difficulty;
+
         [SerializeField, Header("Сложность уровня")]
-        private TypesOfLevelDifficulties _levelDifficulties;
+        private TypesOfLevelDifficulties _difficulty;
         
     }
 }
