@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using Analytics;
+using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,10 +14,13 @@ namespace Level
         private int _sceneReturn;
 
         [SerializeField] private SelectedPlayer _player;
+        [SerializeField] private PlayerSessionAnalytics _sessionAnalytics;
 
         public void Restart()
         {
             _player.Disconnection();
+            _sessionAnalytics.UpgradeLevelCount();
+            _sessionAnalytics.SendFinishStatistics(LevelCompletionStates.Lose);
             SceneManager.LoadScene(GetIndexActiveScene());
         }
 
@@ -24,7 +28,12 @@ namespace Level
         {
             _player.Disconnection();
             int nextScene = GetIndexActiveScene() + 1;
-            SceneManager.LoadScene(nextScene <= _maxLevel ? nextScene : _sceneReturn);
+            _sessionAnalytics.SendFinishStatistics(LevelCompletionStates.Win);
+            SceneManager.LoadScene(nextScene < _maxLevel ? nextScene : _sceneReturn);
+            _sessionAnalytics.UpgradeLevelNumber();
+            _sessionAnalytics.CheckLevelLoop(_maxLevel);
+            _sessionAnalytics.UpgradeLevelCount();
+            _sessionAnalytics.SendStartStatistics();
         }
 
         private int GetIndexActiveScene()

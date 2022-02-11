@@ -6960,11 +6960,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -19.200195
       objectReference: {fileID: 0}
-    - target: {fileID: 7588694573606994004, guid: ff94bef6b5688d545bbbf31edd55fff5,
-        type: 3}
-      propertyPath: _sceneReturn
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 7734579764884791292, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_AnchoredPosition.x

@@ -11,6 +11,5 @@ namespace Analytics
 
         [SerializeField, Header("Сложность уровня")]
         private TypesOfLevelDifficulties _difficulty;
-        
     }
 }

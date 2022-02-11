@@ -11,7 +11,6 @@ namespace EndLevelDoor
     {
         [SerializeField] private PushingOutDoor _pushingOutDoor;
         
-        private PlayerSessionAnalytics _sessionAnalytics;
         private TransitionBetweenLevels _transitionLevels;
         private ControllerKey _controllerKey;
         private GameManager _gameManager;
@@ -21,7 +20,6 @@ namespace EndLevelDoor
 
         private void Start()
         {
-            _sessionAnalytics = FindObjectOfType<PlayerSessionAnalytics>();
             _gameManager = FindObjectOfType<GameManager>();
             _transitionLevels = FindObjectOfType<TransitionBetweenLevels>();
             _controllerKey = FindObjectOfType<ControllerKey>();
@@ -46,8 +44,6 @@ namespace EndLevelDoor
             {
                 _pushingOutDoor.Push();
                 _transitionTimer = TimerForMovingToNewScene();
-                print("Calling next level");
-                _sessionAnalytics.NextLevel();
                 StartCoroutine(_transitionTimer);
             }
         }
