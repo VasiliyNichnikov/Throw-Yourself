@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 211995027}
   - component: {fileID: 211995026}
   m_Layer: 0
-  m_Name: MeshBaker (0)
+  m_Name: MeshBaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3659,7 +3659,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh175806
+  m_Name: pb_Mesh718490
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6869,6 +6869,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4637363947052014400, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraPosition
+      objectReference: {fileID: 0}
     - target: {fileID: 4875909808443585963, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_Name
@@ -6884,6 +6889,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.9995117
       objectReference: {fileID: 0}
+    - target: {fileID: 5746519942373742903, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5978952629295410926, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6894,16 +6904,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6126690834904776368, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6155664089453876107, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029130123632666469, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_Name
+      value: LaserExplosionFire
       objectReference: {fileID: 0}
     - target: {fileID: 7029130124076354471, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 1993868690}
+    - target: {fileID: 7029130124124063260, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7029130124760912355, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: m_AnchoredPosition.y

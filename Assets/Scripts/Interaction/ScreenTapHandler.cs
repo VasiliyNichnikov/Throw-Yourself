@@ -1,6 +1,5 @@
 ﻿using DirectionMovement;
 using Events;
-using Player;
 using UnityEngine;
 
 namespace Interaction
@@ -12,9 +11,20 @@ namespace Interaction
         private Events.MovingToAnotherObject _eventMovingToAnotherObject;
         private MotionVectorCalculator _directionCalculator;
         private DirectionalArrowControl _arrowControl;
+        private LearningSwitch _learningSwitch;
         private PlayerControl _playerControl;
         private bool _pointerHasBeenCreated;
         private bool _isDrag;
+        private bool _firstTouch;
+
+
+        public void OnDown()
+        {
+            print("Down");
+            if (_firstTouch) return;
+            _learningSwitch.LaunchGame();
+            _firstTouch = true;
+        }
 
         public void OnDrag(bool doubleClick, Vector3 positionStart, Vector3 positionEnd)
         {
@@ -86,7 +96,7 @@ namespace Interaction
 
         private void MovePlayer(Vector3 direction)
         {
-            if(_isDrag == false) return;
+            if (_isDrag == false) return;
             _playerControl.Push(direction);
         }
 
@@ -101,6 +111,7 @@ namespace Interaction
             _eventMovingToAnotherObject = FindObjectOfType<EventKeeper>().MovingToAnotherObject;
             _arrowControl = GetComponent<DirectionalArrowControl>();
             _playerControl = GetComponent<PlayerControl>();
+            _learningSwitch = GetComponent<LearningSwitch>();
             _directionCalculator = new MotionVectorCalculator(_camera, _sensitivity);
             InitArrow();
         }
