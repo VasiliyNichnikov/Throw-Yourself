@@ -12,11 +12,12 @@ namespace Player
         private Transform _thisTransform;
         private CreatorLifeSlider _lifeSlider;
         private ConnectingFeedBacks _feedBacks;
-        private bool _isDeath; // TODO костыль, чтобы звук не дублировался
+        private bool _isDeath;
 
         private void Start()
         {
             _nowHp = 100f;
+            _isDeath = false;
             _feedBacks = GetComponent<ConnectingFeedBacks>();
             _thisTransform = transform;
             _transitionBetween = FindObjectOfType<TransitionBetweenLevels>();

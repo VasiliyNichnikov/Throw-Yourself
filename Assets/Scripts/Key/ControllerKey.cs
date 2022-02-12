@@ -17,7 +17,7 @@ namespace Key
 
         [SerializeField] private KeyStatus[] _keys;
         private KeyStatus _selectedKey;
-
+        
         public bool LevelPassed()
         {
             int numberOfKeysCollected = 0;
@@ -38,6 +38,7 @@ namespace Key
                 {
                     key.GetKey(collectedIcon);
                     _selectedKey = key;
+                    return;
                 }
             }
         }
