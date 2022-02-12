@@ -47,17 +47,14 @@ namespace DirectionMovement.FeedBacks
         {
             if (_settingsFirstFeedBack.CheckIfValueInZone(value))
             {
-                // print($"Throwing feedBack level 1; Value - {value}");
                 _settingsFirstFeedBack.FeedBack.PlayFeedbacks();
             }
             else if (_settingsSecondFeedBack.CheckIfValueInZone(value))
             {
-                // print($"Throwing feedBack level 2; Value - {value}");
                 _settingsSecondFeedBack.FeedBack.PlayFeedbacks();
             }
             else if (_settingsThirdFeedBack.CheckIfValueInZone(value))
             {
-                // print($"Throwing feedBack level 3; Value - {value}");
                 _settingsThirdFeedBack.FeedBack.PlayFeedbacks();
             }
         }
