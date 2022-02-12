@@ -1,68 +1,134 @@
-﻿using Level;
-using Player;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Analytics
 {
     public class PlayerSessionAnalytics : MonoBehaviour
     {
+        // Настройки отправки данных
+        [SerializeField, Header("Вывод в консоль")]
+        private bool _isOutputToConsole;
+
+        [SerializeField, Header("Отправка аналитики на сервер (отправка будет доступна только на самом телефоне)")]
+        private bool _isSendingToServer;
+
         // Ключи для PlayerPrefs
         private const string _levelNumberKey = "levelNumber";
         private const string _levelLoopKey = "levelLoop";
+
         private const string _levelCountKey = "levelCount";
+
         // Параметры по умолчанию
         private const int _levelRandom = 0;
         private const string _levelType = "normal";
         private const string _gameMode = "classic";
+
         private LevelInformation _level;
+
         // Параметр, кол-во секунд пройшедшее с запуска уровня
         private float _startTimeLevel;
-        // Данный уровень является первым по прохождению игроком
-        // private static bool _firstPassageOfLevel;
 
+        // Объект яндекс аналитики
+        private IYandexAppMetrica _metrica;
 
         public void SendStartStatistics()
         {
-            // _level = GetComponent<LevelInformation>();
-            print("--------------Send START statistics--------------");
-            print($"Level number: {WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey)}");
-            print($"Level name: {_level.Name}");
-            print($"Level count: {WorkingWithPlayerPrefs.GetDataInt(_levelCountKey)}");
-            print($"Level diff: {_level.Difficulty}");
-            print($"Level loop: {WorkingWithPlayerPrefs.GetDataInt(_levelLoopKey)}");
-            print($"Level random: {_levelRandom}");
-            print($"Level type: {_levelType}");
-            print($"Game mode: {_gameMode}");
+            int levelNumber = WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey);
+            string levelName = _level.Name;
+            int levelCount = WorkingWithPlayerPrefs.GetDataInt(_levelCountKey);
+            string levelDiff = _level.Difficulty.ToString().ToLower();
+            int levelLoop = WorkingWithPlayerPrefs.GetDataInt(_levelLoopKey);
+            if (_isOutputToConsole)
+            {
+                print("--------------Send START statistics--------------");
+                print($"Level number: {levelNumber}");
+                print($"Level name: {levelName}");
+                print($"Level count: {levelCount}");
+                print($"Level diff: {levelDiff}");
+                print($"Level loop: {levelLoop}");
+                print($"Level random: {_levelRandom}");
+                print($"Level type: {_levelType}");
+                print($"Game mode: {_gameMode}");
+                print("-------------------------------------------------");
+            }
+
+            if (_isSendingToServer)
+            {
+                _metrica.ReportEvent("level_start", new Dictionary<string, object>()
+                {
+                    {"level_number", WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey)},
+                    {"level_name", levelName},
+                    {"level_count", levelCount},
+                    {"level_diff", levelDiff},
+                    {"level_loop", levelLoop},
+                    {"level_random", _levelRandom},
+                    {"level_type", _levelType},
+                    {"game_mode", _gameMode}
+                });
+                _metrica.SendEventsBuffer();
+            }
+
             _startTimeLevel = Time.time;
-            print("-------------------------------------------------");
         }
 
         public void SendFinishStatistics(LevelCompletionStates completionState)
         {
-            print("--------------Send FINISH statistics--------------");
-            print($"Level number: {WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey)}");
-            print($"Level name: {_level.Name}");
-            print($"Level count: {WorkingWithPlayerPrefs.GetDataInt(_levelCountKey)}");
-            print($"Level diff: {_level.Difficulty}");
-            print($"Level loop: {WorkingWithPlayerPrefs.GetDataInt(_levelLoopKey)}");
-            print($"Level random: {_levelRandom}");
-            print($"Level type: {_levelType}");
-            print($"Game mode: {_gameMode}");
+            int levelNumber = WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey);
+            string levelName = _level.Name;
+            int levelCount = WorkingWithPlayerPrefs.GetDataInt(_levelCountKey);
+            string levelDiff = _level.Difficulty.ToString().ToLower();
+            int levelLoop = WorkingWithPlayerPrefs.GetDataInt(_levelLoopKey);
+            string result;
+            int progress;
             int passageTime = Mathf.RoundToInt(Time.time - _startTimeLevel);
-            print($"Time - {passageTime} seconds");
             if (completionState == LevelCompletionStates.Win)
             {
-                print("Result: win");
-                print("Progress: 100");
+                result = "win";
+                progress = 100;
             }
             else
             {
-                print("Result: lose");
-                print("Progress: 0");
+                result = "lose";
+                progress = 0;
             }
-            print("-------------------------------------------------");
+
+            if (_isOutputToConsole)
+            {
+                print("--------------Send FINISH statistics--------------");
+                print($"Level number: {levelNumber}");
+                print($"Level name: {levelName}");
+                print($"Level count: {levelCount}");
+                print($"Level diff: {levelDiff}");
+                print($"Level loop: {levelLoop}");
+                print($"Level random: {_levelRandom}");
+                print($"Level type: {_levelType}");
+                print($"Game mode: {_gameMode}");
+                print($"Result: {result}");
+                print($"Progress: {progress}");
+                print($"Time: {passageTime} seconds");
+                print("-------------------------------------------------");
+            }
+
+            if (_isSendingToServer)
+            {
+                _metrica.ReportEvent("level_start", new Dictionary<string, object>()
+                {
+                    {"level_number", WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey)},
+                    {"level_name", levelName},
+                    {"level_count", levelCount},
+                    {"level_diff", levelDiff},
+                    {"level_loop", levelLoop},
+                    {"level_random", _levelRandom},
+                    {"level_type", _levelType},
+                    {"game_mode", _gameMode},
+                    {"result", result},
+                    {"time", passageTime},
+                    {"progress", progress}
+                });
+                _metrica.SendEventsBuffer();
+            }
         }
-        
+
         public void UpgradeLevelNumber()
         {
             int levelNumber = WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey);
@@ -99,9 +165,11 @@ namespace Analytics
 
         private void Start()
         {
+            if(_isSendingToServer)
+                Debug.LogWarning("Отправка аналитики на сервер включена");
+            _metrica = AppMetrica.Instance;
             _level = GetComponent<LevelInformation>();
             SendStartStatistics();
         }
-        
     }
 }
