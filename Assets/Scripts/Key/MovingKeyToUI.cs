@@ -40,7 +40,7 @@ namespace Key
         {
             ChangeConditionKeyAnimation(true);
             Vector3 viewportObjKeyPosition = _camera.WorldToViewportPoint(objKey.position);
-            var newAnchors = MyUtils.GetAnchorsForAnObjectInViewport(viewportObjKeyPosition, _rectKeyAnimation);
+            var newAnchors = MyUtils.GetAnchorsForObjectInViewport(viewportObjKeyPosition, _rectKeyAnimation);
 
             _rectKeyAnimation.anchorMin = newAnchors.min;
             _rectKeyAnimation.anchorMax = newAnchors.max;

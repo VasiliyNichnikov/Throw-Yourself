@@ -609,7 +609,7 @@ MonoBehaviour:
   _prefabKey: {fileID: 823389766786591335, guid: 3b568372d1709894c92ea9944ef31d84,
     type: 3}
   _collectedIcon: {fileID: 21300000, guid: 1ef814fbed8a758419e7a4ecf8b81d5c, type: 3}
-  _controllerKey: {fileID: 9220055662802213238}
+  _controllerKey: {fileID: 5823232819967136407}
   _movingKeyToUI: {fileID: 6753528458327771616}
 --- !u!114 &6753528458327771616
 MonoBehaviour:
@@ -2855,9 +2855,9 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7289871833719436219}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9220055662802213238 stripped
+--- !u!114 &5823232819967136407 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1936235618403052237, guid: d7c1eee750473e3488ec958639f81bc4,
+  m_CorrespondingSourceObject: {fileID: 3889584688946307372, guid: d7c1eee750473e3488ec958639f81bc4,
     type: 3}
   m_PrefabInstance: {fileID: 7289871833719436219}
   m_PrefabAsset: {fileID: 0}

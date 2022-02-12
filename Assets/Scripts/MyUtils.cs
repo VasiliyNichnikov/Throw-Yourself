@@ -38,7 +38,7 @@ public static class MyUtils
         return Mathf.Clamp01(length);
     }
 
-    public static (Vector2 min, Vector2 max) GetAnchorsForAnObjectInViewport(Vector3 viewportPoint,
+    public static (Vector2 min, Vector2 max) GetAnchorsForObjectInViewport(Vector3 viewportPoint,
         RectTransform rectTransform)
     {
         Vector2 difference = rectTransform.anchorMax - rectTransform.anchorMin;

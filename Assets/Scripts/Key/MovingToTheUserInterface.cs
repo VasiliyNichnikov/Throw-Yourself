@@ -34,7 +34,7 @@ namespace Key
         {
             // Выставление ключа UI на уровне объекта на сцене
             Vector3 viewportKeyObjectPosition = _camera.WorldToViewportPoint(_keyObject.position);
-            var newAnchors = MyUtils.GetAnchorsForAnObjectInViewport(viewportKeyObjectPosition, _rectAssembledKey);
+            var newAnchors = MyUtils.GetAnchorsForObjectInViewport(viewportKeyObjectPosition, _rectAssembledKey);
             _rectAssembledKey.anchorMin = newAnchors.min;
             _rectAssembledKey.anchorMax = newAnchors.max;
             Vector3 scaleStart = new Vector3(0, 0, 1);
