@@ -1,4 +1,5 @@
 ﻿using Level;
+using Player;
 using UnityEngine;
 
 namespace Analytics
@@ -17,11 +18,12 @@ namespace Analytics
         // Параметр, кол-во секунд пройшедшее с запуска уровня
         private float _startTimeLevel;
         // Данный уровень является первым по прохождению игроком
-        private static bool _firstPassageOfLevel;
+        // private static bool _firstPassageOfLevel;
 
 
         public void SendStartStatistics()
         {
+            // _level = GetComponent<LevelInformation>();
             print("--------------Send START statistics--------------");
             print($"Level number: {WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey)}");
             print($"Level name: {_level.Name}");
@@ -46,7 +48,8 @@ namespace Analytics
             print($"Level random: {_levelRandom}");
             print($"Level type: {_levelType}");
             print($"Game mode: {_gameMode}");
-            print($"Time - {Time.time - _startTimeLevel} seconds");
+            int passageTime = Mathf.RoundToInt(Time.time - _startTimeLevel);
+            print($"Time - {passageTime} seconds");
             if (completionState == LevelCompletionStates.Win)
             {
                 print("Result: win");
@@ -93,15 +96,11 @@ namespace Analytics
             WorkingWithPlayerPrefs.SaveData(_levelLoopKey, levelLoop);
             WorkingWithPlayerPrefs.SaveData(_levelCountKey, levelCount);
         }
-        
+
         private void Start()
         {
             _level = GetComponent<LevelInformation>();
-            if (_firstPassageOfLevel == false)
-            {
-                SendStartStatistics();
-                _firstPassageOfLevel = true;
-            }
+            SendStartStatistics();
         }
         
     }

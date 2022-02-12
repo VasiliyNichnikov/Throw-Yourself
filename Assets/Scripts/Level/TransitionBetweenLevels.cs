@@ -7,10 +7,10 @@ namespace Level
 {
     public class TransitionBetweenLevels : MonoBehaviour
     {
-        [SerializeField, Range(0, 100), Header("Максимальная сцена в игре")]
+        [SerializeField, Range(1, 100), Header("Максимальная сцена в игре")]
         private int _maxLevel;
 
-        [SerializeField, Range(0, 100), Header("Сцена к которой будет возвращение в случе прохождение игры")]
+        [SerializeField, Range(1, 100), Header("Сцена к которой будет возвращение в случе прохождение игры")]
         private int _sceneReturn;
 
         [SerializeField] private SelectedPlayer _player;
@@ -19,8 +19,8 @@ namespace Level
         public void Restart()
         {
             _player.Disconnection();
-            _sessionAnalytics.UpgradeLevelCount();
             _sessionAnalytics.SendFinishStatistics(LevelCompletionStates.Lose);
+            _sessionAnalytics.UpgradeLevelCount();
             SceneManager.LoadScene(GetIndexActiveScene());
         }
 
@@ -29,11 +29,10 @@ namespace Level
             _player.Disconnection();
             int nextScene = GetIndexActiveScene() + 1;
             _sessionAnalytics.SendFinishStatistics(LevelCompletionStates.Win);
-            SceneManager.LoadScene(nextScene < _maxLevel ? nextScene : _sceneReturn);
             _sessionAnalytics.UpgradeLevelNumber();
-            _sessionAnalytics.CheckLevelLoop(_maxLevel);
             _sessionAnalytics.UpgradeLevelCount();
-            _sessionAnalytics.SendStartStatistics();
+            _sessionAnalytics.CheckLevelLoop(_maxLevel);
+            SceneManager.LoadScene(nextScene < _maxLevel ? nextScene : _sceneReturn - 1);
         }
 
         private int GetIndexActiveScene()
