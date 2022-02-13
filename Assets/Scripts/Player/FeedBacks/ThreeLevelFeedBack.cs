@@ -48,15 +48,15 @@ namespace Player.FeedBacks
         {
             if (_settingsFirstFeedBack.CheckIfValueInZone(value))
             {
-                _settingsFirstFeedBack.FeedBack.PlayFeedbacks();
+                _settingsFirstFeedBack.PlayFeedBack();
             }
             else if (_settingsSecondFeedBack.CheckIfValueInZone(value))
             {
-                _settingsSecondFeedBack.FeedBack.PlayFeedbacks();
+                _settingsSecondFeedBack.PlayFeedBack();
             }
             else if (_settingsThirdFeedBack.CheckIfValueInZone(value))
             {
-                _settingsThirdFeedBack.FeedBack.PlayFeedbacks();
+                _settingsThirdFeedBack.PlayFeedBack();
             }
         }
     }

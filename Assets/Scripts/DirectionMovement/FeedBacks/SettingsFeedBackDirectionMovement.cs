@@ -28,6 +28,13 @@ namespace DirectionMovement.FeedBacks
         {
             return value > _levelFeedBack.MinClamp01 && value <= _levelFeedBack.MaxClamp01;
         }
+
+        public void PlayFeedBack()
+        {
+            if(_feedBack == null)
+                return;
+            _feedBack.PlayFeedbacks();
+        }
         
     }
 }
