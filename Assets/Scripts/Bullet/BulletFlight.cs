@@ -6,7 +6,7 @@ namespace Bullet
     [RequireComponent(typeof(BulletHit))]
     public class BulletFlight : MonoBehaviour
     {
-        [SerializeField, Range(0, 10), Header("Скорость движения пули")]
+        [SerializeField, Range(0, 100), Header("Скорость движения пули")]
         private float _speed;
 
         private bool _launched;
@@ -26,7 +26,7 @@ namespace Bullet
         {
             while (true)
             {
-                _thisTransform.Translate(direction * _speed * Time.deltaTime);
+                _thisTransform.Translate(direction.normalized * _speed * Time.deltaTime);
                 yield return null;
             }
         }

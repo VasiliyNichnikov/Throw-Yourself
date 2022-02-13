@@ -19,6 +19,7 @@ namespace Interaction
         {
             _positionStart = eventData.position;
             _positionEnd = eventData.position;
+            _tapHandler.OnDown();
         }
 
         public void OnDrag(PointerEventData eventData)

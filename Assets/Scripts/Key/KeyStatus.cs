@@ -20,7 +20,7 @@ namespace Key
         {
             _image.sprite = _collectedIcon;
         }
-
+        
         private void Start()
         {
             Rect = GetComponent<RectTransform>();

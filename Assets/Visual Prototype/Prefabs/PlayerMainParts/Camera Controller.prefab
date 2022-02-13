@@ -1257,12 +1257,12 @@ MonoBehaviour:
   SafeMode: 3
   Direction: 0
   AutoChangeDirectionOnEnd: 0
-  AutoPlayOnStart: 1
+  AutoPlayOnStart: 0
   AutoPlayOnEnable: 0
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
   CooldownDuration: 0
-  InitialDelay: 1
+  InitialDelay: 0
   CanPlayWhileAlreadyPlaying: 1
   FeedbacksIntensity: 1
   Events:

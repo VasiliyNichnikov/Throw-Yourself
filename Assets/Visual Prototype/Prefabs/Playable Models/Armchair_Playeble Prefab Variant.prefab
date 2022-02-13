@@ -73,5 +73,77 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8986237552638331582, guid: 971149bbd7060ae468035cbcfa3b1d24,
         type: 3}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsFirstFeedBack.ShowBlock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsFirstFeedBack._feedBack
+      value: 
+      objectReference: {fileID: 756255811474665156}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsThirdFeedBack.ShowBlock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsThirdFeedBack._feedBack
+      value: 
+      objectReference: {fileID: 756255811474665156}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsSecondFeedBack.ShowBlock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsSecondFeedBack._feedBack
+      value: 
+      objectReference: {fileID: 756255811474665156}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsFirstFeedBack._levelFeedBack.Max
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsFirstFeedBack._levelFeedBack.Min
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsThirdFeedBack._levelFeedBack.Max
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsThirdFeedBack._levelFeedBack.Min
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsSecondFeedBack._levelFeedBack.Max
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648505471132816508, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+        type: 3}
+      propertyPath: _settingsSecondFeedBack._levelFeedBack.Min
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01c9a41bb6685694a86db81ebd8c6c31, type: 3}
+--- !u!114 &756255811474665156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2302880748237164360, guid: 01c9a41bb6685694a86db81ebd8c6c31,
+    type: 3}
+  m_PrefabInstance: {fileID: 1552540592788382092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

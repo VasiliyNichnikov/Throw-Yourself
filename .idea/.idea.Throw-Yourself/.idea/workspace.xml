@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/ConnectingFeedBacksDirectionMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/ConnectingFeedBacksDirectionMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Analytics/PlayerSessionAnalytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics/PlayerSessionAnalytics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/TransitionBetweenLevels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/TransitionBetweenLevels.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +26,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3d6d6a4a6d7c4ec2aa654b7d8f54a096795400/dc/554fb526/EditorGUILayout.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ce9a2a611214ae39e2e4557a81347ec10000/79/21d2de91/AndroidJavaObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5406a456cf734443b3d02a7d123287f1299290/91/1969fb50/Array.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/PropertyDrawers/SpriteStateDrawer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e395ed1557354db1a729173c553a159b118800/60/4587e91e/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Tests/Editor/SpritePackageTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/RootCanvasTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/ParentEnemyEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Editor/Canvas/RootCanvasTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Tests/Editor/SpritePackageTests.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -104,6 +106,11 @@
       <workItem from="1642144475305" duration="6541000" />
       <workItem from="1642351140332" duration="1083000" />
       <workItem from="1643724542214" duration="1767000" />
+      <workItem from="1644517498604" duration="5153000" />
+      <workItem from="1644555691326" duration="2997000" />
+      <workItem from="1644595706487" duration="4747000" />
+      <workItem from="1644654945885" duration="21032000" />
+      <workItem from="1644744839170" duration="4067000" />
     </task>
     <servers />
   </component>

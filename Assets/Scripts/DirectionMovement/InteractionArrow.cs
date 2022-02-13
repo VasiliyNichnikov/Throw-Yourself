@@ -1,4 +1,5 @@
 ﻿using DirectionMovement.FeedBacks;
+using Player.FeedBacks;
 using UnityEngine;
 
 namespace DirectionMovement
@@ -12,7 +13,7 @@ namespace DirectionMovement
 
         private ChangerVisibility _visibility;
         private StretchingAnimation _stretching;
-        private ConnectingFeedBacksDirectionMovement _feedBacks;
+        private ThreeLevelFeedBack _feedBacks;
 
         public void SetVisible(bool state)
         {
@@ -49,7 +50,7 @@ namespace DirectionMovement
             _parentArrow = arrows.parent;
             _visibility = arrows.created.GetComponent<ChangerVisibility>();
             _stretching = arrows.created.GetComponent<StretchingAnimation>();
-            _feedBacks = arrows.created.GetComponent<ConnectingFeedBacksDirectionMovement>();
+            _feedBacks = arrows.created.GetComponent<ThreeLevelFeedBack>();
             SetVisible(true);
         }
 

@@ -174,7 +174,7 @@ namespace Enemy
 
         private void Update()
         {
-            if (!IsAlive) return;
+            if (IsAlive == false) return;
             _stateMachine.CurrentState.ActionsUpdate();
             _stateMachine.CurrentState.LogicUpdate();
         }
