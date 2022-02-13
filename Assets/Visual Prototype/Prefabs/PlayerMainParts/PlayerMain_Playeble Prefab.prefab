@@ -279,22 +279,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settingsFirstFeedBack:
-    ShowBlock: 0
+    ShowBlock: 1
     _feedBack: {fileID: 0}
     _levelFeedBack:
-      Min: 0
-      Max: 0
+      Min: 15
+      Max: 45
   _settingsSecondFeedBack:
-    ShowBlock: 0
+    ShowBlock: 1
     _feedBack: {fileID: 0}
     _levelFeedBack:
-      Min: 0
-      Max: 0
+      Min: 45
+      Max: 70
   _settingsThirdFeedBack:
-    ShowBlock: 0
+    ShowBlock: 1
     _feedBack: {fileID: 0}
     _levelFeedBack:
-      Min: 0
+      Min: 70
       Max: 0
 --- !u!1001 &5440903116559051993
 PrefabInstance:
@@ -315,24 +315,59 @@ PrefabInstance:
       objectReference: {fileID: 4755425465716437635}
     - target: {fileID: 311791392625629540, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
+      propertyPath: FlickerOctave
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 311791392625629540, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
       propertyPath: FlickerColor.b
-      value: 14.754423
+      value: 1.4980392
       objectReference: {fileID: 0}
     - target: {fileID: 311791392625629540, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: FlickerColor.g
-      value: 14.754423
+      value: 1.4980392
       objectReference: {fileID: 0}
     - target: {fileID: 311791392625629540, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: FlickerColor.r
-      value: 14.754423
+      value: 1.4980392
       objectReference: {fileID: 0}
     - target: {fileID: 787548057278407833, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: BoundParticleSystem
       value: 
       objectReference: {fileID: 1468430949135994173}
+    - target: {fileID: 946709674634656118, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: BoundRenderer
+      value: 
+      objectReference: {fileID: 4755425465716437635}
+    - target: {fileID: 946709674634656118, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerOctave
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 946709674634656118, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.b
+      value: 1.3501086
+      objectReference: {fileID: 0}
+    - target: {fileID: 946709674634656118, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.g
+      value: 1.3501086
+      objectReference: {fileID: 0}
+    - target: {fileID: 946709674634656118, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.r
+      value: 1.3501086
+      objectReference: {fileID: 0}
+    - target: {fileID: 946709674634656118, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerDuration
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 1073314039110760241, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: m_Name
@@ -515,6 +550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4804033836928785276, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
+      propertyPath: m_Name
+      value: Player Throwing High FeedBack
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804033836928785276, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -568,6 +608,36 @@ PrefabInstance:
       propertyPath: BoundParticleSystem
       value: 
       objectReference: {fileID: 1468430949515695299}
+    - target: {fileID: 5945620435165497692, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: BoundRenderer
+      value: 
+      objectReference: {fileID: 4755425465716437635}
+    - target: {fileID: 5945620435165497692, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerOctave
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945620435165497692, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.b
+      value: 1.1353015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945620435165497692, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.g
+      value: 1.1353015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945620435165497692, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerColor.r
+      value: 1.1353015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5945620435165497692, guid: fe14dbd4cd0822e4195d96bc7d7df618,
+        type: 3}
+      propertyPath: FlickerDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6069278484508646529, guid: fe14dbd4cd0822e4195d96bc7d7df618,
         type: 3}
       propertyPath: m_LocalRotation.x
