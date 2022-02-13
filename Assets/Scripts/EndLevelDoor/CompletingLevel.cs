@@ -2,6 +2,7 @@
 using Analytics;
 using Key;
 using Level;
+using MoreMountains.Feedbacks;
 using Player;
 using UnityEngine;
 
@@ -9,8 +10,11 @@ namespace EndLevelDoor
 {
     public class CompletingLevel : MonoBehaviour
     {
+        [SerializeField, Header("Фидбек, который закрывает уровень перед переходом на следующий")] 
+        private MMFeedbacks _closingLevelFeedBacks;
+
         [SerializeField] private PushingOutDoor _pushingOutDoor;
-        
+
         private TransitionBetweenLevels _transitionLevels;
         private ControllerKey _controllerKey;
         private GameManager _gameManager;
@@ -39,9 +43,12 @@ namespace EndLevelDoor
         private void CheckingCompleteLevel(Collider other)
         {
             ParentPlayer player = other.GetComponent<ParentPlayer>();
-            if (player != null && other.gameObject.layer == _layerPlayer && _controllerKey.LevelPassed() && 
+            if (player != null && other.gameObject.layer == _layerPlayer && _controllerKey.LevelPassed() &&
                 _transitionTimer == null)
             {
+                if (_closingLevelFeedBacks != null)
+                    _closingLevelFeedBacks.PlayFeedbacks();
+
                 _pushingOutDoor.Push();
                 _transitionTimer = TimerForMovingToNewScene();
                 StartCoroutine(_transitionTimer);

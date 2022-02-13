@@ -27,8 +27,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
-  - {fileID: 5446947591486139446}
-  - {fileID: 6647569824595472958}
+  - {fileID: 6407940013272567919}
   - {fileID: 8411164430425233651}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,9 +59,9 @@ Transform:
   m_GameObject: {fileID: 890522947618104542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 1.5945374}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 7605538274515854569}
+  m_Father: {fileID: 6407940013272567919}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!331 &3632494193473715056
@@ -145,6 +144,8 @@ GameObject:
   - component: {fileID: 4827945305340877955}
   - component: {fileID: 5831324315757657727}
   - component: {fileID: 856102463578953436}
+  - component: {fileID: 8204074958622605877}
+  - component: {fileID: 2335977852660936602}
   m_Layer: 0
   m_Name: TransitionStart Feedback
   m_TagString: Untagged
@@ -164,7 +165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7605538274515854569}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4827945305340877955
 MonoBehaviour:
@@ -181,6 +182,8 @@ MonoBehaviour:
   Feedbacks:
   - {fileID: 5831324315757657727}
   - {fileID: 856102463578953436}
+  - {fileID: 8204074958622605877}
+  - {fileID: 2335977852660936602}
   InitializationMode: 2
   SafeMode: 3
   Direction: 0
@@ -191,7 +194,7 @@ MonoBehaviour:
   DisplayFullDurationDetails: 0
   CooldownDuration: 0
   InitialDelay: 0
-  CanPlayWhileAlreadyPlaying: 1
+  CanPlayWhileAlreadyPlaying: 0
   FeedbacksIntensity: 1
   Events:
     TriggerMMFeedbacksEvents: 0
@@ -236,7 +239,7 @@ MonoBehaviour:
     NumberOfRepeats: 0
     RepeatForever: 0
     DelayBetweenRepeats: 1
-    MMFeedbacksDirectionCondition: 0
+    MMFeedbacksDirectionCondition: 1
     PlayDirection: 0
     ConstantIntensity: 0
     UseIntensityInterval: 0
@@ -296,7 +299,7 @@ MonoBehaviour:
     NumberOfRepeats: 0
     RepeatForever: 0
     DelayBetweenRepeats: 1
-    MMFeedbacksDirectionCondition: 0
+    MMFeedbacksDirectionCondition: 1
     PlayDirection: 0
     ConstantIntensity: 0
     UseIntensityInterval: 0
@@ -307,7 +310,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  TargetGameObject: {fileID: 172511928978468456}
+  TargetGameObject: {fileID: 6601711197162201606}
   SetStateOnInit: 0
   StateOnInit: 1
   SetStateOnPlay: 1
@@ -316,6 +319,142 @@ MonoBehaviour:
   StateOnStop: 1
   SetStateOnReset: 0
   StateOnReset: 1
+--- !u!114 &8204074958622605877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140393622306317818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c6a190d064b7642bc4c5b64bbcd3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Animation
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0.1
+    CooldownDuration: 0
+    ExcludeFromHoldingPauses: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 2
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  BoundAnimator: {fileID: 7355046210371229559}
+  UpdateTrigger: 0
+  TriggerMode: 0
+  TriggerParameterName: 
+  UpdateRandomTrigger: 0
+  RandomTriggerMode: 0
+  RandomTriggerParameterNames: []
+  UpdateBool: 1
+  BoolParameterName: LvlEnd
+  BoolParameterValue: 1
+  UpdateRandomBool: 0
+  RandomBoolParameterValue: 1
+  RandomBoolParameterNames: []
+  IntValueMode: 1
+  IntParameterName: LvlEnd
+  IntValue: 0
+  IntValueMin: 0
+  IntValueMax: 5
+  IntIncrement: 1
+  FloatValueMode: 0
+  FloatParameterName: 
+  FloatValue: 0
+  FloatValueMin: 0
+  FloatValueMax: 5
+  FloatIncrement: 1
+--- !u!114 &2335977852660936602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140393622306317818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f129222f02399ae42b78955d953ada11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Set Active
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    ExcludeFromHoldingPauses: 0
+    InterruptsOnStop: 1
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    MMFeedbacksDirectionCondition: 2
+    PlayDirection: 0
+    ConstantIntensity: 0
+    UseIntensityInterval: 0
+    IntensityIntervalMin: 0
+    IntensityIntervalMax: 0
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  TargetGameObject: {fileID: 6601711197162201606}
+  SetStateOnInit: 0
+  StateOnInit: 1
+  SetStateOnPlay: 1
+  StateOnPlay: 2
+  SetStateOnStop: 0
+  StateOnStop: 1
+  SetStateOnReset: 0
+  StateOnReset: 1
+--- !u!1 &6601711197162201606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6407940013272567919}
+  m_Layer: 0
+  m_Name: Mask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6407940013272567919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601711197162201606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5446947591486139446}
+  - {fileID: 6647569824595472958}
+  m_Father: {fileID: 7605538274515854569}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8259272485004453381
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +483,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2660.9292, y: 2660.9292, z: 0}
   m_Children: []
-  m_Father: {fileID: 7605538274515854569}
+  m_Father: {fileID: 6407940013272567919}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3917223113375990052
