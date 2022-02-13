@@ -48,17 +48,14 @@ namespace Player.FeedBacks
         {
             if (_settingsFirstFeedBack.CheckIfValueInZone(value))
             {
-                print("Play 1");
                 _settingsFirstFeedBack.FeedBack.PlayFeedbacks();
             }
             else if (_settingsSecondFeedBack.CheckIfValueInZone(value))
             {
-                print("Play 2");
                 _settingsSecondFeedBack.FeedBack.PlayFeedbacks();
             }
             else if (_settingsThirdFeedBack.CheckIfValueInZone(value))
             {
-                print("Play 3");
                 _settingsThirdFeedBack.FeedBack.PlayFeedbacks();
             }
         }

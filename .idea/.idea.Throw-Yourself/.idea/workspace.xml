@@ -6,17 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ConnectingFeedBacksToDirectionMovementEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ThreeLevelFeedBackEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/ConnectingFeedBacksToDirectionMovementEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ThreeLevelFeedBackEditor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/ConnectingFeedBacksDirectionMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ThreeLevelFeedBack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/FeedBacks/ConnectingFeedBacksDirectionMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ThreeLevelFeedBack.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/InteractionArrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DirectionMovement/InteractionArrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ConnectingFeedBacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ConnectingFeedBacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/HealthPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/HealthPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Armchair_Playeble Prefab Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Playable Models/Armchair_Playeble Prefab Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Player/DirectionMovement.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/Player/DirectionMovement.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/PlayerMainParts/PlayerMain_Playeble Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/PlayerMainParts/PlayerMain_Playeble Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Analytics/PlayerSessionAnalytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics/PlayerSessionAnalytics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ThreeLevelFeedBack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FeedBacks/ThreeLevelFeedBack.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +110,7 @@
       <workItem from="1644555691326" duration="2997000" />
       <workItem from="1644595706487" duration="4747000" />
       <workItem from="1644654945885" duration="21032000" />
-      <workItem from="1644744839170" duration="2385000" />
+      <workItem from="1644744839170" duration="3210000" />
     </task>
     <servers />
   </component>

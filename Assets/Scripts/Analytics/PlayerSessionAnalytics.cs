@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Analytics
 {
@@ -12,17 +13,19 @@ namespace Analytics
         [SerializeField, Header("Отправка аналитики на сервер (отправка будет доступна только на самом телефоне)")]
         private bool _isSendingToServer;
 
+        // Сохранение последнего пройденного уровня
+        private int _lastCompletedLevel;
+
         // Ключи для PlayerPrefs
         private const string _levelNumberKey = "levelNumber";
         private const string _levelLoopKey = "levelLoop";
-
         private const string _levelCountKey = "levelCount";
+        private const string _lastCompletedLevelKey = "lastCompletedLevel";
 
         // Параметры по умолчанию
         private const int _levelRandom = 0;
         private const string _levelType = "normal";
         private const string _gameMode = "classic";
-
         private LevelInformation _level;
 
         // Параметр, кол-во секунд пройшедшее с запуска уровня
@@ -92,6 +95,7 @@ namespace Analytics
                 progress = 0;
             }
 
+            SaveSelectedLevel();
             if (_isOutputToConsole)
             {
                 print("--------------Send FINISH statistics--------------");
@@ -158,18 +162,36 @@ namespace Analytics
             int levelNumber = 1;
             int levelLoop = 0;
             int levelCount = 1;
+            int lastCompletedLevel = 0;
             WorkingWithPlayerPrefs.SaveData(_levelNumberKey, levelNumber);
             WorkingWithPlayerPrefs.SaveData(_levelLoopKey, levelLoop);
             WorkingWithPlayerPrefs.SaveData(_levelCountKey, levelCount);
+            WorkingWithPlayerPrefs.SaveData(_lastCompletedLevelKey, lastCompletedLevel);
         }
 
         private void Start()
         {
-            if(_isSendingToServer)
+            _level = GetComponent<LevelInformation>();
+            CheckSavedLevel();
+            if (_isSendingToServer)
                 Debug.LogWarning("Отправка аналитики на сервер включена");
             _metrica = AppMetrica.Instance;
-            _level = GetComponent<LevelInformation>();
             SendStartStatistics();
+        }
+
+        private void CheckSavedLevel()
+        {
+            _lastCompletedLevel = WorkingWithPlayerPrefs.GetDataInt(_lastCompletedLevelKey);
+            if (_lastCompletedLevel != _level.Number - 1)
+            {
+                SceneManager.LoadScene(_lastCompletedLevel);
+            }
+        }
+
+        private void SaveSelectedLevel()
+        {
+            _lastCompletedLevel++;
+            WorkingWithPlayerPrefs.SaveData(_lastCompletedLevelKey, _lastCompletedLevel);
         }
     }
 }
