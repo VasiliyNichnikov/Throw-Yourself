@@ -31,6 +31,7 @@ namespace Level
             _sessionAnalytics.SendFinishStatistics(LevelCompletionStates.Win);
             _sessionAnalytics.UpgradeLevelNumber();
             _sessionAnalytics.UpgradeLevelCount();
+            _sessionAnalytics.SaveSelectedLevel(_maxLevel, _sceneReturn);
             _sessionAnalytics.CheckLevelLoop(_maxLevel);
             SceneManager.LoadScene(nextScene < _maxLevel ? nextScene : _sceneReturn - 1);
         }

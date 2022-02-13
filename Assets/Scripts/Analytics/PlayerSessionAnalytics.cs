@@ -95,7 +95,6 @@ namespace Analytics
                 progress = 0;
             }
 
-            SaveSelectedLevel();
             if (_isOutputToConsole)
             {
                 print("--------------Send FINISH statistics--------------");
@@ -169,6 +168,14 @@ namespace Analytics
             WorkingWithPlayerPrefs.SaveData(_lastCompletedLevelKey, lastCompletedLevel);
         }
 
+        public void SaveSelectedLevel(int maxLevel, int sceneReturn)
+        {
+            _lastCompletedLevel++;
+            if (_lastCompletedLevel == maxLevel)
+                _lastCompletedLevel = sceneReturn - 1;
+            WorkingWithPlayerPrefs.SaveData(_lastCompletedLevelKey, _lastCompletedLevel);
+        }
+
         private void Start()
         {
             _level = GetComponent<LevelInformation>();
@@ -186,12 +193,6 @@ namespace Analytics
             {
                 SceneManager.LoadScene(_lastCompletedLevel);
             }
-        }
-
-        private void SaveSelectedLevel()
-        {
-            _lastCompletedLevel++;
-            WorkingWithPlayerPrefs.SaveData(_lastCompletedLevelKey, _lastCompletedLevel);
         }
     }
 }
