@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ae7b0843554b5b851534683fb1eee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _difficulty: 0
+  _difficulty: 1
 --- !u!114 &5376129179025812793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1616,6 +1616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebdee5e922142339801e1f99117e7bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isOutputToConsole: 0
+  _isSendingToServer: 1
 --- !u!1 &8104065180754581925
 GameObject:
   m_ObjectHideFlags: 0

@@ -2485,7 +2485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 15
-  _openDoor: {fileID: 8300000, guid: f55d3beaf512c0f43ad68a7810c5c02b, type: 3}
+  _openDoor: {fileID: 8300000, guid: 952a6e513a745714cbf1d4fc6d7dccdd, type: 3}
 --- !u!1 &5302029305880694977
 GameObject:
   m_ObjectHideFlags: 0

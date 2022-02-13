@@ -20,7 +20,6 @@ namespace Interaction
 
         public void OnDown()
         {
-            print("Down");
             if (_firstTouch) return;
             _learningSwitch.LaunchGame();
             _firstTouch = true;

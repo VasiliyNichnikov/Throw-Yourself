@@ -53,8 +53,8 @@ GameObject:
   - component: {fileID: 8016659547687045923}
   - component: {fileID: 6762306714346923861}
   - component: {fileID: 8189272630463486918}
-  - component: {fileID: 3075578613266390834}
   - component: {fileID: 6988683397361690753}
+  - component: {fileID: 7648505471132816508}
   m_Layer: 10
   m_Name: MainMesh Part
   m_TagString: Player
@@ -251,49 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _deathPlayerFeedBack: {fileID: 7704907925501140361}
   _damagePlayerFeedBack: {fileID: 3751231368617436471}
---- !u!114 &3075578613266390834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342495931408389672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d83ae645c92af634f89036dd5302f84a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Active: 1
-  Label: Player Flicker
-  Chance: 100
-  Timing:
-    TimescaleMode: 0
-    InitialDelay: 0
-    CooldownDuration: 0
-    ExcludeFromHoldingPauses: 0
-    InterruptsOnStop: 1
-    NumberOfRepeats: 0
-    RepeatForever: 0
-    DelayBetweenRepeats: 1
-    MMFeedbacksDirectionCondition: 0
-    PlayDirection: 0
-    ConstantIntensity: 0
-    UseIntensityInterval: 0
-    IntensityIntervalMin: 0
-    IntensityIntervalMax: 0
-    Sequence: {fileID: 0}
-    TrackID: 0
-    Quantized: 0
-    TargetBPM: 120
-  DebugActive: 0
-  BoundRenderer: {fileID: 4755425465716437635}
-  Mode: 0
-  PropertyName: _Tint
-  FlickerDuration: 0.3
-  FlickerOctave: 0.2
-  FlickerColor: {r: 1.4980392, g: 0.30588236, b: 0.30588236, a: 1}
-  MaterialIndexes: 00000000
-  UseMaterialPropertyBlocks: 0
+  _pushFeedBack: {fileID: 7648505471132816508}
 --- !u!64 &6988683397361690753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -308,6 +266,36 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8986237552638331582, guid: 971149bbd7060ae468035cbcfa3b1d24, type: 3}
+--- !u!114 &7648505471132816508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342495931408389672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d19ab2e7ad6445ebf76da9c05296cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settingsFirstFeedBack:
+    ShowBlock: 0
+    _feedBack: {fileID: 0}
+    _levelFeedBack:
+      Min: 0
+      Max: 0
+  _settingsSecondFeedBack:
+    ShowBlock: 0
+    _feedBack: {fileID: 0}
+    _levelFeedBack:
+      Min: 0
+      Max: 0
+  _settingsThirdFeedBack:
+    ShowBlock: 0
+    _feedBack: {fileID: 0}
+    _levelFeedBack:
+      Min: 0
+      Max: 0
 --- !u!1001 &5440903116559051993
 PrefabInstance:
   m_ObjectHideFlags: 0

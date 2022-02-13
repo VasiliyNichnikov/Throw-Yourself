@@ -12,11 +12,20 @@ namespace Player.FeedBacks
         [SerializeField, Header("Действие при попадание в игрока")]
         private MMFeedbacks _damagePlayerFeedBack;
 
-        public void PlayPlayerDeath()
+        [SerializeField, Header("Действие при толчке")]
+        private ThreeLevelFeedBack _pushFeedBack;
+
+        public void PlayPlayerDeathFeadBack()
         {
             _deathPlayerFeedBack.PlayFeedbacks();
         }
 
+        public void PlayPushFeedBack(Vector3 direction)
+        {
+            float value = MyUtils.GetTensionValue(direction);
+            _pushFeedBack.LaunchPushFeedBack(value);
+        }
+        
         public void PlayDamagePlayerFeedBack()
         {
             _damagePlayerFeedBack.PlayFeedbacks();
