@@ -175,7 +175,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 7e984f512e89b60468e829489e8883e3,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: f8dce1b87aff92c41a245137a7b5d7a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 932a3de60266c9f4eaa0a79bf473218d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -592,11 +592,11 @@ MonoBehaviour:
   TargetAudioSource: {fileID: 456250087292095878}
   Mode: 0
   RandomSfx: []
-  MinVolume: 0.7
-  MaxVolume: 0.7
-  MinPitch: 1.2
-  MaxPitch: 1.2
-  SfxAudioMixerGroup: {fileID: 0}
+  MinVolume: 1
+  MaxVolume: 1
+  MinPitch: 1
+  MaxPitch: 1
+  SfxAudioMixerGroup: {fileID: 24300002, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
 --- !u!1 &6601711197162201606
 GameObject:
   m_ObjectHideFlags: 0
