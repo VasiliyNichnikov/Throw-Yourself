@@ -12,7 +12,10 @@ namespace Analytics
 
         [SerializeField, Header("Отправка аналитики на сервер (отправка будет доступна только на самом телефоне)")]
         private bool _isSendingToServer;
-
+        
+        [SerializeField, Header("Включение перехода на последнюю сохраненную сцену")]
+        private bool _isSwitchingToSavedScene;
+        
         // Сохранение последнего пройденного уровня
         private int _lastCompletedLevel;
 
@@ -189,7 +192,7 @@ namespace Analytics
         private void CheckSavedLevel()
         {
             _lastCompletedLevel = WorkingWithPlayerPrefs.GetDataInt(_lastCompletedLevelKey);
-            if (_lastCompletedLevel != _level.Number - 1)
+            if (_isSwitchingToSavedScene && _lastCompletedLevel != _level.Number - 1)
             {
                 SceneManager.LoadScene(_lastCompletedLevel);
             }
