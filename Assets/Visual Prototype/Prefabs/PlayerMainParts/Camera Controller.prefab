@@ -1262,8 +1262,8 @@ MonoBehaviour:
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
   CooldownDuration: 0
-  InitialDelay: 0
-  CanPlayWhileAlreadyPlaying: 0
+  InitialDelay: 1
+  CanPlayWhileAlreadyPlaying: 1
   FeedbacksIntensity: 1
   Events:
     TriggerMMFeedbacksEvents: 0
