@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using DirectionMovement.FeedBacks;
+using UnityEngine;
 
-namespace DirectionMovement.FeedBacks
+namespace Player.FeedBacks
 {
-    public class ConnectingFeedBacksDirectionMovement : MonoBehaviour
+    public class ThreeLevelFeedBack : MonoBehaviour
     {
 #if UNITY_EDITOR
         public SettingsFeedBackDirectionMovement SettingsFirstFeedBack
@@ -47,14 +48,17 @@ namespace DirectionMovement.FeedBacks
         {
             if (_settingsFirstFeedBack.CheckIfValueInZone(value))
             {
+                print("Play 1");
                 _settingsFirstFeedBack.FeedBack.PlayFeedbacks();
             }
             else if (_settingsSecondFeedBack.CheckIfValueInZone(value))
             {
+                print("Play 2");
                 _settingsSecondFeedBack.FeedBack.PlayFeedbacks();
             }
             else if (_settingsThirdFeedBack.CheckIfValueInZone(value))
             {
+                print("Play 3");
                 _settingsThirdFeedBack.FeedBack.PlayFeedbacks();
             }
         }

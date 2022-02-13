@@ -32,7 +32,7 @@ namespace Player
             _feedBacks.PlayDamagePlayerFeedBack();
             if (_nowHp <= 0 && _isDeath == false)
             {
-                _feedBacks.PlayPlayerDeath();
+                _feedBacks.PlayPlayerDeathFeadBack();
                 _isDeath = true;
                 _transitionBetween.Restart();
             }

@@ -1,33 +1,36 @@
 ﻿using DirectionMovement.FeedBacks;
 using MoreMountains.Feedbacks;
+using Player.FeedBacks;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace Editor
 {
-    [CustomEditor(typeof(ConnectingFeedBacksDirectionMovement))]
-    public class ConnectingFeedBacksToDirectionMovementEditor : UnityEditor.Editor
+    [CustomEditor(typeof(ThreeLevelFeedBack))]
+    public class ThreeLevelFeedBackEditor : UnityEditor.Editor
     {
-        private ConnectingFeedBacksDirectionMovement _connectingFeedBacks;
+        private ThreeLevelFeedBack _threeLevelFeedBacks;
         private const float _minLimit = 0.0f;
         private const float _maxLimit = 100.0f;
 
         private void OnEnable()
         {
-            _connectingFeedBacks = target as ConnectingFeedBacksDirectionMovement;
+            _threeLevelFeedBacks = target as ThreeLevelFeedBack;
         }
 
         public override void OnInspectorGUI()
         {
-            _connectingFeedBacks.SettingsFirstFeedBack = DrawSettings(_connectingFeedBacks.SettingsFirstFeedBack);
-            _connectingFeedBacks.SettingsSecondFeedBack = DrawSettings(_connectingFeedBacks.SettingsSecondFeedBack);
-            _connectingFeedBacks.SettingsThirdFeedBack = DrawSettings(_connectingFeedBacks.SettingsThirdFeedBack);
-
+            serializedObject.Update();
+            _threeLevelFeedBacks.SettingsFirstFeedBack = DrawSettings(_threeLevelFeedBacks.SettingsFirstFeedBack);
+            _threeLevelFeedBacks.SettingsSecondFeedBack = DrawSettings(_threeLevelFeedBacks.SettingsSecondFeedBack);
+            _threeLevelFeedBacks.SettingsThirdFeedBack = DrawSettings(_threeLevelFeedBacks.SettingsThirdFeedBack);
             if (GUI.changed)
             {
-                SetObjectDirty(_connectingFeedBacks.gameObject);
+                SetObjectDirty(_threeLevelFeedBacks.gameObject);
+                PrefabUtility.RecordPrefabInstancePropertyModifications(this);
             }
+            serializedObject.ApplyModifiedProperties();
         }
 
         private SettingsFeedBackDirectionMovement DrawSettings(SettingsFeedBackDirectionMovement settings)
@@ -49,7 +52,7 @@ namespace Editor
 
         private void SetObjectDirty(GameObject obj)
         {
-            EditorUtility.SetDirty(obj);
+            EditorUtility.SetDirty(_threeLevelFeedBacks);
             EditorSceneManager.MarkSceneDirty(obj.scene);
         }
     }
