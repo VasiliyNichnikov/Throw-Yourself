@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level/TextCurrentLevel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level/TextCurrentLevel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Analytics/PlayerSessionAnalytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics/PlayerSessionAnalytics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/TransitionBetweenLevels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/TransitionBetweenLevels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Lvl1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EndLevelDoor/CompletingLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EndLevelDoor/CompletingLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/UI/Main Ui Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Visual Prototype/Prefabs/UI/Main Ui Prefabs/Canvas.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +113,8 @@
       <workItem from="1644555691326" duration="2997000" />
       <workItem from="1644595706487" duration="4747000" />
       <workItem from="1644654945885" duration="21032000" />
-      <workItem from="1644744839170" duration="4067000" />
+      <workItem from="1644744839170" duration="5172000" />
+      <workItem from="1644771214817" duration="762000" />
     </task>
     <servers />
   </component>
