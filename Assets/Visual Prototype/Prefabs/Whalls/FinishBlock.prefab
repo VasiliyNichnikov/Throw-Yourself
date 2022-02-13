@@ -2485,7 +2485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 15
-  _openDoor: {fileID: 8300000, guid: 952a6e513a745714cbf1d4fc6d7dccdd, type: 3}
+  _openDoor: {fileID: 8300000, guid: f8dce1b87aff92c41a245137a7b5d7a6, type: 3}
 --- !u!1 &5302029305880694977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6629a4251d70438fa7f44f048c88ed46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _closingLevelFeedBacks: {fileID: 0}
   _pushingOutDoor: {fileID: 8638680167853579599}
 --- !u!1 &8865135973618866240
 GameObject:
