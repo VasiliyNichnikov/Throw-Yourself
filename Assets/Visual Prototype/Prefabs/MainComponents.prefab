@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isOutputToConsole: 0
   _isSendingToServer: 1
-  _isSwitchingToSavedScene: 1
+  _isSwitchingToSavedScene: 0
 --- !u!1 &8104065180754581925
 GameObject:
   m_ObjectHideFlags: 0
