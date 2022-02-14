@@ -36,7 +36,10 @@ namespace Analytics
 
         // Объект яндекс аналитики
         private IYandexAppMetrica _metrica;
-
+        
+        // Сделать чтобы переход на уровень будет только один раз
+        private static bool _firstLevel = false;
+        
         public void SendStartStatistics()
         {
             int levelNumber = WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey);
@@ -192,9 +195,10 @@ namespace Analytics
         private void CheckSavedLevel()
         {
             _lastCompletedLevel = WorkingWithPlayerPrefs.GetDataInt(_lastCompletedLevelKey);
-            if (_isSwitchingToSavedScene && _lastCompletedLevel != _level.Number - 1)
+            if (_firstLevel == false && _isSwitchingToSavedScene && _lastCompletedLevel != _level.Number - 1)
             {
                 SceneManager.LoadScene(_lastCompletedLevel);
+                _firstLevel = true;
             }
         }
     }
