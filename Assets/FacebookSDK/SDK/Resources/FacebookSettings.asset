@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedAppIndex: 0
   clientTokens:
-  - cccf0d964f5e7a6cb961b3c670f27319
+  - 4e1a7da40450d040bc4060a38dcad3fc
   appIds:
-  - 537159824076324
+  - 1014411589431653
   appLabels:
-  - App Name
+  - Throw Yourself
   cookie: 1
   logging: 1
   status: 1
   xfbml: 0
   frictionlessRequests: 1
-  androidKeystorePath: 
+  androidKeystorePath: C:\Users\Daniil\Documents\GitHub\Throw-Yourself\throw-yourself.keystore
   iosURLSuffix: 
   appLinkSchemes:
   - list: []
