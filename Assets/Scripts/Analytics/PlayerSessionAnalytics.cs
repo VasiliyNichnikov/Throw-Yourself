@@ -117,7 +117,7 @@ namespace Analytics
 
             if (_isSendingToServer)
             {
-                _metrica.ReportEvent("level_start", new Dictionary<string, object>()
+                _metrica.ReportEvent("level_finish", new Dictionary<string, object>()
                 {
                     {"level_number", WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey)},
                     {"level_name", levelName},
