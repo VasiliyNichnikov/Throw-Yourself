@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedAppIndex: 0
   clientTokens:
-  - c7e7a5c6e00a4a5c0966ae76823387eb
+  - 973de73e4bf1d1f93b5be80db9c9144d
   appIds:
-  - 1014411589431653
+  - 522966649093738
   appLabels:
   - Throw-Yourself
   cookie: 1
