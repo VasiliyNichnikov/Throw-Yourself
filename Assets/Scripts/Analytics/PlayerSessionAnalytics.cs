@@ -182,8 +182,14 @@ namespace Analytics
             WorkingWithPlayerPrefs.SaveData(_lastCompletedLevelKey, _lastCompletedLevel);
         }
 
-        private void Start()
+        private void Awake()
         {
+            if (WorkingWithPlayerPrefs.GetDataString("FirstEnter") != "true")
+            {
+                ResetPlayerPrefsParameters();
+                WorkingWithPlayerPrefs.SaveData("FirstEnter", "true");
+            }
+            
             _level = GetComponent<LevelInformation>();
             CheckSavedLevel();
             if (_isSendingToServer)
