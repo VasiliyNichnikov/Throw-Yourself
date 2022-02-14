@@ -255,7 +255,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: '{inproject}: throw-yourself.keystore'
-  AndroidKeyaliasName: '-'
+  AndroidKeyaliasName: kidogame
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -737,8 +737,10 @@ PlayerSettings:
     33: UNITY_POST_PROCESSING_STACK_V2
   platformArchitecture: {}
   scriptingBackend:
+    Android: 1
     Standalone: 1
-  il2cppCompilerConfiguration: {}
+  il2cppCompilerConfiguration:
+    Android: 0
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
