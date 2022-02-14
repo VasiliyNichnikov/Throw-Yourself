@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a58ee95-9b1f-46b7-80fd-f08c93450e3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Analytics/InitializationFacebook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Analytics/InitializationFacebook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Throw-Yourself/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FacebookSDK/SDK/Resources/FacebookSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FacebookSDK/SDK/Resources/FacebookSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,7 @@
       <workItem from="1644595706487" duration="4747000" />
       <workItem from="1644654945885" duration="21032000" />
       <workItem from="1644744839170" duration="5172000" />
-      <workItem from="1644771214817" duration="6352000" />
+      <workItem from="1644771214817" duration="7304000" />
     </task>
     <servers />
   </component>
