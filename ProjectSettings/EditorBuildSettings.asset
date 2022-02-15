@@ -8,121 +8,121 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Lvl1.unity
     guid: b1e6d5428b001904bad4da41a2b236d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl2.unity
     guid: d8eb312a4e4a12d4b8468b65181ad3d7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl3.unity
     guid: fb86ad83b5b349f409cde352a8407436
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl4.unity
     guid: 33f2011dade635c4fad2441e5341a675
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl5.unity
     guid: 5e6b960e90bee8041893b56d27082a03
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl6.unity
     guid: f5f3b29531ec36549a48a6130e666216
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl7.unity
     guid: c9aab9d937416924f8acf20da6207f9b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl8.unity
     guid: a5e8e0ddac438864f92c86906cdf9b5d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl9.unity
     guid: c945e37353148824db400ff2e281c0ec
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl10.unity
     guid: 9ae639e09d4e21c4aa453b29c652a5a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl11.unity
     guid: cd4370d306c268b4db991da32799e6b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl12.unity
     guid: 575e3d7fac626094094d0f940fe78fb4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl13.unity
     guid: 71353f63ab3c66b4fb2c6763b6f6a422
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl14.unity
     guid: f8231a46979b18f4fb007c7d82b8fde5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl15.unity
     guid: 477c64d3f633c9e458634814e8fe4c54
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl16.unity
     guid: 44b293f24d75afa4181cbdbcd41a971b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl17.unity
     guid: 68d198c4556d34d4fa207febdf338595
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl18.unity
     guid: 9c3f5e8febb2e9f4c8bff0b6401f45d2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl19.unity
     guid: fcec9438ddd65c94a8edfb735950a035
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl20.unity
     guid: 145bfc8144d5cd0468476a509e31393b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl21.unity
     guid: 186307b7249940c4ab7e0373f2910506
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl22.unity
     guid: f87bd3f42d776bf4ab74f87a84b75c30
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl23.unity
     guid: 7bd5419334904544c8b61c23fe9a3daf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl24.unity
     guid: 474205b5ff42cb745abae27b293a0d89
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl25.unity
     guid: f924ddd391cb3354ea5e901808a9feef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl26.unity
     guid: c6c25822b20adbd449a8da178b946b1e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl27.unity
     guid: 0e252e98e83149543be8cad1048e035f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl28.unity
     guid: 15668f45a7306434da904118a1ea744c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl29.unity
     guid: af16c49b79ab7ab48b524fa1fac00356
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl30.unity
     guid: b2a5338377a36d046a86b303356d5aee
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl31.unity
     guid: 0857dbe29cbde324f9405d6d0fcd5e8f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl32.unity
     guid: 9df6e656aceea2f4383112860e5fa9f7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl33.unity
     guid: 1b21ad8f67b0b6a418bb0dbef22ab504
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl34.unity
     guid: 07e8acdf5ea52f445acb9fd3f5bbbd2a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl35.unity
     guid: b79a40d570ad70c49a5e26cf20cf8cbf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl36.unity
     guid: 6c0e78182009a6b46b1b111e2878d836
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl37.unity
     guid: e85d284637dac154da9bce2211663086
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl38.unity
     guid: 8dd9a962cfeebf348a9cec5dd8afdfb4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl39.unity
     guid: 093cac4dc2a88cc4fa90ce9382a82b1b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Levels/Lvl40.unity
     guid: 3ffef3284e9e0124780107889c6368fe
   m_configObjects: {}

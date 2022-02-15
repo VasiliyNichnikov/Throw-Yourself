@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3716,7 +3716,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh113864
+  m_Name: pb_Mesh345524
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7033,6 +7033,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2624703825457861992, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 237.75891
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432933949906451601, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 237.75891
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489572550684892900, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 237.75891
+      objectReference: {fileID: 0}
+    - target: {fileID: 4423079217976853230, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634694987767253634, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376129179025812793, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: _isSwitchingToSavedScene
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7029130123895940049, guid: ff94bef6b5688d545bbbf31edd55fff5,
         type: 3}
       propertyPath: _points.Array.data[0].z
@@ -7102,6 +7132,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainComponents
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176322105595883620, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -19.199951
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438983645734436975, guid: ff94bef6b5688d545bbbf31edd55fff5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 237.75891
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff94bef6b5688d545bbbf31edd55fff5, type: 3}
