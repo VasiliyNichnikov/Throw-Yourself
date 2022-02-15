@@ -2862,6 +2862,36 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 8323626445714849870}
+    - target: {fileID: 4238958459585253727, guid: d7c1eee750473e3488ec958639f81bc4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392310255519474883, guid: d7c1eee750473e3488ec958639f81bc4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3958961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392310255519474883, guid: d7c1eee750473e3488ec958639f81bc4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3958961
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392310255519474883, guid: d7c1eee750473e3488ec958639f81bc4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3958961
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362245773145715029, guid: d7c1eee750473e3488ec958639f81bc4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7798927406510950239, guid: d7c1eee750473e3488ec958639f81bc4,
+        type: 3}
+      propertyPath: m_Text
+      value: slide to start
+      objectReference: {fileID: 0}
     - target: {fileID: 8053529677713274332, guid: d7c1eee750473e3488ec958639f81bc4,
         type: 3}
       propertyPath: _cameraFeedBacks
