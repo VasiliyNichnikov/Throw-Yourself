@@ -2485,7 +2485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _force: 15
-  _openDoor: {fileID: 8300000, guid: 952a6e513a745714cbf1d4fc6d7dccdd, type: 3}
+  _openDoor: {fileID: 8300000, guid: bae49b5b793fdf6408d2dd180c02e1cc, type: 3}
 --- !u!1 &5302029305880694977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6629a4251d70438fa7f44f048c88ed46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _closingLevelFeedBacks: {fileID: 0}
   _pushingOutDoor: {fileID: 8638680167853579599}
 --- !u!1 &8865135973618866240
 GameObject:
@@ -4907,7 +4908,7 @@ PrefabInstance:
     - target: {fileID: 8270090719015107698, guid: a4687ee476995cb4bb277f7bc2f262a3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4687ee476995cb4bb277f7bc2f262a3, type: 3}
@@ -5197,7 +5198,7 @@ PrefabInstance:
     - target: {fileID: 8270090719015107698, guid: a4687ee476995cb4bb277f7bc2f262a3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4687ee476995cb4bb277f7bc2f262a3, type: 3}
@@ -5292,7 +5293,7 @@ PrefabInstance:
     - target: {fileID: 8270090719015107698, guid: a4687ee476995cb4bb277f7bc2f262a3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4687ee476995cb4bb277f7bc2f262a3, type: 3}

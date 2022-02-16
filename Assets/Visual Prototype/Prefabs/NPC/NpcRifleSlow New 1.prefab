@@ -30,6 +30,37 @@ Transform:
   m_Father: {fileID: 2496872079299164936}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &668016627816931314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5289675736787503950}
+  m_Layer: 11
+  m_Name: Armature
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5289675736787503950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668016627816931314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9102726487594774870}
+  m_Father: {fileID: 6612353545574033091}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &777275307020415959
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,13 +148,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691137805005507294}
   m_LocalRotation: {x: -0.001411725, y: -0.008795795, z: 0.012940624, w: 0.9998766}
-  m_LocalPosition: {x: -0.0061289105, y: 0.83109605, z: -0.01884265}
-  m_LocalScale: {x: 1, y: 1, z: 0.99999976}
+  m_LocalPosition: {x: -0.0061289105, y: 0.83109605, z: -0.018842595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7212930808675019406}
   - {fileID: 5067531331350353817}
   - {fileID: 1824090333481111945}
-  m_Father: {fileID: 6612353545574033091}
+  m_Father: {fileID: 5289675736787503950}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1691137805005507296
@@ -2027,7 +2058,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9102726487594774870}
+  - {fileID: 5289675736787503950}
   - {fileID: 2213891021447698126}
   - {fileID: 7036837684225458477}
   m_Father: {fileID: 4953867536695956957}
@@ -2188,7 +2219,7 @@ MonoBehaviour:
   _rotationOfFieldOfView: {fileID: 7036837684225458478}
   _pointCreateBullet: {fileID: 3928638995808233922}
   _route: {fileID: 7036837684617143471}
-  _armature: {fileID: 9102726487594774870}
+  _armature: {fileID: 5289675736787503950}
   _bulletSndFeedback: {fileID: 1132581198696846851}
 --- !u!114 &8311457634902613139
 MonoBehaviour:

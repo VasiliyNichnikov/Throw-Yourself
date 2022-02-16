@@ -36,7 +36,10 @@ namespace Analytics
 
         // Объект яндекс аналитики
         private IYandexAppMetrica _metrica;
-
+        
+        // Сделать чтобы переход на уровень будет только один раз
+        private static bool _firstLevel = false;
+        
         public void SendStartStatistics()
         {
             int levelNumber = WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey);
@@ -117,7 +120,7 @@ namespace Analytics
 
             if (_isSendingToServer)
             {
-                _metrica.ReportEvent("level_start", new Dictionary<string, object>()
+                _metrica.ReportEvent("level_finish", new Dictionary<string, object>()
                 {
                     {"level_number", WorkingWithPlayerPrefs.GetDataInt(_levelNumberKey)},
                     {"level_name", levelName},
@@ -179,8 +182,14 @@ namespace Analytics
             WorkingWithPlayerPrefs.SaveData(_lastCompletedLevelKey, _lastCompletedLevel);
         }
 
-        private void Start()
+        private void Awake()
         {
+            if (WorkingWithPlayerPrefs.GetDataString("FirstEnter") != "true")
+            {
+                ResetPlayerPrefsParameters();
+                WorkingWithPlayerPrefs.SaveData("FirstEnter", "true");
+            }
+            
             _level = GetComponent<LevelInformation>();
             CheckSavedLevel();
             if (_isSendingToServer)
@@ -192,9 +201,10 @@ namespace Analytics
         private void CheckSavedLevel()
         {
             _lastCompletedLevel = WorkingWithPlayerPrefs.GetDataInt(_lastCompletedLevelKey);
-            if (_isSwitchingToSavedScene && _lastCompletedLevel != _level.Number - 1)
+            if (_firstLevel == false && _isSwitchingToSavedScene && _lastCompletedLevel != _level.Number - 1)
             {
                 SceneManager.LoadScene(_lastCompletedLevel);
+                _firstLevel = true;
             }
         }
     }
