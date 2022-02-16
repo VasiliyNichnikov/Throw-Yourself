@@ -1940,7 +1940,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectsToDelete:
   - {fileID: 2144154177545479092}
-  - {fileID: 0}
 --- !u!114 &5619304085076852671
 MonoBehaviour:
   m_ObjectHideFlags: 0

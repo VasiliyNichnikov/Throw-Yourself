@@ -1,5 +1,4 @@
 ﻿using System;
-using Enemy.FieldOfView;
 using UnityEngine;
 
 namespace Enemy.AFK
