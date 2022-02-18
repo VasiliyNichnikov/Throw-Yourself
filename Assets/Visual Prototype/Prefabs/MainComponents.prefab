@@ -1617,8 +1617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isOutputToConsole: 0
-  _isSendingToServer: 1
-  _isSwitchingToSavedScene: 0
+  _isSendingToServer: 0
+  _isSwitchingToSavedScene: 1
 --- !u!1 &8104065180754581925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,18 +2711,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a3774e3d56097949a90325ab94d9a52, type: 3}
---- !u!4 &4924941880216007772 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2837765023127634712, guid: 5a3774e3d56097949a90325ab94d9a52,
-    type: 3}
-  m_PrefabInstance: {fileID: 7149795134659704644}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &8323626445714849870 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1205375827749156618, guid: 5a3774e3d56097949a90325ab94d9a52,
-    type: 3}
-  m_PrefabInstance: {fileID: 7149795134659704644}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8893642941162727041 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1753516439850914245, guid: 5a3774e3d56097949a90325ab94d9a52,
@@ -2735,6 +2723,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &8323626445714849870 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1205375827749156618, guid: 5a3774e3d56097949a90325ab94d9a52,
+    type: 3}
+  m_PrefabInstance: {fileID: 7149795134659704644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4924941880216007772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2837765023127634712, guid: 5a3774e3d56097949a90325ab94d9a52,
+    type: 3}
+  m_PrefabInstance: {fileID: 7149795134659704644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7289871833719436219
 PrefabInstance:
   m_ObjectHideFlags: 0
