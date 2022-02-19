@@ -24,7 +24,7 @@ MonoBehaviour:
   status: 1
   xfbml: 0
   frictionlessRequests: 1
-  androidKeystorePath: C:\Users\vnich\YandexDisk\Unity Projects\Throw-Yourself\throw-yourself.keystore
+  androidKeystorePath: C:\Users\vnich\YandexDisk\Unity Projects\Throw-Yourself\new-throw-yourself.keystore
   iosURLSuffix: 
   appLinkSchemes:
   - list: []
